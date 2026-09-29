@@ -107,6 +107,8 @@ if (WAITLIST_ENDPOINT) {
 }
 
 // --- Small effects -------------------------------------------------------------
+// Ambient hero animations begin once the page has settled (see .animate in style.css).
+window.addEventListener("load", () => setTimeout(() => document.documentElement.classList.add("animate"), 3000));
 const nav = document.querySelector(".nav");
 const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 8);
 window.addEventListener("scroll", onScroll, { passive: true });
