@@ -469,3 +469,4 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 .mac-cta h2 { margin: 0; }
 .mac-cta p { color: #e3d2c4; }
 @media (max-width: 640px) { .mac-cta { flex-direction: column; } }
+.guide-more a.button, .guide-help a.button { color: #1b0d06; }
