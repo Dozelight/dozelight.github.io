@@ -3,6 +3,15 @@
     <channel>
         <title>Dozelight</title>
         <item>
+            <title>1.3.2</title>
+            <pubDate>Tue, 29 Sep 2026 07:57:07 +0200</pubDate>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.3.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.3.2.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dozelight.github.io/updates/Dozelight-1.3.2.zip" length="1314698" type="application/octet-stream" sparkle:edSignature="iaD1CtW3PPpV2yeICKCQGUpN2TdNHA76QUdRXaoSL+UEYSeMiUI7X7fPK2dO367NhmcEeA9on8/5cPprfxF0Ag=="/>
+        </item>
+        <item>
             <title>1.3.1</title>
             <pubDate>Tue, 29 Sep 2026 07:38:47 +0200</pubDate>
             <sparkle:version>21</sparkle:version>
