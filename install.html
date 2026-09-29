@@ -7,16 +7,17 @@
   <meta name="description" content="How to install Dozelight on your Mac, step by step with pictures, plus troubleshooting and uninstalling.">
   <meta name="theme-color" content="#0d0a0b">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script src="platform.js"></script>
+  <script src="platform.js" defer></script>
   <link rel="canonical" href="https://dozelight.github.io/install.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I don't see the Open Anyway button", "acceptedAnswer": {"@type": "Answer", "text": "macOS only shows it for about an hour after you try to open Dozelight. Open Dozelight again, click Done, then go straight to System Settings → Privacy & Security and scroll down to Security."}}, {"@type": "Question", "name": "macOS says Dozelight is damaged and can't be opened", "acceptedAnswer": {"@type": "Answer", "text": "The download was probably interrupted. Delete Dozelight from Applications, download it again from this site and repeat the steps. If it still happens, email us at dozelight@icloud.com."}}, {"@type": "Question", "name": "I can't find the icon in the menu bar", "acceptedAnswer": {"@type": "Answer", "text": "If your menu bar is full, macOS may hide some icons behind the camera notch. Quit a few other menu bar apps, or open System Settings → Menu Bar and make sure Dozelight is allowed. You can also open Dozelight from Spotlight at any time: it opens its menu for you."}}, {"@type": "Question", "name": "I'm on an older version of macOS", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight needs macOS 13 Ventura or later. On older versions it won't open."}}]}</script>
 </head>
 <body>
   <header class="nav scrolled">
     <a class="brand" href="index.html" aria-label="Dozelight home">
-      <img src="assets/icon.png" alt="" width="32" height="32">
+      <img src="assets/icon-64.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
@@ -54,7 +55,7 @@
           <div class="win">
             <div class="win-bar"><span class="traffic"><i></i><i></i><i></i></span><span class="win-title">Dozelight</span></div>
             <div class="dmg">
-              <div class="dmg-item"><img src="assets/icon.png" alt="" width="72" height="72"><span>Dozelight</span></div>
+              <div class="dmg-item"><img src="assets/icon-144.png" alt="" width="72" height="72"><span>Dozelight</span></div>
               <div class="dmg-arrow">→</div>
               <div class="dmg-item"><span class="folder"></span><span>Applications</span></div>
             </div>
@@ -72,7 +73,7 @@
         </div>
         <figure class="shot" aria-label="Illustration: the macOS warning that Dozelight was not opened, with the Done button highlighted">
           <div class="alert">
-            <img src="assets/icon.png" alt="" width="56" height="56">
+            <img src="assets/icon-144.png" alt="" width="56" height="56">
             <b>“Dozelight” Not Opened</b>
             <p>Apple could not verify “Dozelight” is free of malware that may harm your Mac or compromise your privacy.</p>
             <div class="alert-buttons"><span class="btn highlight">Done</span><span class="btn">Move to Trash</span></div>
@@ -118,7 +119,7 @@
         </div>
         <figure class="shot" aria-label="Illustration: the confirmation dialog, with the Open Anyway button highlighted">
           <div class="alert">
-            <img src="assets/icon.png" alt="" width="56" height="56">
+            <img src="assets/icon-144.png" alt="" width="56" height="56">
             <b>Open “Dozelight”?</b>
             <p>Apple is not able to verify that it is free from malware. Only open it if you trust its source.</p>
             <div class="alert-buttons"><span class="btn highlight">Open Anyway</span><span class="btn">Move to Trash</span><span class="btn">Done</span></div>
@@ -178,7 +179,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
     <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>

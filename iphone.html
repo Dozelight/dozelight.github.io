@@ -10,16 +10,17 @@
   <meta property="og:description" content="Built-in settings for a red, extra-dim screen at night, a triple-click switch and a bedtime automation. A free guide from Dozelight.">
   <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script src="platform.js"></script>
+  <script src="platform.js" defer></script>
   <link rel="canonical" href="https://dozelight.github.io/iphone.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "A warmer Night Shift", "acceptedAnswer": {"@type": "Answer", "text": "Open Settings → Display & Brightness → Night Shift, turn on Scheduled and drag Color Temperature to More Warm. It's gentler than full red for the early evening."}}, {"@type": "Question", "name": "Darkroom: black pages with red text", "acceptedAnswer": {"@type": "Answer", "text": "Turn on Classic Invert in Display & Text Size together with the red Color Tint from step 1. White pages turn black and text turns red, the gentlest way to read in bed. You can add Classic Invert to the Accessibility Shortcut too."}}, {"@type": "Question", "name": "Grayscale", "acceptedAnswer": {"@type": "Answer", "text": "In Color Filters, choose Grayscale instead of Color Tint. It makes the phone less tempting to keep scrolling late at night."}}]}</script>
 </head>
 <body>
   <header class="nav scrolled">
     <a class="brand" href="index.html" aria-label="Dozelight home">
-      <img src="assets/icon.png" alt="" width="32" height="32">
+      <img src="assets/icon-64.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
     <nav class="nav-links" aria-label="Sections">
@@ -152,7 +153,7 @@
       </details>
 
       <div class="mac-cta">
-        <img src="assets/icon.png" alt="" width="64" height="64">
+        <img src="assets/icon-144.png" alt="" width="64" height="64">
         <div>
           <h2>On a Mac? Dozelight does all of this for you.</h2>
           <p>Warmer than Night Shift, down to candlelight and pure red, with a bedtime schedule that changes gradually through the evening. Plus Darkroom, Extra Dim, and the Touch Bar, pointer and keyboard.</p>
@@ -164,7 +165,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
     <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>

@@ -14,9 +14,19 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script src="platform.js"></script>
+  <script>
+    // Windows visitors who haven't picked a platform go to the Windows page (see platform.js). Search crawlers stay.
+    (function () {
+      var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "", chosen = null;
+      try { chosen = localStorage.getItem("platform"); } catch (e) {}
+      if (!chosen && /Win/i.test(ua) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
+        location.replace("windows.html" + location.hash);
+    })();
+  </script>
+  <script src="platform.js" defer></script>
   <meta name="google-site-verification" content="awgSpBVwiy73n4SWK_MEB2o4UoAEffG2brTuxusj59I">
   <meta name="msvalidate.01" content="475B252E7EF599B6CED038FA5DAF3CCC">
   <link rel="canonical" href="https://dozelight.github.io/">
@@ -28,7 +38,7 @@
 
   <header class="nav">
     <a class="brand" href="#top" aria-label="Dozelight home">
-      <img src="assets/icon.png" alt="" width="32" height="32">
+      <img src="assets/icon-64.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
@@ -262,7 +272,7 @@
     <!-- Pricing and download -->
     <section class="section pricing" id="download">
       <div class="waitlist-card">
-        <img src="assets/icon.png" alt="" width="72" height="72">
+        <img src="assets/icon-144.png" alt="" width="72" height="72">
         <p class="eyebrow">Early-access price</p>
         <h2>Get Dozelight</h2>
         <p class="price"><strong>$9.99</strong><span>one-time purchase</span></p>
@@ -387,7 +397,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
     <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>

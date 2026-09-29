@@ -13,16 +13,17 @@
   <meta property="og:url" content="https://dozelight.github.io/red-screen-windows.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script src="platform.js"></script>
+  <script src="platform.js" defer></script>
   <link rel="canonical" href="https://dozelight.github.io/red-screen-windows.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why can't Night Light turn the screen red?", "acceptedAnswer": {"@type": "Answer", "text": "Night Light lowers blue light only, and keeps green. Red needs both blue and green removed, which Night Light doesn't do."}}, {"@type": "Question", "name": "Is red light better at night?", "acceptedAnswer": {"@type": "Answer", "text": "Research suggests that the blue part of light has the strongest effect on melatonin, the hormone that helps you fall asleep, and red light the weakest. Dozelight and Night Light are comfort tools, not medical products."}}, {"@type": "Question", "name": "Why doesn't the screen change color with HDR on?", "acceptedAnswer": {"@type": "Answer", "text": "With HDR turned on, Windows ignores color changes from apps. Turn HDR off in Settings → System → Display while you use a red screen."}}, {"@type": "Question", "name": "Does Dozelight need administrator rights?", "acceptedAnswer": {"@type": "Answer", "text": "No. Windows limits how warm apps can make the screen, and Dozelight can lift that limit once, with an administrator's approval. Everything else works without it."}}, {"@type": "Question", "name": "Is there something similar for Mac and iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. See how to make Night Shift warmer on Mac, and our guide to a red screen at night on iPhone and iPad."}}]}</script>
 </head>
 <body>
   <header class="nav scrolled">
     <a class="brand" href="index.html" aria-label="Dozelight home">
-      <img src="assets/icon.png" alt="" width="32" height="32">
+      <img src="assets/icon-64.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
@@ -93,7 +94,7 @@
       </details>
 
       <div class="mac-cta">
-        <img src="assets/windows-icon.png" alt="" width="64" height="64">
+        <img src="assets/windows-icon-144.png" alt="" width="64" height="64">
         <div>
           <h2>A red screen at night, one click away.</h2>
           <p>Dozelight takes your Windows screen down to candlelight and pure red, on your bedtime schedule. Try every feature free for 14 days.</p>
@@ -105,7 +106,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
     <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>

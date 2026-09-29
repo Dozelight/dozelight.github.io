@@ -13,16 +13,17 @@
   <meta property="og:url" content="https://dozelight.github.io/compare.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script src="platform.js"></script>
+  <script src="platform.js" defer></script>
   <link rel="canonical" href="https://dozelight.github.io/compare.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is f.lux free?", "acceptedAnswer": {"@type": "Answer", "text": "f.lux is free for personal use. Businesses need a license from its makers."}}, {"@type": "Question", "name": "Can I use Dozelight and Night Shift together?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, on Mac that's how it's designed: keep Night Shift on its schedule and Dozelight adds warmth on top of it. On Windows, turn Night Light off so the two don't compete."}}, {"@type": "Question", "name": "How warm is 1000K?", "acceptedAnswer": {"@type": "Answer", "text": "About the glow of embers. For comparison, candlelight is around 1900K, a classic light bulb around 2700K and daylight around 6500K. Below that Dozelight also offers Red Only, which removes blue and green completely."}}, {"@type": "Question", "name": "Does Dozelight collect data?", "acceptedAnswer": {"@type": "Answer", "text": "No. It has no analytics or tracking. It only goes online to check your license key and look for updates."}}]}</script>
 </head>
 <body>
   <header class="nav scrolled">
     <a class="brand" href="index.html" aria-label="Dozelight home">
-      <img src="assets/icon.png" alt="" width="32" height="32">
+      <img src="assets/icon-64.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
@@ -92,7 +93,7 @@
       </details>
 
       <div class="mac-cta">
-        <img src="assets/icon.png" alt="" width="64" height="64">
+        <img src="assets/icon-144.png" alt="" width="64" height="64">
         <div>
           <h2>Try Dozelight free for 14 days.</h2>
           <p>Every feature, on Mac or Windows. One license covers up to 3 computers.</p>
@@ -107,7 +108,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
     <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>
