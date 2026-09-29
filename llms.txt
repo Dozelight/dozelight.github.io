@@ -31,6 +31,7 @@ Key facts:
 - [How to make your screen red at night on Windows](https://dozelight.github.io/red-screen-windows.html): Night Light's limit and how to get pure red
 - [Night Shift vs Night Light vs f.lux vs Dozelight](https://dozelight.github.io/compare.html): a comparison table
 - [Red screen at night on iPhone and iPad](https://dozelight.github.io/iphone.html): built-in settings, since iOS apps can't tint the screen
+- [What's new](https://dozelight.github.io/changelog.html): the version history of both apps
 - [Installing on Mac](https://dozelight.github.io/install.html) and [Installing on Windows](https://dozelight.github.io/windows-install.html)
 
 ## Legal

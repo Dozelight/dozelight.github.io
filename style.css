@@ -564,3 +564,8 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
    view settles at once and speed tests don't count the slow motion as the page still drawing. */
 .eyebrow .dot, .sun, .menu, .hero-panel { animation-play-state: paused; }
 .animate .eyebrow .dot, .animate .sun, .animate .menu, .animate .hero-panel { animation-play-state: running; }
+
+/* What's new: one heading per release, with its date */
+.guide-more h3 { font-size: 1.15rem; margin-top: 14px; }
+.guide-more h3 small { font: 400 0.85rem var(--sans); color: var(--muted); margin-left: 8px; }
+.guide-more h3 + ul { margin-top: -4px; }
