@@ -364,3 +364,4 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
   animation: spin 0.8s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
+.menu-item.sub::after { content: "›"; position: absolute; right: 14px; font-size: 15px; line-height: 1; top: 50%; translate: 0 -50%; color: #cbbfb6; }
