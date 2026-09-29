@@ -430,3 +430,6 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 .settings-body { grid-template-columns: 150px 1fr; }
 .settings-side span { white-space: nowrap; }
 .settings-row span:first-child { font-size: 12px; }
+.early-note { max-width: 30em; color: #e3d2c4; font-size: 0.95rem; padding: 10px 16px; border-radius: 12px; background: rgba(255, 150, 70, 0.1); border: 1px solid rgba(255, 170, 110, 0.25); }
+.early-note b { color: var(--amber); }
+.early-note a { color: var(--amber); }
