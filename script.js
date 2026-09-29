@@ -33,7 +33,7 @@ const toSlider = k => Math.round(((Math.log(MAX_K) - Math.log(k)) / (Math.log(MA
 function describe(k) {
   if (k >= 5000) return "Daylight";
   if (k > 2700) return "Evening";
-  if (k === 2700) return "Night Shift's limit";
+  if (k === 2700 && document.documentElement.dataset.platform !== "windows") return "Night Shift's limit";
   if (k > 2200) return "Warm";
   if (k > 1800) return "Candlelight";
   if (k > 1400) return "Firelight";

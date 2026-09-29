@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-platform="mac">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
+  <script src="platform.js"></script>
 </head>
 <body>
   <header class="nav scrolled">
@@ -16,6 +17,10 @@
       <img src="assets/icon.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
+    <div class="platform-switch" role="group" aria-label="Platform">
+      <a href="install.html" data-choose="mac" aria-current="page">macOS</a>
+      <a href="windows-install.html" data-choose="windows">Windows</a>
+    </div>
     <nav class="nav-links" aria-label="Sections">
       <a href="index.html#features">Features</a>
       <a href="index.html#download">Pricing</a>
@@ -23,6 +28,7 @@
     </nav>
     <a class="button button-small" href="download/Dozelight.dmg" download>Download</a>
   </header>
+  <div class="platform-hint" id="platform-hint" hidden>Looks like you're on Windows. <a href="windows-install.html" data-choose="windows">See how to install Dozelight for Windows →</a></div>
 
   <main class="guide">
     <header class="guide-head">
@@ -172,7 +178,7 @@
   <footer class="footer">
     <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
-    <p class="footer-links"><a href="install.html">Install guide</a> · <a href="windows.html">Windows preview</a> · <a href="iphone.html">iPhone &amp; iPad guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="iphone.html">iPhone &amp; iPad guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="fineprint">Mac, macOS, Night Shift and Touch Bar are trademarks of Apple Inc. Dozelight is not affiliated with Apple.</p>
   </footer>
 </body>

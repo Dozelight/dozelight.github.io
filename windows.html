@@ -1,163 +1,315 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-platform="windows">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dozelight for Windows (preview)</title>
-  <meta name="description" content="A free early preview of Dozelight for Windows 10 and 11: warmer than Night Light, down to candlelight and pure red, from a panel in your taskbar.">
+  <title>Dozelight: evening light for your PC</title>
+  <meta name="description" content="Dozelight takes your Windows screen down to candlelight and pure red, right from the taskbar. A tiny app for Windows 10 and 11, free while in preview.">
   <meta name="theme-color" content="#0d0a0b">
-  <meta property="og:title" content="Dozelight for Windows (preview)">
-  <meta property="og:description" content="Warmer than Night Light, down to candlelight and pure red. A free early preview for Windows 10 and 11.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dozelight: evening light for your PC">
+  <meta property="og:description" content="Down to candlelight and pure red, right from the taskbar. A tiny app for Windows 10 and 11, free while in preview.">
   <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
+  <meta property="og:url" content="https://dozelight.github.io/windows.html">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
+  <script src="platform.js"></script>
 </head>
 <body>
-  <header class="nav scrolled">
-    <a class="brand" href="index.html" aria-label="Dozelight home">
-      <img src="assets/icon.png" alt="" width="32" height="32">
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Dozelight for Windows home">
+      <img src="assets/windows-icon.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
+    <div class="platform-switch" role="group" aria-label="Platform">
+      <a href="index.html" data-choose="mac">macOS</a>
+      <a href="windows.html" data-choose="windows" aria-current="page">Windows</a>
+    </div>
     <nav class="nav-links" aria-label="Sections">
-      <a href="index.html#features">Features</a>
-      <a href="index.html#download">Pricing</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="#demo">Try it</a>
+      <a href="#features">Features</a>
+      <a href="#next">Coming next</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="button button-small" href="download/Dozelight-Windows-Preview.zip" download>Download</a>
+    <a class="button button-small" href="#download">Download</a>
   </header>
+  <div class="platform-hint" id="platform-hint" hidden>Looks like you're on a Mac. <a href="index.html" data-choose="mac">See Dozelight for Mac →</a></div>
 
-  <main class="guide">
-    <header class="guide-head">
-      <p class="eyebrow">Free preview for Windows</p>
-      <h1>Evening light for Windows, too.</h1>
-      <p>Dozelight for Windows goes warmer than Night Light, down to candlelight and pure red, from a small panel in your taskbar. It's an early preview and free while it lasts.</p>
-      <ul class="preview-list">
-        <li>A warmth slider from 6500K down to 1000K, plus five presets</li>
-        <li>Red Only, with its own brightness</li>
-        <li>An on/off switch and Open at Login</li>
-        <li>Coming next: Auto mode that follows your bedtime, filters and automatic updates</li>
-      </ul>
-      <p class="fineprint">For Windows 10 and 11, 64-bit. It's a single 108 KB app with nothing else to install. It's brand new, so we'd love to hear how it works on your PC.</p>
-      <a class="button" href="download/Dozelight-Windows-Preview.zip" download>Download the preview (ZIP, 70 KB)</a>
-    </header>
-
-    <ol class="guide-steps">
-      <!-- 1 -->
-      <li class="guide-step">
-        <div class="guide-text">
-          <span class="step-no">1</span>
-          <h2>Unzip and open Dozelight</h2>
-          <p>Open <code>Dozelight-Windows-Preview.zip</code> from your Downloads folder and move <code>Dozelight.exe</code> to a folder where it can stay, for example Documents. Then double-click it.</p>
-          <p class="fineprint">Open at Login starts Dozelight from that folder, so keep it there.</p>
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Free preview for Windows</p>
+        <h1>Evening light<br><em>for your PC.</em></h1>
+        <p class="lede">
+          Dozelight takes your screen down to candlelight and pure red, right from the taskbar.
+          One click, one slider, and your evenings get gentler on your eyes.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="download/Dozelight-Windows-Preview.zip" download>Download free preview</a>
+          <a class="button button-ghost" href="windows-install.html">How to install</a>
         </div>
-        <figure class="shot" aria-label="Illustration: the Dozelight app icon">
-          <div class="alert">
-            <img src="assets/windows-icon.png" alt="" width="72" height="72">
-            <b>Dozelight.exe</b>
-            <p>Dozelight, version 0.1 preview</p>
-          </div>
-        </figure>
-      </li>
+        <p class="hero-note">Free while in preview · Windows 10 and 11 · 64-bit</p>
+        <ul class="hero-facts" aria-label="Highlights">
+          <li><strong>1000K</strong><span>warmest setting</span></li>
+          <li><strong>Red only</strong><span>zero blue light</span></li>
+          <li><strong>108 KB</strong><span>the whole app</span></li>
+        </ul>
+      </div>
 
-      <!-- 2 -->
-      <li class="guide-step">
-        <div class="guide-text">
-          <span class="step-no">2</span>
-          <h2>Click More info, then Run anyway</h2>
-          <p>Windows shows a blue <b>Windows protected your PC</b> screen for new apps that aren't signed yet. Click <b>More info</b>, then <b>Run anyway</b>.</p>
-          <p class="fineprint">You only do this once. After that Dozelight opens normally.</p>
-        </div>
-        <figure class="shot" aria-label="Illustration: the Windows SmartScreen message with More info and Run anyway highlighted">
-          <div class="smartscreen">
-            <b>Windows protected your PC</b>
-            <p>Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</p>
-            <span class="link highlight">More info</span>
-            <div class="facts"><span>App:</span><span>Dozelight.exe</span><span>Publisher:</span><span>Unknown publisher</span></div>
-            <div class="buttons"><span class="wbtn highlight">Run anyway</span><span class="wbtn">Don't run</span></div>
-          </div>
-        </figure>
-      </li>
-
-      <!-- 3 -->
-      <li class="guide-step">
-        <div class="guide-text">
-          <span class="step-no">3</span>
-          <h2>Find Dozelight in your taskbar</h2>
-          <p>The Dozelight panel opens by itself the first time. After that, click the sun on the horizon next to the clock to open it.</p>
-          <p>If you don't see the sun, it's hidden behind the <b>^</b> arrow. Drag it from there onto the taskbar so it's always one click away.</p>
-        </div>
-        <figure class="shot" aria-label="Illustration: the Windows taskbar with the Dozelight icon highlighted next to the clock">
-          <div class="taskbar">
-            <span class="tray-up">^</span>
-            <span class="tray-icon highlight" title="Dozelight"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#fff"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>
-            <span>ENG</span>
-            <span class="clock">21:30<br>29/09/2026</span>
-          </div>
-          <div class="mb-caption">↑ Dozelight</div>
-        </figure>
-      </li>
-
-      <!-- 4 -->
-      <li class="guide-step">
-        <div class="guide-text">
-          <span class="step-no">4</span>
-          <h2>Pick your warmth</h2>
-          <p>Drag the slider or choose a preset. <b>Red Only</b> removes all blue and green light, and the slider then sets how bright the red is.</p>
-          <p>Windows limits how warm apps can make the screen. If Dozelight shows a note about it, click <b>Unlock Warmer Colors</b> and approve it. You may need to restart Windows once.</p>
-        </div>
-        <figure class="shot" aria-label="Illustration: the Dozelight panel with the warmth slider and presets">
-          <div class="wpanel">
-            <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight <small>Preview</small></b><span style="display:flex;gap:8px;align-items:center">On <span class="wswitch on"></span></span></div>
-            <div class="wpanel-value"><span>Warmth</span><span>2000K · 49%</span></div>
-            <div class="wpanel-slider"><i style="width:49%"></i><b style="left:49%"></b></div>
-            <hr>
-            <div class="wpanel-row"><span>Warm</span><span class="muted-ui">2400K</span></div>
-            <div class="wpanel-row selected"><span>✓&nbsp; Candlelight</span><span class="muted-ui">2000K</span></div>
-            <div class="wpanel-row"><span>Firelight</span><span class="muted-ui">1600K</span></div>
-            <hr>
-            <div class="wpanel-row"><span>Red Only (No Blue or Green)</span><span class="wswitch"></span></div>
-          </div>
-        </figure>
-      </li>
-    </ol>
-
-    <section class="guide-more">
-      <h2>Troubleshooting</h2>
-      <details>
-        <summary>The screen doesn't change color</summary>
-        <p>With HDR turned on, Windows ignores color changes from apps. Turn HDR off in <b>Settings → System → Display</b>. If you use Night Light, try turning it off too, so the two don't compete. Remote Desktop and virtual machines usually don't allow color changes either.</p>
-      </details>
-      <details>
-        <summary>It doesn't get as warm as the slider says</summary>
-        <p>That's the Windows limit. Click <b>Unlock Warmer Colors</b> in the Dozelight panel, approve it, and restart Windows if Dozelight asks you to.</p>
-      </details>
-      <details>
-        <summary>Windows Security or my antivirus warns about Dozelight</summary>
-        <p>New apps that aren't signed yet sometimes get flagged. Dozelight only changes your screen's colors and doesn't connect to the internet. If your antivirus blocks it, email us and we'll look into it.</p>
-      </details>
-
-      <h2>Uninstalling</h2>
-      <p>Open the Dozelight panel, turn off <b>Open at Login</b>, then click <b>Quit Dozelight</b>. Your screen goes back to normal right away. Then delete <code>Dozelight.exe</code>.</p>
-
-      <p class="guide-help">Tried it? Tell us how it went at <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a>. Your feedback decides what comes next.</p>
-
-      <div class="mac-cta">
-        <img src="assets/icon.png" alt="" width="64" height="64">
-        <div>
-          <h2>On a Mac? Dozelight is ready there.</h2>
-          <p>Auto mode that follows your bedtime, Red Only, Darkroom and other filters, plus the Touch Bar, pointer and keyboard.</p>
-          <a class="button" href="index.html">See Dozelight for Mac</a>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="horizon"></div>
+        <!-- A recreation of the Dozelight panel -->
+        <div class="wpanel hero-panel">
+          <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight <small>Preview</small></b><span style="display:flex;gap:8px;align-items:center">On <span class="wswitch on"></span></span></div>
+          <div class="wpanel-value"><span>Warmth</span><span>1600K · 64%</span></div>
+          <div class="wpanel-slider"><i style="width:64%"></i><b style="left:64%"></b></div>
+          <hr>
+          <div class="wpanel-row"><span><span class="ico-glyph"></span>Evening</span><span class="muted-ui">3400K</span></div>
+          <div class="wpanel-row"><span><span class="ico-glyph"></span>Warm</span><span class="muted-ui">2400K</span></div>
+          <div class="wpanel-row"><span><span class="ico-glyph"></span>Candlelight</span><span class="muted-ui">2000K</span></div>
+          <div class="wpanel-row selected"><span><span class="ico-glyph">✓</span>Firelight</span><span class="muted-ui">1600K</span></div>
+          <div class="wpanel-row"><span><span class="ico-glyph"></span>Ember</span><span class="muted-ui">1200K</span></div>
+          <hr>
+          <div class="wpanel-row"><span>Red Only (No Blue or Green)</span><span class="wswitch"></span></div>
+          <div class="wpanel-row"><span>Open at Login</span><span class="wswitch on"></span></div>
         </div>
       </div>
-      <p class="fineprint">Windows, Night Light and Microsoft Defender are trademarks of Microsoft Corporation. Dozelight is not affiliated with Microsoft.</p>
+    </section>
+
+    <!-- Interactive demo -->
+    <section class="section demo" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">Try it</p>
+        <h2>Drag the evening in.</h2>
+        <p>This is a simulation in your browser. The real app tints your whole screen.</p>
+      </div>
+
+      <div class="demo-stage">
+        <div class="screen" id="screen">
+          <div class="window">
+            <div class="window-bar windows">
+              <span class="window-title">Notes</span>
+              <span class="win-controls" aria-hidden="true"><span>—</span><span>▢</span><span>✕</span></span>
+            </div>
+            <div class="window-body">
+              <aside class="sidebar">
+                <p class="side-head">Folders</p>
+                <p class="side-item active">All notes</p>
+                <p class="side-item">Ideas</p>
+                <p class="side-item">Reading list</p>
+                <p class="side-item">Travel</p>
+              </aside>
+              <article class="doc">
+                <div class="photo"><span class="photo-sun"></span></div>
+                <h3>Late night thoughts</h3>
+                <p>It's 11:40 PM and the screen still looks like noon. Every white page is a small sunrise.</p>
+                <div class="lines"><i></i><i></i><i style="width:72%"></i></div>
+                <div class="chips"><span class="chip blue">Blue</span><span class="chip green">Green</span><span class="chip red">Red</span></div>
+              </article>
+            </div>
+          </div>
+          <div class="demo-taskbar" aria-hidden="true">
+            <i class="blue"></i><i></i><i class="green"></i><i></i>
+            <span>21:30<br>29/09/2026</span>
+          </div>
+          <div class="tint" id="tint"></div>
+        </div>
+
+        <div class="controls">
+          <div class="readout">
+            <span class="readout-k" id="readout">6500K</span>
+            <span class="readout-label" id="readout-label">Daylight</span>
+          </div>
+          <label class="range-label" for="kelvin">Color temperature</label>
+          <input type="range" id="kelvin" min="0" max="1000" value="0" aria-describedby="readout">
+          <div class="range-ends"><span>Daylight</span><span>Evening</span><span>Candlelight</span></div>
+          <div class="presets" role="group" aria-label="Presets">
+            <button type="button" data-k="6500">Daylight</button>
+            <button type="button" data-k="3400">Evening</button>
+            <button type="button" data-k="2400">Warm</button>
+            <button type="button" data-k="2000">Candlelight</button>
+            <button type="button" data-k="1600">Firelight</button>
+            <button type="button" data-k="1200">Ember</button>
+            <button type="button" data-k="red" class="red">Red only</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2>Small app. Warm light. One click away.</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>Down to 1000K</h3>
+          <p>From daylight all the way to the glow of embers, with five presets from Evening to Ember.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Red only</h3>
+          <p>Removes blue and green completely, leaving the gentlest light a screen can make. Dim the red to taste.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="15" width="19" height="5" rx="1.5"/><path d="M14 11.5a3 3 0 0 1 6 0M17 6.5v1.5"/></svg></div>
+          <h3>Right in your taskbar</h3>
+          <p>Click the sun next to the clock for a panel with the switch, the slider and the presets. It stays open while you try things.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 4v5h-5"/></svg></div>
+          <h3>Stays put</h3>
+          <p>Your tint comes back by itself after the lock screen, sleep and display changes, and it opens with Windows if you like.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z"/></svg></div>
+          <h3>Featherlight and private</h3>
+          <p>The whole app is 108 KB, with nothing to install alongside it. It never goes online and collects nothing.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>Light and dark</h3>
+          <p>The panel follows your Windows theme and accent color, in the style of Windows 11.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section" id="next">
+      <div class="section-head">
+        <p class="eyebrow">Coming next</p>
+        <h2>Growing up in the open.</h2>
+        <p>Dozelight for Windows is new. Here's what's on the way, in about this order. <a class="inline-link" href="mailto:dozelight@icloud.com">Tell us what matters most to you →</a></p>
+      </div>
+      <ol class="roadmap">
+        <li><span class="status">Next</span><b>Follows your bedtime</b><span>Auto mode warms the screen gradually through the evening, switches to red after bedtime and fades back before you wake.</span></li>
+        <li><span class="status">Planned</span><b>Filters</b><span>Black &amp; White, Sepia, Darkroom and Extra Dim, for going darker than the lowest brightness.</span></li>
+        <li><span class="status">Planned</span><b>Dusk and dawn</b><span>Today's dusk and dawn in the panel, with no location permission needed.</span></li>
+        <li><span class="status">Planned</span><b>Automatic updates</b><span>New versions installed with one click, plus a proper installer.</span></li>
+      </ol>
+    </section>
+
+    <!-- Download -->
+    <section class="section pricing" id="download">
+      <div class="waitlist-card">
+        <img src="assets/windows-icon.png" alt="" width="72" height="72">
+        <p class="eyebrow">Free preview</p>
+        <h2>Get Dozelight</h2>
+        <p class="price"><strong>Free</strong><span>while in preview</span></p>
+        <p class="early-note"><b>Preview.</b> Dozelight for Windows is brand new. Try it free and <a href="mailto:dozelight@icloud.com">tell us how it works on your PC</a>. Your feedback decides what comes next.</p>
+        <ul class="included">
+          <li>Warmth slider, five presets and Red Only</li>
+          <li>On/off switch and Open at Login</li>
+          <li>No account and no email needed</li>
+          <li>Windows 10 and 11, 64-bit</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="button" href="download/Dozelight-Windows-Preview.zip" download>Download free preview</a>
+          <a class="button button-ghost" href="windows-install.html">Installation guide</a>
+        </div>
+        <p class="fineprint">Version 0.1 preview · 70 KB ZIP · Windows 10 and 11, 64-bit.</p>
+      </div>
+    </section>
+
+    <!-- Installing -->
+    <section class="section install" id="install">
+      <div class="section-head">
+        <p class="eyebrow">Installing</p>
+        <h2>Up and running in a minute.</h2>
+        <p>Dozelight isn't signed yet, so the first time you open it, Windows asks you to confirm. You only do this once. <a class="inline-link" href="windows-install.html">See the step-by-step guide with pictures →</a></p>
+      </div>
+      <ol class="steps">
+        <li><b>Unzip it</b><span>Open the ZIP and move <code>Dozelight.exe</code> to a folder where it can stay, for example Documents.</span></li>
+        <li><b>Open Dozelight</b><span>Windows shows <b>Windows protected your PC</b>. Click <b>More info</b>, then <b>Run anyway</b>.</span></li>
+        <li><b>Find the sun</b><span>Dozelight lives in the taskbar next to the clock. If it's hidden behind <b>^</b>, drag it onto the taskbar.</span></li>
+        <li><b>Go warmer</b><span>If Windows limits the warmest colors, click <b>Unlock Warmer Colors</b> in the panel and approve it once.</span></li>
+      </ol>
+    </section>
+
+    <!-- Updates list -->
+    <section class="section updates" id="updates">
+      <div class="waitlist-card small">
+        <h2>Hear about new features</h2>
+        <p>Leave your email and get a short note when Dozelight for Windows gets something new.</p>
+        <form class="signup" id="signup" hidden>
+          <label class="visually-hidden" for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <input type="hidden" name="_subject" value="New Dozelight update sign-up (Windows)">
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button" type="submit">Notify me</button>
+          <p class="fineprint signup-note">We'll only use your email for Dozelight news. See the <a href="privacy.html">privacy policy</a>.</p>
+        </form>
+        <p class="signup-status" id="signup-status" role="status"></p>
+        <div class="github-notify" id="github-notify">
+          <a class="button" href="https://github.com/Dozelight/dozelight.github.io/subscription">Watch on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions, answered.</h2>
+      </div>
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. Dozelight for Windows is free while it's in preview, with no trial and no account. If that ever changes, we'll say so clearly first, and the preview you have keeps working.</p>
+      </details>
+      <details>
+        <summary>Which PCs does it run on?</summary>
+        <p>Any PC with 64-bit Windows 10 or Windows 11. It also runs on Windows 11 laptops with Arm processors, through Windows' built-in emulation.</p>
+      </details>
+      <details>
+        <summary>Why does Windows warn me when I first open it?</summary>
+        <p>Dozelight isn't signed yet, so Microsoft Defender SmartScreen asks you to confirm once. Click <b>More info</b>, then <b>Run anyway</b>. The <a href="windows-install.html">installation guide</a> shows each step.</p>
+      </details>
+      <details>
+        <summary>Why do the warmest colors need unlocking?</summary>
+        <p>Windows limits how far apps can change the screen's colors. Dozelight can lift that limit once, with an administrator's approval, by setting the same Windows option other screen-tint apps use. You may need to restart Windows once afterwards.</p>
+      </details>
+      <details>
+        <summary>The screen doesn't change color. What can I do?</summary>
+        <p>With HDR turned on, Windows ignores color changes from apps, so turn HDR off in <b>Settings → System → Display</b>. If you use Night Light, try turning it off so the two don't compete. Remote Desktop and virtual machines usually don't allow color changes either.</p>
+      </details>
+      <details>
+        <summary>Do screenshots look red?</summary>
+        <p>No. The tint is applied on the way to the display, so screenshots, recordings and screen sharing keep their true colors.</p>
+      </details>
+      <details>
+        <summary>Does it collect any data?</summary>
+        <p>No. Dozelight for Windows never goes online. Your settings stay in your Windows user account.</p>
+      </details>
+      <details>
+        <summary>Is it a medical product?</summary>
+        <p>No. Dozelight is a comfort tool for using your computer in the evening. It doesn't diagnose, treat or prevent any condition.</p>
+      </details>
+      <details>
+        <summary>How do I uninstall it?</summary>
+        <p>Open the Dozelight panel, turn off <b>Open at Login</b> and click <b>Quit Dozelight</b>. Your screen goes back to normal right away. Then delete <code>Dozelight.exe</code>.</p>
+      </details>
+      <details>
+        <summary>Is there an iPhone or iPad version?</summary>
+        <p>iPhone and iPad don't allow apps to tint the whole screen. But they have built-in settings that come close: see our free <a href="iphone.html">guide to a red screen at night on iPhone and iPad</a>.</p>
+      </details>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <div class="footer-brand"><img src="assets/windows-icon.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
-    <p class="footer-links"><a href="install.html">Install guide</a> · <a href="windows.html">Windows preview</a> · <a href="iphone.html">iPhone &amp; iPad guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="iphone.html">iPhone &amp; iPad guide</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="fineprint">Windows, Night Light and Microsoft Defender are trademarks of Microsoft Corporation. Dozelight is not affiliated with Microsoft.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
