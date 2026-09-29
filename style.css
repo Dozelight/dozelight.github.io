@@ -365,3 +365,68 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .menu-item.sub::after { content: "›"; position: absolute; right: 14px; font-size: 15px; line-height: 1; top: 50%; translate: 0 -50%; color: #cbbfb6; }
+
+/* Menu illustration icons, matching the app */
+.menu-item { padding-left: 48px; }
+.menu-item.checked::before { left: 10px; }
+.menu-item .mi { position: absolute; left: 25px; top: 50%; translate: 0 -50%; width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; opacity: 0.9; }
+.inline-link { color: var(--amber); white-space: nowrap; }
+
+/* Install guide */
+.guide { max-width: var(--max); margin: 0 auto; padding: 64px 20px 96px; }
+.guide-head { display: grid; gap: 16px; max-width: 760px; margin-bottom: 56px; justify-items: start; }
+.guide-head h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+.guide-head > p:not(.eyebrow):not(.fineprint) { color: #e3d2c4; font-size: 1.15rem; }
+.guide-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+.guide-step { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; padding: 32px; border-radius: 24px; background: var(--surface); border: 1px solid var(--border); }
+.guide-text { display: grid; gap: 12px; align-content: start; }
+.guide-text p { color: #e3d2c4; }
+.step-no { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font: 600 1.1rem var(--mono); color: #1b0d06; background: linear-gradient(135deg, #ffc36e, var(--ember)); }
+.guide-text h2 { font-size: 1.6rem; }
+.shot { margin: 0; display: grid; place-items: center; padding: 28px; border-radius: 18px; min-height: 230px;
+  background: radial-gradient(ellipse at 30% 20%, #3b5b9a, transparent 60%), linear-gradient(160deg, #20325c, #4b2a55 60%, #7a3b3b); }
+.btn { display: inline-block; padding: 5px 14px; border-radius: 7px; font: 500 13px -apple-system, BlinkMacSystemFont, var(--sans); background: rgba(255, 255, 255, 0.14); color: #f4f4f6; }
+.btn.highlight { background: #2f7cf6; color: #fff; box-shadow: 0 0 0 3px rgba(255, 170, 80, 0.95), 0 0 24px 4px rgba(255, 150, 60, 0.6); }
+.win { width: min(100%, 440px); border-radius: 12px; overflow: hidden; background: #2a2a2d; box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08); font: 13px -apple-system, BlinkMacSystemFont, var(--sans); color: #eee; }
+.win-bar { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #323236; }
+.win-title { font-weight: 600; color: #bdbdc2; margin: 0 auto; padding-right: 50px; }
+.dmg { display: flex; align-items: center; justify-content: space-around; padding: 30px 20px 34px; background: #1f1f22; }
+.dmg-item { display: grid; justify-items: center; gap: 8px; color: #ddd; }
+.dmg-arrow { font-size: 34px; color: var(--amber); }
+.folder { width: 72px; height: 58px; border-radius: 8px; background: linear-gradient(#6fb6ff, #3c8df0); position: relative; margin-top: 8px; }
+.folder::before { content: ""; position: absolute; top: -8px; left: 6px; width: 28px; height: 12px; border-radius: 4px 4px 0 0; background: #5aa6fa; }
+.alert { width: min(100%, 300px); display: grid; justify-items: center; gap: 10px; text-align: center; padding: 22px 20px 18px; border-radius: 16px; background: rgba(46, 46, 50, 0.96); box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1); font: 13px -apple-system, BlinkMacSystemFont, var(--sans); color: #eee; }
+.alert img { border-radius: 12px; }
+.alert b { font-size: 14px; }
+.alert p { font-size: 12px; color: #c9c9ce; }
+.alert-buttons { display: grid; gap: 6px; width: 100%; margin-top: 4px; }
+.alert-buttons .btn { text-align: center; }
+.settings-body { display: grid; grid-template-columns: 130px 1fr; min-height: 180px; }
+.settings-side { display: grid; align-content: start; gap: 2px; padding: 10px 8px; background: #252528; }
+.settings-side span { padding: 4px 8px; border-radius: 6px; color: #cfcfd4; font-size: 12px; }
+.settings-side .active { background: #2f7cf6; color: #fff; }
+.settings-main { padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.settings-head { font-weight: 700; color: #eee; }
+.settings-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px; border-radius: 8px; background: #323236; font-size: 12px; }
+.settings-row.blocked { background: #3a3326; }
+.muted-ui { color: #a9a9ae; }
+.menubar { width: min(100%, 460px); display: flex; justify-content: space-between; align-items: center; padding: 6px 12px; border-radius: 10px; background: rgba(20, 20, 24, 0.75); backdrop-filter: blur(10px); font: 13px -apple-system, BlinkMacSystemFont, var(--sans); color: #f2f2f4; }
+.mb-right { display: flex; align-items: center; gap: 12px; }
+.mb-icon { display: grid; place-items: center; width: 26px; height: 22px; border-radius: 6px; }
+.mb-icon img { border-radius: 4px; }
+.mb-icon.highlight { box-shadow: 0 0 0 2px rgba(255, 170, 80, 0.95), 0 0 20px 4px rgba(255, 150, 60, 0.6); }
+.mb-glyph { opacity: 0.85; }
+.mb-caption { justify-self: end; margin-top: 8px; margin-right: 128px; color: var(--amber); font-weight: 600; }
+.guide-more { max-width: 820px; margin: 72px auto 0; display: grid; gap: 14px; }
+.guide-more h2 { font-size: 1.6rem; margin-top: 20px; }
+.guide-more > p { color: #e3d2c4; }
+.guide-more details { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.guide-more summary { cursor: pointer; font-weight: 600; }
+.guide-more details p { margin-top: 10px; color: var(--muted); }
+.guide-more a, .guide-help a { color: var(--amber); }
+.guide-help { margin-top: 24px; color: #e3d2c4; }
+@media (max-width: 900px) { .guide-step { grid-template-columns: 1fr; padding: 24px; } .mb-caption { margin-right: 20px; } }
+.btn { white-space: nowrap; }
+.settings-body { grid-template-columns: 150px 1fr; }
+.settings-side span { white-space: nowrap; }
+.settings-row span:first-child { font-size: 12px; }
