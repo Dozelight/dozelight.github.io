@@ -569,3 +569,7 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 .guide-more h3 { font-size: 1.15rem; margin-top: 14px; }
 .guide-more h3 small { font: 400 0.85rem var(--sans); color: var(--muted); margin-left: 8px; }
 .guide-more h3 + ul { margin-top: -4px; }
+.answer .answer-row { display: inline-grid; grid-template-columns: 90px 150px auto; gap: 12px; padding: 4px 0; color: inherit; text-decoration: none; }
+.answer .answer-row:hover span:nth-child(2) { text-decoration: underline; }
+.answer .answer-row span:last-child { color: var(--muted); }
+@media (max-width: 520px) { .answer .answer-row { grid-template-columns: 70px auto; } .answer .answer-row span:last-child { display: none; } }
