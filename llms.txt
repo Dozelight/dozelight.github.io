@@ -24,6 +24,9 @@ Key facts:
 
 ## Guides
 
+- [Screens, blue light and better sleep](https://dozelight.github.io/screens-and-sleep.html): melatonin, evening light and sleep habits for more restful sleep
+- [Rest your eyes](https://dozelight.github.io/rest-your-eyes.html): reducing digital eye strain, the 20-20-20 rule, evening screen settings
+- [Blue light filter for Mac and Windows](https://dozelight.github.io/blue-light-filter.html): what a blue light filter does and how to set one up
 - [How to make Night Shift warmer on Mac](https://dozelight.github.io/night-shift-warmer.html): Night Shift's limit (about 2700K) and how to go warmer
 - [How to make your screen red at night on Windows](https://dozelight.github.io/red-screen-windows.html): Night Light's limit and how to get pure red
 - [Night Shift vs Night Light vs f.lux vs Dozelight](https://dozelight.github.io/compare.html): a comparison table
