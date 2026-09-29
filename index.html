@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dozelight: evening light for your Mac</title>
+  <meta name="description" content="Dozelight is a Mac menu bar app that takes your screen warmer than Night Shift allows, down to candlelight and pure red, on your bedtime schedule.">
+  <meta name="theme-color" content="#0d0a0b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dozelight: evening light for your Mac">
+  <meta property="og:description" content="Down to candlelight and pure red, on your bedtime schedule. A tiny menu bar app for macOS.">
+  <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
+  <meta property="og:url" content="https://dozelight.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Dozelight home">
+      <img src="assets/icon.png" alt="" width="32" height="32">
+      <span>Dozelight</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#demo">Try it</a>
+      <a href="#features">Features</a>
+      <a href="#night">Your night</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="button button-small" href="#waitlist">Get notified</a>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Coming soon for macOS</p>
+        <h1>Evening light<br><em>for your Mac.</em></h1>
+        <p class="lede">
+          Night Shift stops at 2700K. Dozelight keeps going, down to candlelight and pure red,
+          and follows your bedtime so your screen winds down with you.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#waitlist">Get notified at launch</a>
+          <a class="button button-ghost" href="#demo">Try it in your browser</a>
+        </div>
+        <ul class="hero-facts" aria-label="Highlights">
+          <li><strong>1000K</strong><span>warmest setting</span></li>
+          <li><strong>Red only</strong><span>zero blue light</span></li>
+          <li><strong>0%</strong><span>CPU when idle</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="horizon"></div>
+        <!-- A recreation of Dozelight's menu -->
+        <div class="menu">
+          <div class="menu-row sun-row">
+            <span><i class="ico ico-rise"></i>Dawn 05:58</span>
+            <span><i class="ico ico-set"></i>Dusk 18:55</span>
+          </div>
+          <div class="menu-row title-row">
+            <b>Dozelight</b>
+            <span class="switch on"><i></i></span><span class="muted">On</span>
+            <span class="value">Auto · 1900K</span>
+          </div>
+          <div class="fake-slider"><div class="fill" style="width:47%"></div><div class="knob" style="left:47%"></div></div>
+          <div class="menu-check"><span class="box on"></span>Snap to presets</div>
+          <div class="menu-sep"></div>
+          <div class="menu-head">Presets</div>
+          <div class="menu-item">Warm (2400K)</div>
+          <div class="menu-item">Candlelight (2000K)</div>
+          <div class="menu-item">Firelight (1600K)</div>
+          <div class="menu-item">Ember (1200K)</div>
+          <div class="menu-sep"></div>
+          <div class="menu-item">Red Only (No Blue or Green)</div>
+          <div class="menu-sep"></div>
+          <div class="menu-head">Automatic</div>
+          <div class="menu-item checked">Auto (Protect Sleep and Melatonin)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive demo -->
+    <section class="section demo" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">Try it</p>
+        <h2>Drag the evening in.</h2>
+        <p>This is a simulation in your browser. The real app tints your whole display, and the Touch Bar too.</p>
+      </div>
+
+      <div class="demo-stage">
+        <div class="screen" id="screen">
+          <div class="window">
+            <div class="window-bar">
+              <span class="traffic"><i></i><i></i><i></i></span>
+              <span class="window-title">Notes</span>
+            </div>
+            <div class="window-body">
+              <aside class="sidebar">
+                <p class="side-head">Folders</p>
+                <p class="side-item active">All notes</p>
+                <p class="side-item">Ideas</p>
+                <p class="side-item">Reading list</p>
+                <p class="side-item">Travel</p>
+              </aside>
+              <article class="doc">
+                <div class="photo"><span class="photo-sun"></span></div>
+                <h3>Late night thoughts</h3>
+                <p>It's 11:40 PM and the screen still looks like noon. Every white page is a small sunrise.</p>
+                <div class="lines"><i></i><i></i><i style="width:72%"></i></div>
+                <div class="chips"><span class="chip blue">Blue</span><span class="chip green">Green</span><span class="chip red">Red</span></div>
+              </article>
+            </div>
+          </div>
+          <div class="touchbar">
+            <span class="tb-esc">esc</span>
+            <span class="tb-group"><i class="tb-btn"></i><i class="tb-btn"></i><i class="tb-btn wide"></i></span>
+            <span class="tb-group"><i class="tb-btn"></i><i class="tb-btn"></i><i class="tb-btn"></i><i class="tb-btn"></i></span>
+          </div>
+          <div class="tint" id="tint"></div>
+        </div>
+
+        <div class="controls">
+          <div class="readout">
+            <span class="readout-k" id="readout">6500K</span>
+            <span class="readout-label" id="readout-label">Daylight</span>
+          </div>
+          <label class="range-label" for="kelvin">Color temperature</label>
+          <input type="range" id="kelvin" min="0" max="1000" value="0" aria-describedby="readout">
+          <div class="range-ends"><span>Daylight</span><span>Night Shift limit</span><span>Candlelight</span></div>
+          <div class="presets" role="group" aria-label="Presets">
+            <button type="button" data-k="6500">Daylight</button>
+            <button type="button" data-k="2700">Night Shift</button>
+            <button type="button" data-k="2400">Warm</button>
+            <button type="button" data-k="2000">Candlelight</button>
+            <button type="button" data-k="1600">Firelight</button>
+            <button type="button" data-k="1200">Ember</button>
+            <button type="button" data-k="red" class="red">Red only</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2>Small app. Warm light. Every detail.</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>Past Night Shift</h3>
+          <p>Night Shift tops out at 2700K. Dozelight adds warmth on top of it, down to 1000K, with presets from Warm to Ember.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Red only</h3>
+          <p>Removes blue and green completely, leaving the gentlest light a screen can make. Dim the red to taste.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div>
+          <h3>Follows your bedtime</h3>
+          <p>Auto mode warms the screen gradually through the evening, switches to red after bedtime and fades back before you wake.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="9" width="19" height="6" rx="2"/><path d="M6 12h2M10.5 12h3M16 12h2"/></svg></div>
+          <h3>The Touch Bar too</h3>
+          <p>Night Shift ignores the Touch Bar. Dozelight tints it to match your screen, or gives it its own slider.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 3l12 7-5.5 1.5L10 17z"/><circle cx="10" cy="11" r="8.5" opacity=".35"/></svg></div>
+          <h3>A pointer you can find</h3>
+          <p>In deep red the arrow gets lost. Turn on a larger pointer and a soft halo, only when the screen is at its warmest.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 7V4M5.6 10.6 3.5 8.5M18.4 10.6l2.1-2.1"/></svg></div>
+          <h3>Dusk and dawn</h3>
+          <p>Today's dusk and dawn, right in the menu. No location permission needed.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>Instant</h3>
+          <p>Reacts to Night Shift, your settings and your displays in a fraction of a second. No polling, no lag.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z"/></svg></div>
+          <h3>Featherlight and private</h3>
+          <p>Under 300 KB, no measurable CPU when idle, no network access and no data collected. It just changes the light.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- A night with Dozelight -->
+    <section class="section night" id="night">
+      <div class="section-head">
+        <p class="eyebrow">Your night</p>
+        <h2>A screen that winds down with you.</h2>
+        <p>Blue light is what reads as daytime. With Auto mode, Dozelight lowers it little by little as bedtime gets closer,
+          then keeps only red light through the night, so a 3 AM glance at your screen stays gentle.</p>
+      </div>
+      <div class="timeline" role="img" aria-label="With bedtime at 23:00 and wake-up at 07:00: Night Shift only until 19:00, gradually warmer to 1900K at bedtime, red only from midnight, and back to normal by 07:00.">
+        <div class="timeline-bar"></div>
+        <ol class="timeline-stops">
+          <li style="--at:0%"><b>19:00</b><span>Night Shift only</span></li>
+          <li style="--at:16.7%"><b>21:00</b><span>2300K</span></li>
+          <li style="--at:33.3%"><b>23:00</b><span>Bedtime, 1900K</span></li>
+          <li style="--at:41.7%"><b>00:00</b><span>Red only</span></li>
+          <li style="--at:95.8%"><b>06:30</b><span>Fading back</span></li>
+          <li style="--at:100%"><b>07:00</b><span>Good morning</span></li>
+        </ol>
+      </div>
+      <p class="fineprint">Set your own bedtime and wake-up time in the menu.</p>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section" id="compare">
+      <div class="section-head">
+        <p class="eyebrow">Compared</p>
+        <h2>What Night Shift can't do.</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col"></th><th scope="col">Night Shift</th><th scope="col">Dozelight</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Warmest setting</th><td>2700K</td><td class="yes">1000K</td></tr>
+            <tr><th scope="row">Red only, no blue or green</th><td class="no">No</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Gradual bedtime schedule</th><td class="no">Sunset to sunrise only</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Touch Bar</th><td class="no">Stays white</td><td class="yes">Tinted to match</td></tr>
+            <tr><th scope="row">Pointer help in the dark</th><td class="no">No</td><td class="yes">Larger pointer and halo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section class="section waitlist" id="waitlist">
+      <div class="waitlist-card">
+        <img src="assets/icon.png" alt="" width="72" height="72">
+        <h2>Dozelight is almost ready.</h2>
+        <p>It launches with a free trial. Get a heads-up the moment it's out: one message, no spam.</p>
+        <form class="signup" id="signup" hidden>
+          <label class="visually-hidden" for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <input type="hidden" name="_subject" value="New Dozelight waitlist sign-up">
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button" type="submit">Notify me</button>
+          <p class="fineprint signup-note">We'll only use your email to let you know when Dozelight launches.</p>
+        </form>
+        <p class="signup-status" id="signup-status" role="status"></p>
+        <div class="github-notify" id="github-notify">
+          <a class="button" href="https://github.com/Dozelight/dozelight.github.io/subscription">Watch for the release on GitHub</a>
+          <p class="fineprint">On GitHub, choose <b>Watch → Custom → Releases</b> to get an email when Dozelight launches.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions, answered.</h2>
+      </div>
+      <details>
+        <summary>Which Macs does it run on?</summary>
+        <p>Any Mac with macOS 13 Ventura or later, Apple silicon or Intel. Touch Bar tinting works on Apple silicon MacBook Pros with a Touch Bar.</p>
+      </details>
+      <details>
+        <summary>Does it replace Night Shift?</summary>
+        <p>It works together with it. Keep Night Shift on its usual schedule. Dozelight adds warmth on top of it while Night Shift is on, and can also tint the screen on its own.</p>
+      </details>
+      <details>
+        <summary>Will it slow down my Mac?</summary>
+        <p>No. Dozelight only does work when something changes, like Night Shift turning on or you moving a slider. When idle it uses no measurable CPU.</p>
+      </details>
+      <details>
+        <summary>Do screenshots and screen recordings look red?</summary>
+        <p>No. The tint is applied by the display itself, so screenshots, recordings and screen sharing keep their true colors.</p>
+      </details>
+      <details>
+        <summary>Does it collect any data?</summary>
+        <p>No. Dozelight doesn't connect to the internet and collects nothing. Dusk and dawn are estimated from your time zone, so it doesn't need your location either.</p>
+      </details>
+      <details>
+        <summary>Is it a medical product?</summary>
+        <p>No. Dozelight is a comfort tool for using your Mac in the evening. It doesn't diagnose, treat or prevent any condition.</p>
+      </details>
+      <details>
+        <summary>How much will it cost?</summary>
+        <p>Pricing will be announced at launch, and there will be a free trial so you can try every feature first.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="assets/icon.png" alt="" width="24" height="24"> Dozelight</div>
+    <p>© 2026 Dozelight. Made for late nights.</p>
+    <p class="fineprint">Mac, macOS, Night Shift and Touch Bar are trademarks of Apple Inc. Dozelight is not affiliated with Apple.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
