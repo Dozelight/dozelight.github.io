@@ -1,0 +1,4 @@
+version 0.3.0
+build 3
+url https://dozelight.github.io/updates/windows/Dozelight-0.3.0.exe
+sha256 f6b1cb54d1dec9fe66de1e1f25ed46d628263e88ecab0d7bfad385be97c1a8da
