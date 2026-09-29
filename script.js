@@ -119,3 +119,37 @@ if (!reduceMotion && "IntersectionObserver" in window) {
   document.querySelectorAll(".section-head, .card, .demo-stage, .timeline, .table-wrap, .waitlist-card, .faq details")
     .forEach(el => { el.classList.add("reveal"); revealer.observe(el); });
 }
+
+// --- Buy buttons -----------------------------------------------------------------
+// Polar's checkout takes a couple of seconds to open, so give instant feedback on click, and connect to
+// Polar early when someone is about to click (only then, so ordinary visitors never contact Polar).
+const buyLinks = [...document.querySelectorAll('a[href^="https://buy.polar.sh/"]')];
+let warmedUp = false;
+function warmUp() {
+  if (warmedUp) return;
+  warmedUp = true;
+  for (const origin of ["https://buy.polar.sh", "https://polar.sh"]) {
+    const link = document.createElement("link");
+    link.rel = "preconnect";
+    link.href = origin;
+    link.crossOrigin = "anonymous";
+    document.head.appendChild(link);
+  }
+}
+buyLinks.forEach(link => {
+  link.dataset.label = link.textContent;
+  link.addEventListener("pointerenter", warmUp);
+  link.addEventListener("focus", warmUp);
+  link.addEventListener("touchstart", warmUp, { passive: true });
+  link.addEventListener("click", event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;  // new tab: leave as is
+    if (link.classList.contains("loading")) { event.preventDefault(); return; }       // ignore double clicks
+    link.classList.add("loading");
+    link.textContent = "Opening secure checkout…";
+  });
+});
+// Coming back with the browser's Back button restores the original label.
+window.addEventListener("pageshow", event => {
+  if (!event.persisted) return;
+  buyLinks.forEach(link => { link.classList.remove("loading"); link.textContent = link.dataset.label; });
+});
