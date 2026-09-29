@@ -8,7 +8,9 @@
   var chosen = null;
   try { chosen = localStorage.getItem("platform"); } catch (e) {}
   var root = document.documentElement, page = root.getAttribute("data-platform");
-  if (root.hasAttribute("data-home") && !chosen && detected && detected !== page) {
+  // Search engine crawlers (Bing's runs on Windows) always get the page they asked for.
+  var crawler = /bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent);
+  if (root.hasAttribute("data-home") && !chosen && detected && detected !== page && !crawler) {
     location.replace("windows.html" + location.hash);
     return;
   }
