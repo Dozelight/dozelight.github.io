@@ -4,4 +4,4 @@ The website for **Dozelight**, a Mac menu bar app that takes your screen warmer 
 
 **Website:** https://dozelight.github.io/
 
-Dozelight is coming soon. To hear when it launches, watch this repository for releases (**Watch → Custom → Releases**).
+Dozelight is available in early access with a 14-day free trial. Download it from the website.

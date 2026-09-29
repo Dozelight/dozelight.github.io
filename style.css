@@ -328,3 +328,32 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Launch: pricing, install steps, legal pages */
+.hero-note { color: var(--muted); font-size: 0.85rem; }
+.price { display: flex; align-items: baseline; gap: 10px; justify-content: center; }
+.price strong { font: 700 3.2rem var(--serif); color: var(--text); }
+.price span { color: var(--muted); }
+.included { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; text-align: left; }
+.included li { padding-left: 26px; position: relative; }
+.included li::before { content: "✓"; position: absolute; left: 0; color: var(--amber); font-weight: 700; }
+.waitlist-card.small { padding: 44px 28px; }
+.waitlist-card.small h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.steps li { counter-increment: step; display: grid; gap: 8px; align-content: start; padding: 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.steps li::before { content: counter(step); width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font: 600 1rem var(--mono); color: #1b0d06; background: linear-gradient(135deg, #ffc36e, var(--ember)); }
+.steps b { font-size: 1.05rem; }
+.steps span { color: var(--muted); font-size: 0.95rem; }
+code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; border-radius: 6px; }
+.footer-links a { color: var(--muted); }
+.footer-links a:hover { color: var(--text); }
+.faq details a, .signup-note a { color: var(--amber); }
+.legal { max-width: 760px; margin: 0 auto; padding: 72px 20px 96px; }
+.legal h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 8px; }
+.legal h2 { font-size: 1.4rem; margin: 36px 0 10px; }
+.legal p, .legal li { color: #e3d2c4; }
+.legal p + p { margin-top: 12px; }
+.legal ul { padding-left: 22px; display: grid; gap: 6px; }
+.legal a { color: var(--amber); }
+@media (max-width: 980px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .steps { grid-template-columns: 1fr; } }
