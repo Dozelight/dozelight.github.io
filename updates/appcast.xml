@@ -3,6 +3,15 @@
     <channel>
         <title>Dozelight</title>
         <item>
+            <title>1.3.3</title>
+            <pubDate>Tue, 29 Sep 2026 08:12:37 +0200</pubDate>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>1.3.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.3.3.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dozelight.github.io/updates/Dozelight-1.3.3.zip" length="1315723" type="application/octet-stream" sparkle:edSignature="YQqeeVZoXLzOTqcsdFj8SKdRgNYuDfER+x0uRxWCQ+EY7g0owlDt6UG32xb8ZNxx1uRly4laYrW3OXsHgZ+iDA=="/>
+        </item>
+        <item>
             <title>1.3.2</title>
             <pubDate>Tue, 29 Sep 2026 07:57:07 +0200</pubDate>
             <sparkle:version>22</sparkle:version>
@@ -19,15 +28,6 @@
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.3.1.html</sparkle:releaseNotesLink>
             <enclosure url="https://dozelight.github.io/updates/Dozelight-1.3.1.zip" length="1312638" type="application/octet-stream" sparkle:edSignature="lJPyX6x16ozmfzJXQjXR7rRnavxTWdhqSAntMr02W6PKZkWGNQbuveQB4e8o7FiSeyVg/757ELFujId5YeBmAQ=="/>
-        </item>
-        <item>
-            <title>1.3.0</title>
-            <pubDate>Tue, 29 Sep 2026 07:09:40 +0200</pubDate>
-            <sparkle:version>20</sparkle:version>
-            <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.3.0.html</sparkle:releaseNotesLink>
-            <enclosure url="https://dozelight.github.io/updates/Dozelight-1.3.0.zip" length="1311022" type="application/octet-stream" sparkle:edSignature="tgMGVnLIUd7WLckEEEVMkT4SJnFAP0ZIRzTE8n+x1a45gvrWbfVIchDTqA9JYQXoFdI5wlsSbNAFgC6XzLlrDA=="/>
         </item>
     </channel>
 </rss>
