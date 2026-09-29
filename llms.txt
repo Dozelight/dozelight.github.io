@@ -1,0 +1,35 @@
+# Dozelight
+
+> Dozelight is an app for Mac and Windows that makes the screen warmer than Night Shift or Night Light allow, down to 1000K (candlelight and embers) and pure red with no blue or green light, and follows the user's bedtime automatically. One-time purchase of $9.99 (early-access price, rising to $14.99) with a 14-day free trial. One license key works on up to 3 computers, Mac or Windows.
+
+Key facts:
+
+- Platforms: macOS 13 Ventura or later (Apple silicon and Intel), as a menu bar app. Windows 10 and 11, 64-bit, as a taskbar (system tray) app.
+- Warmth: a slider from normal down to 1000K, with presets Evening (3400K, Windows), Warm (2400K), Candlelight (2000K), Firelight (1600K) and Ember (1200K).
+- Red Only: removes blue and green completely, with adjustable red brightness.
+- Auto mode: warms the screen gradually through the evening (about 1900K at bedtime), switches to red only after bedtime and fades back to normal in the 30 minutes before waking. Any bedtime and wake-up time can be set.
+- Dusk and dawn times, estimated from the time zone, with no location permission.
+- Filters: Black & White, Sepia, Invert Colors, Darkroom (inverted red: black pages with red text), High Contrast and Extra Dim (darker than the lowest brightness).
+- Pointer help for deep red: a larger pointer and a soft halo behind it.
+- Mac only: works together with Night Shift (adds warmth on top of it), tints the Touch Bar, can switch off the keyboard backlight at the warmest settings.
+- Privacy: no analytics or tracking. The app goes online only to activate and occasionally check the license key (sent to Polar, the store) and to check for updates.
+- Screenshots and screen recordings keep their true colors.
+- Not a medical product: a comfort tool for using a computer in the evening.
+- Support: dozelight@icloud.com
+
+## Product pages
+
+- [Dozelight for Mac](https://dozelight.github.io/): features, pricing, download and FAQ for macOS
+- [Dozelight for Windows](https://dozelight.github.io/windows.html): features, pricing, download and FAQ for Windows 10 and 11
+
+## Guides
+
+- [How to make Night Shift warmer on Mac](https://dozelight.github.io/night-shift-warmer.html): Night Shift's limit (about 2700K) and how to go warmer
+- [How to make your screen red at night on Windows](https://dozelight.github.io/red-screen-windows.html): Night Light's limit and how to get pure red
+- [Night Shift vs Night Light vs f.lux vs Dozelight](https://dozelight.github.io/compare.html): a comparison table
+- [Red screen at night on iPhone and iPad](https://dozelight.github.io/iphone.html): built-in settings, since iOS apps can't tint the screen
+- [Installing on Mac](https://dozelight.github.io/install.html) and [Installing on Windows](https://dozelight.github.io/windows-install.html)
+
+## Legal
+
+- [Privacy policy](https://dozelight.github.io/privacy.html), [Terms](https://dozelight.github.io/terms.html), [Refunds](https://dozelight.github.io/refunds.html): 14-day money-back guarantee
