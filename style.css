@@ -536,6 +536,7 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 .window-bar.windows { justify-content: space-between; background: #f3f3f3; }
 .window-bar.windows .window-title { font-weight: 400; color: #1b1b1b; }
 .win-controls { display: flex; gap: 18px; color: #444; font-size: 12px; letter-spacing: 0; }
+.win-min { align-self: center; width: 10px; height: 1px; background: currentColor; }  /* the minimize button, a line rather than a dash */
 .demo-taskbar { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 16px auto 0; width: 88%; height: 38px; padding: 0 12px; border-radius: 8px; background: #202020; position: relative; }
 .demo-taskbar i { width: 22px; height: 22px; border-radius: 5px; background: #e9e9ee; }
 .demo-taskbar i.blue { background: linear-gradient(135deg, #4aa3ff, #2f6fe0); }
