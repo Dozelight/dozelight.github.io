@@ -1,5 +1,5 @@
-version 1.3.2
-build 6
-url https://dozelight.github.io/updates/windows/Dozelight-1.3.2.exe
-sha256 43706b9be48c15c208b339db8b473c28a8f6bb4a9e6702091e21044e446c9e2c
-signature 2c589576e3f8559f899d452cc3f0e05978485ac52889553d9e6d267f65c3987770a1ec29e5f5794d4e5803a0c07cb0f5183578dd8c467928f2cd2597097bd75e
+version 1.3.3
+build 7
+url https://dozelight.github.io/updates/windows/Dozelight-1.3.3.exe
+sha256 063da22ce56a51c7ed7730c8ae971bb72d9219194cc3e7d43a95970fd4bc146a
+signature 62749df8309b13a4bd9f1d5d5905261ee311ddb0699cad0e2b969620fc3c56ca18d82c0f089b1c973e9390ae036791b3ef258f173775f1f68c30ee79e4f10fc3
