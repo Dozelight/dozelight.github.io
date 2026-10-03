@@ -1,5 +1,5 @@
-version 1.5.3
-build 19
-url https://dozelight.github.io/updates/windows/Dozelight-1.5.3.exe
-sha256 0ea5659cdbe0da5f2bddcafd51bd69615f080abc0fdde2db3c175398fe309201
-signature 6f564aece2b236eea72ca569ec65424d74e5c5ec25df59fe5695bc4360dcf3ae2ced1a8fe9d7c209d18a12bbd0c98ac52f6f2edf4743fc8c22342e62b32bae39
+version 1.5.4
+build 20
+url https://dozelight.github.io/updates/windows/Dozelight-1.5.4.exe
+sha256 582b75eae2c385ce3346f3195bfa20857ea53da681862e777ea1b98382b7af0c
+signature deac044325045ab536ad8c5ec41275993807f2bff46867e306cf8a6dfae1b05028ecaff2e21efa647fae8dabd2ad610af4c1b2ead1beaaead64f8736155283a4
