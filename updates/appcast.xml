@@ -3,6 +3,16 @@
     <channel>
         <title>Dozelight</title>
         <item>
+            <title>1.5.2</title>
+            <pubDate>Sat, 03 Oct 2026 15:59:53 +0200</pubDate>
+            <sparkle:fullReleaseNotesLink>https://dozelight.github.io/changelog.html</sparkle:fullReleaseNotesLink>
+            <sparkle:version>85</sparkle:version>
+            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.5.2.html</sparkle:releaseNotesLink>
+            <enclosure url="https://dozelight.github.io/updates/Dozelight-1.5.2.zip" length="1388856" type="application/octet-stream" sparkle:edSignature="cp5NfDVd3IIiLWC6L2JMehQVTuyY6Zm+RxxZrVuCYLu3uTHOx8W4dQXAt/aO4gAAJ1YdIhD7WorZ53i31xRXBQ=="/>
+        </item>
+        <item>
             <title>1.5.1</title>
             <pubDate>Fri, 02 Oct 2026 14:26:08 +0200</pubDate>
             <sparkle:fullReleaseNotesLink>https://dozelight.github.io/changelog.html</sparkle:fullReleaseNotesLink>
@@ -21,16 +31,6 @@
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.5.0.html</sparkle:releaseNotesLink>
             <enclosure url="https://dozelight.github.io/updates/Dozelight-1.5.0.zip" length="1382278" type="application/octet-stream" sparkle:edSignature="ak0+9HRSfmjnx38tIPwif+QzIhWYKZVbs2ZJqA7RYg8ZHwTLYDeP0J7qjhXN283QAPTyt0TIFE97BN+dyz/DCw=="/>
-        </item>
-        <item>
-            <title>1.4.7</title>
-            <pubDate>Wed, 30 Sep 2026 09:37:56 +0200</pubDate>
-            <sparkle:fullReleaseNotesLink>https://dozelight.github.io/changelog.html</sparkle:fullReleaseNotesLink>
-            <sparkle:version>64</sparkle:version>
-            <sparkle:shortVersionString>1.4.7</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://dozelight.github.io/updates/Dozelight-1.4.7.html</sparkle:releaseNotesLink>
-            <enclosure url="https://dozelight.github.io/updates/Dozelight-1.4.7.zip" length="1329453" type="application/octet-stream" sparkle:edSignature="hYooCyx4YMfcu9LrMm3XjvV4OTnfrpLn5eIpYUtbvnJuYXoSOn3AJaNhInOR064v49uTEJZVe8OmmC0rJSY8Aw=="/>
         </item>
     </channel>
 </rss>
