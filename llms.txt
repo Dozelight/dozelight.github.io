@@ -6,7 +6,7 @@ Key facts:
 
 - Platforms: macOS 13 Ventura or later (Apple silicon and Intel), as a menu bar app. Windows 10 and 11, 64-bit, as a taskbar (system tray) app.
 - Warmth: a slider from normal down to 1000K, with presets Evening (3400K, Windows), Warm (2400K), Candlelight (2000K), Firelight (1600K) and Ember (1200K).
-- Blocks blue light completely at 1900K and warmer. Red Only removes blue and green completely, with adjustable red brightness.
+- Blocks blue light completely at 1900K and warmer. Red Only, the last step of the slider, removes blue and green completely; Extra Dim takes it darker.
 - Auto mode: warms the screen gradually through the evening (about 1900K at bedtime), switches to red only after bedtime and fades back to normal in the 30 minutes before waking. Any bedtime and wake-up time can be set.
 - Dusk and dawn times, estimated from the time zone, with no location permission.
 - Filters: Black & White, Sepia, Invert Colors, Darkroom (inverted red: black pages with red text), High Contrast and Extra Dim (darker than the lowest brightness).

@@ -98,7 +98,7 @@ if (WAITLIST_ENDPOINT) {
       });
       if (!response.ok) throw new Error(String(response.status));
       form.hidden = true;
-      status.textContent = "You're on the list. We'll email you once, when Dozelight launches.";
+      status.textContent = "You're on the list. We'll email you about big updates, and never more than that.";
     } catch {
       status.textContent = "That didn't go through. Please try again in a moment.";
       button.disabled = false;
