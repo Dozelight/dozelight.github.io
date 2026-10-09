@@ -150,6 +150,98 @@
       </div>
     </section>
 
+    <!-- Feature showcase -->
+    <section class="section showcase" id="showcase">
+      <div class="section-head">
+        <p class="eyebrow">What it does</p>
+        <h2>Three things it does better.</h2>
+      </div>
+      <div class="showcase-rows">
+        <div class="guide-step showcase-row">
+          <div class="guide-text">
+            <h3>Auto, with dusk &amp; dawn and Maximum warmth</h3>
+            <p>Auto warms the screen a little at a time through the evening, switches to red after bedtime and fades back before you wake. It can follow your bedtime, or dusk and dawn.</p>
+            <p>Maximum warmth sets how far it goes: a gentle amber, candlelight, or all the way to red. A reminder 30 minutes before bed is one tick away.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Illustration: a timeline from 18:00 to 07:00. The screen stays neutral until dusk, warms steadily towards bedtime, flattens against the Maximum warmth line through the night and fades back to neutral just before 07:00.">
+          <div class="auto-chart" aria-hidden="true">
+            <div class="auto-plot">
+              <svg class="auto-curve" viewBox="0 0 440 120" preserveAspectRatio="none">
+                <defs><linearGradient id="auto-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a2f" stop-opacity="0.45"/><stop offset="1" stop-color="#ff7a2f" stop-opacity="0"/></linearGradient></defs>
+                <path class="vline" d="M34 0V120M169 0V120" vector-effect="non-scaling-stroke"/>
+                <line class="max" x1="0" y1="22" x2="440" y2="22" vector-effect="non-scaling-stroke"/>
+                <path class="area" d="M0 108H34C90 108 125 72 169 46C182 38 192 24 206 22H406C418 22 428 72 440 108V120H0Z"/>
+                <path class="line" d="M0 108H34C90 108 125 72 169 46C182 38 192 24 206 22H406C418 22 428 72 440 108" vector-effect="non-scaling-stroke"/>
+              </svg>
+              <span class="auto-max">Maximum warmth</span>
+              <span class="auto-sun"></span>
+            </div>
+            <div class="auto-bar"></div>
+            <div class="auto-marks">
+              <span class="start" style="--at:0%">18:00</span>
+              <span class="optional" style="--at:19%">dusk</span>
+              <span style="--at:38.5%">bedtime</span>
+              <span class="end" style="--at:100%">wake 07:00</span>
+            </div>
+          </div>
+        </figure>
+        </div>
+        <div class="guide-step showcase-row flip">
+          <div class="guide-text">
+            <h3>Red only, the last step of the slider</h3>
+            <p>The slider runs from daylight down to 1000K. Then there's one more step: Red only removes blue and green completely, leaving the gentlest light a screen can make.</p>
+            <p>Extra Dim takes the red darker still, below the lowest brightness setting.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Illustration: Dozelight's warmth slider, from daylight through the Evening, Warm, Candlelight, Firelight and Ember presets to a 1000K stop, then a separate red block marked Red only, where the knob sits. Below it, an Extra Dim slider at 40%.">
+          <div class="wpanel" aria-hidden="true">
+            <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight</b><span style="display:flex;gap:8px;align-items:center">On <span class="wswitch on"></span></span></div>
+            <div class="wpanel-value"><span>Warmth</span><span>Red only</span></div>
+            <div class="kslider win">
+              <span class="k-label above start" style="--at:0%">Daylight</span>
+              <span class="k-label above" style="--at:76%">1000K</span>
+              <div class="kslider-track">
+                <i class="seg warm"></i><i class="seg pause"></i><i class="seg red"></i>
+                <i class="tick" style="--at:12%"></i><i class="tick" style="--at:26%"></i><i class="tick" style="--at:38%"></i><i class="tick" style="--at:54%"></i><i class="tick" style="--at:66%"></i>
+                <b class="knob" style="--at:92.5%"></b>
+              </div>
+              <span class="k-label below" style="--at:12%">Evening</span>
+              <span class="k-label below alt" style="--at:26%">Warm</span>
+              <span class="k-label below" style="--at:38%">Candlelight</span>
+              <span class="k-label below alt" style="--at:54%">Firelight</span>
+              <span class="k-label below" style="--at:66%">Ember</span>
+              <span class="k-label below end" style="--at:100%">Red only</span>
+            </div>
+            <hr>
+            <div class="wpanel-value"><span>Extra Dim</span><span>40%</span></div>
+            <div class="wpanel-slider"><i style="width:40%"></i><b style="left:40%"></b></div>
+          </div>
+        </figure>
+        </div>
+        <div class="guide-step showcase-row">
+          <div class="guide-text">
+            <h3>Pause and excluded apps</h3>
+            <p>When you need true colors, pause for an hour or until morning. Or pick apps, a photo editor say, where the tint lifts while you're in them and comes back when you leave.</p>
+            <p>Any change you make in the panel ends a pause.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Illustration: a warm-tinted desktop with two windows. Photos, in front, shows its true colors; the Notes window behind it stays warm. The Dozelight panel reads Paused in Photos, with a Pause row offering 1 hour or until 07:00.">
+          <div class="pause-scene" aria-hidden="true">
+            <div class="pause-windows">
+              <div class="pwin back"><div class="pwin-bar windows">Notes<span class="win-controls"><span class="win-min"></span><span>▢</span><span>✕</span></span></div><div class="pwin-body"><i></i><i></i><i></i><i style="width:70%"></i><i></i><i style="width:45%"></i></div></div>
+              <div class="pwin front"><div class="pwin-bar windows">Photos<span class="win-controls"><span class="win-min"></span><span>▢</span><span>✕</span></span></div><div class="pwin-photos"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            </div>
+            <div class="wpanel">
+              <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight</b><span style="display:flex;gap:8px;align-items:center">On <span class="wswitch on"></span></span></div>
+              <div class="wpanel-value"><span>Warmth</span><span>Paused in Photos</span></div>
+              <hr>
+              <div class="wpanel-row selected"><span>Pause</span><span class="muted-ui">For 1 hour · Until 07:00 ›</span></div>
+            </div>
+            <div class="pause-tint"></div>
+          </div>
+        </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- Features -->
     <section class="section" id="features">
       <div class="section-head">
@@ -165,12 +257,12 @@
         <article class="card">
           <div class="card-icon red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/></svg></div>
           <h3>Red only</h3>
-          <p>Removes blue and green completely, leaving the gentlest light a screen can make. It's the last step of the slider; Extra Dim takes it darker.</p>
+          <p>Removes blue and green completely, one step past 1000K, <a class="inline-link" href="#showcase">as shown above</a>.</p>
         </article>
         <article class="card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div>
           <h3>Follows your bedtime</h3>
-          <p>Auto mode warms the screen gradually through the evening, switches to red after bedtime and fades back before you wake. A reminder 30 minutes before bed is one tick away.</p>
+          <p>Auto warms the screen gradually through the evening and switches to red after bedtime, <a class="inline-link" href="#showcase">as shown above</a>.</p>
         </article>
         <article class="card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="15" width="19" height="5" rx="1.5"/><path d="M14 11.5a3 3 0 0 1 6 0M17 6.5v1.5"/></svg></div>
@@ -215,7 +307,7 @@
         <article class="card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg></div>
           <h3>Pause when you need colors</h3>
-          <p>Pause for an hour or until morning. Changing anything brings the tint straight back.</p>
+          <p>An hour or until morning, <a class="inline-link" href="#showcase">as shown above</a>; any change brings the tint straight back.</p>
         </article>
         <article class="card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><path d="M15 17h4M17 15v4"/></svg></div>
