@@ -17,8 +17,21 @@
   <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script data-lang-redirect>
+    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
+    // Crawlers stay.
+    (function () {
+      var chosen = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      try { chosen = localStorage.getItem("lang"); } catch (e) {}
+      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
+        location.replace("pl/" + (location.pathname.split("/").pop() || "") + location.search + location.hash);
+    })();
+  </script>
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
+  <link rel="alternate" hreflang="en" href="https://dozelight.github.io/red-screen-windows.html">
+  <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/red-screen-windows.html">
+  <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/red-screen-windows.html">
   <link rel="canonical" href="https://dozelight.github.io/red-screen-windows.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why can't Night Light turn the screen red?", "acceptedAnswer": {"@type": "Answer", "text": "Night Light lowers blue light only, and keeps green. Red needs both blue and green removed, which Night Light doesn't do."}}, {"@type": "Question", "name": "Is red light better at night?", "acceptedAnswer": {"@type": "Answer", "text": "Research suggests that the blue part of light has the strongest effect on melatonin, the hormone that helps you fall asleep, and red light the weakest. Dozelight and Night Light are comfort tools, not medical products."}}, {"@type": "Question", "name": "Why doesn't the screen change color with HDR on?", "acceptedAnswer": {"@type": "Answer", "text": "With HDR turned on, Windows ignores color changes from apps. Turn HDR off in Settings → System → Display while you use a red screen."}}, {"@type": "Question", "name": "Does Dozelight need administrator rights?", "acceptedAnswer": {"@type": "Answer", "text": "No. Windows limits how warm apps can make the screen, and Dozelight can lift that limit once, with an administrator's approval. Everything else works without it."}}, {"@type": "Question", "name": "Is there something similar for Mac and iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. See how to make Night Shift warmer on Mac, and our guide to a red screen at night on iPhone and iPad."}}]}</script>
 </head>
@@ -37,6 +50,7 @@
       <a href="red-screen-windows.html">Red screen on Windows</a>
       <a href="compare.html">Compare</a>
     </nav>
+    <a class="lang-link" href="pl/red-screen-windows.html" hreflang="pl" lang="pl" data-lang="pl" aria-label="Polski">PL</a>
     <a class="button button-small" href="windows.html#download">Dozelight for Windows</a>
   </header>
 

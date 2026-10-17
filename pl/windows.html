@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pl" data-platform="windows">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dozelight: filtr światła niebieskiego dla twojego komputera</title>
+  <meta name="description" content="Dozelight to filtr i bloker światła niebieskiego dla Windows 10 i 11: cieplejszy niż Światło nocne, aż do blasku świecy i czystej czerwieni, zgodnie z twoją porą snu.">
+  <meta name="theme-color" content="#0d0a0b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dozelight">
+  <meta property="og:title" content="Dozelight: filtr światła niebieskiego dla twojego komputera">
+  <meta property="og:description" content="Aż do blasku świecy i czystej czerwieni, prosto z paska zadań. Malutka aplikacja dla Windows 10 i 11 z 14-dniowym okresem próbnym.">
+  <meta property="og:image" content="https://dozelight.github.io/assets/og-windows.jpg">
+  <meta property="og:url" content="https://dozelight.github.io/pl/windows.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="preload" href="../assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../platform.js" defer></script>
+  <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="../count.js"></script>
+  <link rel="alternate" hreflang="en" href="https://dozelight.github.io/windows.html">
+  <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/windows.html">
+  <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/windows.html">
+  <link rel="canonical" href="https://dozelight.github.io/pl/windows.html">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Dozelight na Windows", "operatingSystem": "Windows 10, Windows 11", "applicationCategory": "UtilitiesApplication", "description": "Dozelight to filtr i bloker światła niebieskiego dla Windows 10 i 11. Światło nocne tylko ogranicza światło niebieskie, a Dozelight blokuje je całkowicie – aż do blasku świecy i czystej czerwieni, prosto z paska zadań. 14-dniowy okres próbny.", "url": "https://dozelight.github.io/windows.html", "downloadUrl": "https://dozelight.github.io/download/Dozelight-Windows.zip", "image": "https://dozelight.github.io/assets/windows-icon.png", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL"}, "publisher": {"@type": "Organization", "name": "Dozelight", "url": "https://dozelight.github.io/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ile to kosztuje?", "acceptedAnswer": {"@type": "Answer", "text": "9,99 USD, jednorazowo. To cena we wczesnym dostępie – po jego zakończeniu wzrośnie do 14,99 USD. Najpierw możesz przez 14 dni bezpłatnie wypróbować wszystkie funkcje."}}, {"@type": "Question", "name": "Czy mogę używać jednej licencji na komputerze z Windows i na Macu?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Jedna licencja działa łącznie na maksymalnie 3 komputerach, z Windows lub Mac, więc z tym samym kluczem możesz używać Dozelight na swoim pececie i MacBooku."}}, {"@type": "Question", "name": "Co się stanie po zakończeniu okresu próbnego?", "acceptedAnswer": {"@type": "Answer", "text": "Ocieplenie zostanie wstrzymane, dopóki nie wpiszesz klucza licencyjnego. Twoje ustawienia pozostaną bez zmian, więc wszystko wróci w chwili aktywacji."}}, {"@type": "Question", "name": "Czy Dozelight zastępuje Światło nocne?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Dozelight idzie znacznie dalej niż Światło nocne: ma cieplejsze ustawienia, tryb Tylko czerwień, stopniowy harmonogram pory snu i filtry. Wyłącz Światło nocne, żeby oba nie wchodziły sobie w drogę. Zobacz Night Shift vs Światło nocne vs f.lux vs Dozelight oraz jak zabarwić ekran na czerwono w nocy w Windows."}}, {"@type": "Question", "name": "Czym są Ciemnia i Dodatkowe przyciemnienie?", "acceptedAnswer": {"@type": "Answer", "text": "Ciemnia odwraca kolory ekranu i zostawia tylko czerwień, więc strony stają się czarne z czerwonym tekstem: to najłagodniejszy sposób na czytanie późną nocą. Dodatkowe przyciemnienie sprawia, że ekran jest ciemniejszy niż przy najniższym ustawieniu jasności. Oba znajdziesz w sekcji Filtry, obok Czerni i bieli, Sepii, Odwróć kolory i Wysokiego kontrastu. Działają o każdej porze dnia."}}, {"@type": "Question", "name": "Na jakich komputerach działa?", "acceptedAnswer": {"@type": "Answer", "text": "Na każdym komputerze z 64-bitowym systemem Windows 10 lub Windows 11. Działa też na laptopach z Windows 11 i procesorami Arm, dzięki wbudowanej w Windows emulacji."}}, {"@type": "Question", "name": "Dlaczego Windows ostrzega mnie przy pierwszym uruchomieniu?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight nie jest jeszcze podpisany cyfrowo, więc Microsoft Defender SmartScreen raz poprosi cię o potwierdzenie. Kliknij Więcej informacji, a potem Uruchom mimo to. Instrukcja instalacji pokazuje każdy krok."}}, {"@type": "Question", "name": "Dlaczego najcieplejsze kolory trzeba odblokować?", "acceptedAnswer": {"@type": "Answer", "text": "Windows ogranicza, jak bardzo aplikacje mogą zmieniać kolory ekranu. Dozelight może jednorazowo znieść ten limit, za zgodą administratora, ustawiając tę samą opcję Windows, z której korzystają inne aplikacje do ocieplania ekranu. Potem może być potrzebne jednorazowe ponowne uruchomienie Windows."}}, {"@type": "Question", "name": "Ekran nie zmienia koloru. Co mogę zrobić?", "acceptedAnswer": {"@type": "Answer", "text": "Gdy włączony jest HDR, Windows ignoruje zmiany kolorów wprowadzane przez aplikacje, więc wyłącz HDR w Ustawienia → System → Ekran. Jeśli używasz Światła nocnego, spróbuj je wyłączyć, żeby oba nie wchodziły sobie w drogę. Pulpit zdalny i maszyny wirtualne zwykle też nie pozwalają na zmianę kolorów."}}, {"@type": "Question", "name": "Czy zrzuty ekranu są czerwone?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Ocieplenie jest nakładane w drodze do monitora, więc zrzuty ekranu, nagrania i udostępniany ekran zachowują prawdziwe kolory."}}, {"@type": "Question", "name": "Czy Dozelight zbiera jakieś dane?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Dozelight nie ma żadnej analityki ani śledzenia. Łączy się z internetem tylko po to, by aktywować i od czasu do czasu sprawdzić klucz licencyjny – wysyła wtedy wyłącznie klucz i nazwę twojego komputera do Polar, który obsługuje nasz sklep – oraz raz dziennie, by poszukać aktualizacji. Zmierzch i świt są wyliczane na podstawie strefy czasowej, więc twoja lokalizacja też nie jest potrzebna."}}, {"@type": "Question", "name": "Dozelight to filtr czy bloker światła niebieskiego?", "acceptedAnswer": {"@type": "Answer", "text": "Jedno i drugie. Filtr światła niebieskiego, taki jak Światło nocne, ogranicza światło niebieskie. Dozelight robi to w łagodniejszych ustawieniach, a jako bloker światła niebieskiego całkowicie wyłącza niebieskie światło ekranu: przy 1900K i cieplej oraz w trybie Tylko czerwień. Sam decydujesz, jak daleko się posunąć, albo pozwalasz, by tryb Auto podążał za twoją porą snu."}}, {"@type": "Question", "name": "Czy Dozelight całkowicie blokuje światło niebieskie?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Przy 1900K i cieplej oraz w trybie Tylko czerwień Dozelight całkowicie wyłącza niebieskie światło ekranu. Łagodniejsze ustawienia tylko je ograniczają, jak mocniejsze Światło nocne. Tryb Auto osiąga 1900K w twojej porze snu i przez całą noc zostawia tylko czerwone światło."}}, {"@type": "Question", "name": "Czy Dozelight pomoże mi lepiej spać?", "acceptedAnswer": {"@type": "Answer", "text": "Usuwa jedną z rzeczy, które mogą opóźniać sen: jasne, bogate w niebieską barwę światło ekranu wieczorem. Tryb Auto stopniowo ociepla ekran, a po porze snu zostawia tylko czerwone światło. Regularne pory snu, wyciszenie przed snem i ciemna sypialnia znaczą co najmniej tyle samo – zajrzyj do naszego poradnika o ekranach, świetle niebieskim i lepszym śnie. Dozelight to narzędzie dla wygody, a nie wyrób medyczny."}}, {"@type": "Question", "name": "Czy to wyrób medyczny?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Dozelight to narzędzie, które sprawia, że wieczorne korzystanie z komputera jest wygodniejsze. Nie diagnozuje, nie leczy ani nie zapobiega żadnym schorzeniom."}}, {"@type": "Question", "name": "Jak odinstalować Dozelight?", "acceptedAnswer": {"@type": "Answer", "text": "Otwórz panel Dozelight, wyłącz Uruchamiaj z systemem Windows i kliknij Zamknij Dozelight. Ekran od razu wróci do normy. Potem usuń plik Dozelight.exe."}}, {"@type": "Question", "name": "Jak przenieść licencję na nowy komputer?", "acceptedAnswer": {"@type": "Answer", "text": "Na starym komputerze otwórz Licencja… w panelu Dozelight i kliknij Dezaktywuj ten komputer. Swoimi komputerami możesz też zarządzać w portalu klienta Polar, do którego link znajdziesz w potwierdzeniu zakupu."}}, {"@type": "Question", "name": "Jak działają aktualizacje?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight raz dziennie sprawdza, czy jest nowa wersja. Jeśli jest, pokazuje ją w panelu i instaluje jednym kliknięciem. W każdej chwili możesz też wybrać w panelu Ustawienia → Sprawdź aktualizacje… Twoje ustawienia i licencja zostają bez zmian."}}, {"@type": "Question", "name": "Czy mogę dostać zwrot pieniędzy?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Jeśli Dozelight ci nie odpowiada, napisz do nas w ciągu 14 dni od zakupu, a zwrócimy całą kwotę. Zobacz zasady zwrotów."}}, {"@type": "Question", "name": "Czy jest wersja na iPhone’a lub iPada?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone i iPad nie pozwalają aplikacjom ocieplać całego ekranu. Mają jednak wbudowane ustawienia, które dają podobny efekt: zobacz nasz bezpłatny poradnik, jak uzyskać czerwony ekran w nocy na iPhonie i iPadzie."}}]}</script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Dozelight na Windows – strona główna">
+      <img src="../assets/windows-icon-64.png" alt="" width="32" height="32">
+      <span>Dozelight</span>
+    </a>
+    <div class="platform-switch" role="group" aria-label="Platforma">
+      <a href="index.html" data-choose="mac">macOS</a>
+      <a href="windows.html" data-choose="windows" aria-current="page">Windows</a>
+    </div>
+    <nav class="nav-links" aria-label="Sekcje">
+      <a href="#demo">Wypróbuj</a>
+      <a href="#features">Funkcje</a>
+      <a href="#night">Twoja noc</a>
+      <a href="#download">Cena</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="lang-link" href="../windows.html" hreflang="en" lang="en" data-lang="en" aria-label="English">EN</a>
+    <a class="button button-small" href="#download">Pobierz</a>
+  </header>
+  <div class="platform-hint" id="platform-hint" hidden>Wygląda na to, że używasz Maca. <a href="index.html" data-choose="mac">Zobacz Dozelight na Maca →</a></div>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Bloker światła niebieskiego dla Windows</p>
+        <h1>Zablokuj światło niebieskie<br><em>na swoim komputerze.</em></h1>
+        <p class="lede">
+          Światło nocne to łagodny filtr światła niebieskiego: tylko je ogranicza. Dozelight blokuje je całkowicie – aż do blasku świecy
+          i czystej czerwieni, prosto z paska zadań – i podąża za twoją porą snu, więc ekran wycisza się razem z tobą.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="../download/Dozelight-Windows.zip" download data-goatcounter-click="download-windows" data-goatcounter-title="Download for Windows">Pobierz wersję próbną</a>
+          <a class="button button-ghost" href="https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL" data-goatcounter-click="buy-windows" data-goatcounter-title="Buy (Windows page)">Kup za 9,99 USD</a>
+        </div>
+        <p class="hero-note">14-dniowy okres próbny ze wszystkimi funkcjami · Windows 10 i 11 · 64-bitowy</p>
+        <ul class="hero-facts" aria-label="Najważniejsze">
+          <li><strong>1000K</strong><span>najcieplejsze ustawienie</span></li>
+          <li><strong>100%</strong><span>światła niebieskiego zablokowane</span></li>
+          <li><strong>297 KB</strong><span>cała aplikacja</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="horizon"></div>
+        <!-- A recreation of the Dozelight panel -->
+        <div class="wpanel hero-panel">
+          <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight</b><span style="display:flex;gap:8px;align-items:center">Wł. <span class="wswitch on"></span></span></div>
+          <div class="wpanel-value"><span>Świt 05:57</span><span>Zmierzch 18:54</span></div>
+          <div class="wpanel-value"><span>Ciepło</span><span>Auto · 2300K</span></div>
+          <div class="wpanel-slider"><i style="width:33%"></i><b style="left:33%"></b></div>
+          <hr>
+          <div class="wpanel-row"><span>Ustawienia wstępne</span><span class="muted-ui">›</span></div>
+          <div class="wpanel-row"><span>Tylko czerwień (bez niebieskiego i zielonego)</span><span class="wswitch"></span></div>
+          <div class="wpanel-row selected"><span>Auto (sen i melatonina)</span><span class="wswitch on"></span></div>
+          <div class="wpanel-row"><span>Harmonogram Auto</span><span class="muted-ui">23:00–07:00 ›</span></div>
+          <div class="wpanel-row"><span>Filtry</span><span class="muted-ui">›</span></div>
+          <hr>
+          <div class="wpanel-row"><span>Wskaźnik</span><span class="muted-ui">›</span></div>
+          <div class="wpanel-row"><span>Ustawienia</span><span class="muted-ui">›</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive demo -->
+    <section class="section demo" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">Wypróbuj</p>
+        <h2>Przesuń suwak i wpuść wieczór.</h2>
+        <p>To tylko symulacja w twojej przeglądarce. Prawdziwa aplikacja ociepla cały ekran.</p>
+      </div>
+
+      <div class="demo-stage">
+        <div class="screen" id="screen">
+          <div class="window">
+            <div class="window-bar windows">
+              <span class="window-title">Notatki</span>
+              <span class="win-controls" aria-hidden="true"><span class="win-min"></span><span>▢</span><span>✕</span></span>
+            </div>
+            <div class="window-body">
+              <aside class="sidebar">
+                <p class="side-head">Foldery</p>
+                <p class="side-item active">Wszystkie notatki</p>
+                <p class="side-item">Pomysły</p>
+                <p class="side-item">Do przeczytania</p>
+                <p class="side-item">Podróże</p>
+              </aside>
+              <article class="doc">
+                <div class="photo"><span class="photo-sun"></span></div>
+                <h3>Nocne przemyślenia</h3>
+                <p>Jest 23:40, a ekran wciąż świeci jak w samo południe. Każda biała strona to mały wschód słońca.</p>
+                <div class="lines"><i></i><i></i><i style="width:72%"></i></div>
+                <div class="chips"><span class="chip blue">Niebieski</span><span class="chip green">Zielony</span><span class="chip red">Czerwony</span></div>
+              </article>
+            </div>
+          </div>
+          <div class="demo-taskbar" aria-hidden="true">
+            <i class="blue"></i><i></i><i class="green"></i><i></i>
+            <span>21:30<br>29.09.2026</span>
+          </div>
+          <div class="tint" id="tint"></div>
+        </div>
+
+        <div class="controls">
+          <div class="readout">
+            <span class="readout-k" id="readout">6500K</span>
+            <span class="readout-label" id="readout-label">Dzień</span>
+          </div>
+          <label class="range-label" for="kelvin">Temperatura barwowa</label>
+          <input type="range" id="kelvin" min="0" max="1000" value="0" aria-describedby="readout">
+          <div class="range-ends"><span>Dzień</span><span>Wieczór</span><span>Świeca</span></div>
+          <div class="presets" role="group" aria-label="Ustawienia wstępne">
+            <button type="button" data-k="6500">Dzień</button>
+            <button type="button" data-k="3400">Wieczór</button>
+            <button type="button" data-k="2400">Ciepło</button>
+            <button type="button" data-k="2000">Świeca</button>
+            <button type="button" data-k="1600">Ognisko</button>
+            <button type="button" data-k="1200">Żar</button>
+            <button type="button" data-k="red" class="red">Tylko czerwień</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature showcase -->
+    <section class="section showcase" id="showcase">
+      <div class="section-head">
+        <p class="eyebrow">Co potrafi</p>
+        <h2>Trzy rzeczy, które robi lepiej.</h2>
+      </div>
+      <div class="showcase-rows">
+        <div class="guide-step showcase-row">
+          <div class="guide-text">
+            <h3>Auto, zmierzch i świt oraz Maksymalne ocieplenie</h3>
+            <p>Auto ociepla ekran krok po kroku przez cały wieczór, po porze snu przechodzi w czerwień, a przed pobudką stopniowo wraca do normy. Może podążać za twoją porą snu albo za zmierzchem i świtem.</p>
+            <p>Maksymalne ocieplenie decyduje, jak daleko to zajdzie: łagodny bursztyn, blask świecy albo czysta czerwień. Przypomnienie 30 minut przed snem włączysz jednym kliknięciem.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Ilustracja: oś czasu od 18:00 do 07:00. Ekran pozostaje neutralny do zmierzchu, równomiernie ociepla się aż do pory snu, przez całą noc trzyma się linii Maksymalnego ocieplenia i tuż przed 07:00 wraca do neutralnych barw.">
+          <div class="auto-chart" aria-hidden="true">
+            <div class="auto-plot">
+              <svg class="auto-curve" viewBox="0 0 440 120" preserveAspectRatio="none">
+                <defs><linearGradient id="auto-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a2f" stop-opacity="0.45"/><stop offset="1" stop-color="#ff7a2f" stop-opacity="0"/></linearGradient></defs>
+                <path class="vline" d="M34 0V120M169 0V120" vector-effect="non-scaling-stroke"/>
+                <line class="max" x1="0" y1="22" x2="440" y2="22" vector-effect="non-scaling-stroke"/>
+                <path class="area" d="M0 108H34C90 108 125 72 169 46C182 38 192 24 206 22H406C418 22 428 72 440 108V120H0Z"/>
+                <path class="line" d="M0 108H34C90 108 125 72 169 46C182 38 192 24 206 22H406C418 22 428 72 440 108" vector-effect="non-scaling-stroke"/>
+              </svg>
+              <span class="auto-max">Maksymalne ocieplenie</span>
+              <span class="auto-sun"></span>
+            </div>
+            <div class="auto-bar"></div>
+            <div class="auto-marks">
+              <span class="start" style="--at:0%">18:00</span>
+              <span class="optional" style="--at:19%">zmierzch</span>
+              <span style="--at:38.5%">pora snu</span>
+              <span class="end" style="--at:100%">pobudka 07:00</span>
+            </div>
+          </div>
+        </figure>
+        </div>
+        <div class="guide-step showcase-row flip">
+          <div class="guide-text">
+            <h3>Tylko czerwień – ostatni krok suwaka</h3>
+            <p>Suwak prowadzi od światła dziennego aż do 1000K. A potem jest jeszcze jeden krok: Tylko czerwień całkowicie usuwa niebieski i zielony, zostawiając najłagodniejsze światło, jakie potrafi dać ekran.</p>
+            <p>Dodatkowe przyciemnienie ściemnia czerwień jeszcze bardziej, poniżej najniższego ustawienia jasności.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Ilustracja: suwak ocieplenia w Dozelight – od światła dziennego przez ustawienia Wieczór, Ciepło, Świeca, Ognisko i Żar do znacznika 1000K, a za nim osobny czerwony odcinek oznaczony Tylko czerwień, na którym stoi gałka. Poniżej suwak Dodatkowego przyciemnienia ustawiony na 40%.">
+          <div class="wpanel" aria-hidden="true">
+            <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight</b><span style="display:flex;gap:8px;align-items:center">Wł. <span class="wswitch on"></span></span></div>
+            <div class="wpanel-value"><span>Ciepło</span><span>Tylko czerwień</span></div>
+            <div class="kslider win">
+              <span class="k-label above start" style="--at:0%">Dzień</span>
+              <span class="k-label above" style="--at:76%">1000K</span>
+              <div class="kslider-track">
+                <i class="seg warm"></i><i class="seg pause"></i><i class="seg red"></i>
+                <i class="tick" style="--at:12%"></i><i class="tick" style="--at:26%"></i><i class="tick" style="--at:38%"></i><i class="tick" style="--at:54%"></i><i class="tick" style="--at:66%"></i>
+                <b class="knob" style="--at:92.5%"></b>
+              </div>
+              <span class="k-label below" style="--at:12%">Wieczór</span>
+              <span class="k-label below alt" style="--at:26%">Ciepło</span>
+              <span class="k-label below" style="--at:38%">Świeca</span>
+              <span class="k-label below alt" style="--at:54%">Ognisko</span>
+              <span class="k-label below" style="--at:66%">Żar</span>
+              <span class="k-label below end" style="--at:100%">Tylko czerwień</span>
+            </div>
+            <hr>
+            <div class="wpanel-value"><span>Dodatkowe przyciemnienie</span><span>40%</span></div>
+            <div class="wpanel-slider"><i style="width:40%"></i><b style="left:40%"></b></div>
+          </div>
+        </figure>
+        </div>
+        <div class="guide-step showcase-row">
+          <div class="guide-text">
+            <h3>Wstrzymanie i aplikacje bez ocieplenia</h3>
+            <p>Gdy potrzebujesz prawdziwych kolorów, wstrzymaj ocieplenie na godzinę albo do rana. Możesz też wybrać aplikacje – na przykład edytor zdjęć – w których ocieplenie znika, gdy z nich korzystasz, i wraca, gdy je opuszczasz.</p>
+            <p>Każda zmiana w panelu kończy wstrzymanie.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Ilustracja: ocieplony pulpit z dwoma oknami. Zdjęcia na pierwszym planie pokazują prawdziwe kolory, a okno Notatek za nimi pozostaje ciepłe. Panel Dozelight pokazuje „Wstrzymane: Zdjęcia”, a wiersz Wstrzymaj proponuje 1 godzinę albo do 07:00.">
+          <div class="pause-scene" aria-hidden="true">
+            <div class="pause-windows">
+              <div class="pwin back"><div class="pwin-bar windows">Notatki<span class="win-controls"><span class="win-min"></span><span>▢</span><span>✕</span></span></div><div class="pwin-body"><i></i><i></i><i></i><i style="width:70%"></i><i></i><i style="width:45%"></i></div></div>
+              <div class="pwin front"><div class="pwin-bar windows">Zdjęcia<span class="win-controls"><span class="win-min"></span><span>▢</span><span>✕</span></span></div><div class="pwin-photos"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            </div>
+            <div class="wpanel">
+              <div class="wpanel-head"><b><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.5 15.5a5.5 5.5 0 0 1 11 0z" fill="#ff9f0a"/><path d="M12 3.5v3M5.2 6.8l1.9 1.9M18.8 6.8l-1.9 1.9M2.5 13.5h2M19.5 13.5h2M3 19.5h18" stroke="#ff9f0a" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Dozelight</b><span style="display:flex;gap:8px;align-items:center">Wł. <span class="wswitch on"></span></span></div>
+              <div class="wpanel-value"><span>Ciepło</span><span>Wstrzymane: Zdjęcia</span></div>
+              <hr>
+              <div class="wpanel-row selected"><span>Wstrzymaj</span><span class="muted-ui">Na 1 godzinę · Do 07:00 ›</span></div>
+            </div>
+            <div class="pause-tint"></div>
+          </div>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="eyebrow">Funkcje</p>
+        <h2>Mała aplikacja. Ciepłe światło. Jedno kliknięcie.</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>Aż do 1000K</h3>
+          <p>Od światła dziennego aż po blask żarzących się węgli – z ustawieniami od Wieczoru po Żar i suwakiem, który potrafi się do nich przyciągać.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Tylko czerwień</h3>
+          <p>Całkowicie usuwa niebieski i zielony, jeden krok za 1000K, <a class="inline-link" href="#showcase">jak widać wyżej</a>.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div>
+          <h3>Podąża za twoją porą snu</h3>
+          <p>Auto stopniowo ociepla ekran przez cały wieczór, a po porze snu przechodzi w czerwień, <a class="inline-link" href="#showcase">jak widać wyżej</a>.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="15" width="19" height="5" rx="1.5"/><path d="M14 11.5a3 3 0 0 1 6 0M17 6.5v1.5"/></svg></div>
+          <h3>Zawsze pod ręką na pasku zadań</h3>
+          <p>Kliknij słońce obok zegara, a otworzy się panel z przełącznikiem, suwakiem i wszystkimi ustawieniami. Zostaje otwarty, gdy coś wypróbowujesz.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 3l12 7-5.5 1.5L10 17z"/><circle cx="10" cy="11" r="8.5" opacity=".35"/></svg></div>
+          <h3>Wskaźnik, który łatwo znaleźć</h3>
+          <p>W głębokiej czerwieni strzałka łatwo ginie. Włącz większy wskaźnik i delikatną poświatę – tylko wtedy, gdy ekran jest najcieplejszy. Wersja z Microsoft Store potrafi też zabarwić na czerwono klawiaturę z Oświetleniem dynamicznym.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 7V4M5.6 10.6 3.5 8.5M18.4 10.6l2.1-2.1"/></svg></div>
+          <h3>Zmierzch i świt</h3>
+          <p>Dzisiejszy zmierzch i świt prosto w panelu, wyliczone na podstawie twojej strefy czasowej. Bez dostępu do lokalizacji – nigdy.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="10" r="6"/><circle cx="15" cy="10" r="6"/><circle cx="12" cy="15" r="6"/></svg></div>
+          <h3>Filtry i ułatwienia dostępu</h3>
+          <p>Czerń i biel, Sepia, Odwróć kolory i Ciemnia, a do tego Wysoki kontrast i Dodatkowe przyciemnienie, gdy chcesz zejść poniżej najniższej jasności.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 4v5h-5"/></svg></div>
+          <h3>Niezawodny i zawsze aktualny</h3>
+          <p>Ocieplenie samo wraca po ekranie blokady, uśpieniu i zmianach monitorów, a nowe wersje instalujesz jednym kliknięciem.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z"/></svg></div>
+          <h3>Lekki jak piórko i prywatny</h3>
+          <p>Cała aplikacja ma 297 KB i nie trzeba niczego doinstalowywać. Żadnego śledzenia. Łączy się z internetem tylko po to, by sprawdzić licencję i poszukać aktualizacji.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 7V4"/><path d="M12 20v1" opacity=".4"/></svg></div>
+          <h3>Podąża za słońcem, jeśli chcesz</h3>
+          <p>Auto może kierować się zmierzchem i świtem zamiast porą snu. Ekran ociepla się od zmierzchu, po porze snu barwa się pogłębia, a do świtu wszystko wraca do normy.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Tak ciepło, jak chcesz</h3>
+          <p>Maksymalne ocieplenie określa, jak daleko sięga Auto: łagodny bursztyn dla jednych, blask świecy dla większości, czysta czerwień dla nocnych marków.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg></div>
+          <h3>Wstrzymaj, gdy potrzebujesz kolorów</h3>
+          <p>Na godzinę albo do rana, <a class="inline-link" href="#showcase">jak widać wyżej</a>; każda zmiana od razu przywraca ocieplenie.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><path d="M15 17h4M17 15v4"/></svg></div>
+          <h3>Z wyjątkiem tych aplikacji</h3>
+          <p>Wybierz aplikacje, na przykład edytor zdjęć, w których ocieplenie znika, gdy z nich korzystasz, i wraca, gdy je opuszczasz.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="12" height="9" rx="1.5"/><rect x="11" y="9" width="11" height="8" rx="1.5"/><path d="M8 16v3M5 19h6"/></svg></div>
+          <h3>Wszystkie monitory albo tylko niektóre</h3>
+          <p>Jeśli masz więcej niż jeden monitor, wybierz, które mają być ocieplane. Monitor do pracy z kolorem może zostać neutralny.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h1M10 11h1M14 11h1M18 11h1M8 14h8"/></svg></div>
+          <h3>Bez sięgania po mysz</h3>
+          <p>Ctrl+Alt+Shift+D włącza i wyłącza Dozelight, Ctrl+Alt+Shift+strzałka w prawo lub w lewo zmienia ciepło o krok, a kółko myszy nad ikoną w zasobniku systemowym pozwala je precyzyjnie dostroić.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.5 1.5"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.5-1.5"/></svg></div>
+          <h3>Gotowy do automatyzacji</h3>
+          <p><code>dozelight://warmer</code>, <code>pause</code>, <code>off</code> i inne linki sterują Dozelight ze skryptów, skrótów albo scen inteligentnego domu.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- A night with Dozelight -->
+    <section class="section night" id="night">
+      <div class="section-head">
+        <p class="eyebrow">Twoja noc</p>
+        <h2>Ekran, który wycisza się razem z tobą.</h2>
+        <p>To właśnie światło niebieskie mówi: „jest dzień”. W trybie Auto Dozelight ogranicza je krok po kroku, im bliżej pory snu,
+          a potem przez całą noc zostawia tylko światło czerwone – więc nawet zerknięcie na ekran o 3:00 w nocy pozostaje łagodne.</p>
+      </div>
+      <div class="timeline" role="img" aria-label="Przy porze snu o 23:00 i pobudce o 07:00: 3400K o 19:00, stopniowo cieplej aż do 1900K w porze snu, tylko czerwień od północy i powrót do normy do 07:00.">
+        <div class="timeline-bar"></div>
+        <ol class="timeline-stops">
+          <li style="--at:0%"><b>19:00</b><span>Wieczór, 3400K</span></li>
+          <li style="--at:16.7%"><b>21:00</b><span>2300K</span></li>
+          <li style="--at:33.3%"><b>23:00</b><span>Pora snu, 1900K</span></li>
+          <li style="--at:41.7%"><b>00:00</b><span>Tylko czerwień</span></li>
+          <li style="--at:95.8%"><b>06:30</b><span>Powolny powrót</span></li>
+          <li style="--at:100%"><b>07:00</b><span>Dzień dobry</span></li>
+        </ol>
+      </div>
+      <p class="fineprint">Własną porę snu i porę pobudki ustawisz w panelu.</p>
+    </section>
+
+    <!-- Download -->
+    <section class="section pricing" id="download">
+      <div class="waitlist-card">
+        <img src="../assets/windows-icon-144.png" alt="Ikona aplikacji Dozelight na Windows" width="72" height="72">
+        <p class="eyebrow">Cena we wczesnym dostępie</p>
+        <h2>Zdobądź Dozelight</h2>
+        <p class="price"><strong>9,99 USD</strong><span>jednorazowa płatność</span></p>
+        <p class="early-note"><b>Cena we wczesnym dostępie.</b> Po zakończeniu wczesnego dostępu wzrośnie do 14,99 USD. Pierwsi kupujący pomagają kształtować Dozelight: <a href="mailto:dozelight@icloud.com">napisz nam, co chcesz zobaczyć w kolejnych wersjach</a>.</p>
+        <ul class="included">
+          <li>14-dniowy okres próbny ze wszystkimi funkcjami</li>
+          <li>Jedna licencja na maksymalnie 3 komputery, z Windows lub Mac</li>
+          <li>Tryb Auto, Tylko czerwień, filtry i dodatki dla wskaźnika</li>
+          <li>Automatyczne aktualizacje instalowane jednym kliknięciem</li>
+          <li>14-dniowa gwarancja zwrotu pieniędzy</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="button" href="../download/Dozelight-Windows.zip" download data-goatcounter-click="download-windows" data-goatcounter-title="Download for Windows">Pobierz wersję próbną</a>
+          <a class="button button-ghost" href="https://apps.microsoft.com/detail/9P8447TGN40X" data-goatcounter-click="store-windows" data-goatcounter-title="Microsoft Store">Pobierz z Microsoft Store</a>
+          <a class="button button-ghost" href="https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL" data-goatcounter-click="buy-windows" data-goatcounter-title="Buy (Windows page)">Kup teraz</a>
+        </div>
+        <p class="fineprint">Wersja 1.5.7 · 158 KB ZIP · Windows 10 i 11, 64-bitowy. Płatności bezpiecznie obsługuje Polar. <a class="inline-link" href="windows-install.html">Instrukcja instalacji →</a> · <a class="inline-link" href="changelog.html#windows">Co nowego →</a></p>
+      </div>
+    </section>
+
+    <!-- Installing -->
+    <section class="section install" id="install">
+      <div class="section-head">
+        <p class="eyebrow">Instalacja</p>
+        <h2>Gotowe w minutę.</h2>
+        <p>Dozelight nie jest jeszcze podpisany cyfrowo, więc przy pierwszym uruchomieniu Windows poprosi cię o potwierdzenie. Robisz to tylko raz. <a class="inline-link" href="windows-install.html">Zobacz instrukcję krok po kroku z obrazkami →</a></p>
+      </div>
+      <ol class="steps">
+        <li><b>Rozpakuj</b><span>Otwórz plik ZIP i przenieś <code>Dozelight.exe</code> do folderu, w którym może zostać na stałe, na przykład do Dokumentów.</span></li>
+        <li><b>Otwórz Dozelight</b><span>Windows wyświetli komunikat <b>System Windows ochronił ten komputer</b>. Kliknij <b>Więcej informacji</b>, a potem <b>Uruchom mimo to</b>.</span></li>
+        <li><b>Znajdź słońce</b><span>Dozelight mieszka na pasku zadań obok zegara. Jeśli schował się pod <b>^</b>, przeciągnij go na pasek zadań.</span></li>
+        <li><b>Jeszcze cieplej</b><span>Jeśli Windows ogranicza najcieplejsze kolory, kliknij w panelu <b>Odblokuj cieplejsze kolory</b> i jednorazowo to zatwierdź.</span></li>
+      </ol>
+    </section>
+
+    <!-- Updates list -->
+    <section class="section updates" id="updates">
+      <div class="waitlist-card small">
+        <h2>Bądź na bieżąco z nowościami</h2>
+        <p>Zostaw swój e-mail, a dostaniesz krótką wiadomość, gdy Dozelight na Windows zyska coś nowego.</p>
+        <form class="signup" id="signup" hidden>
+          <label class="visually-hidden" for="email">Adres e-mail</label>
+          <input type="email" id="email" name="email" placeholder="ty@example.com" autocomplete="email" required>
+          <input type="hidden" name="_subject" value="New Dozelight update sign-up (Windows)">
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button" type="submit">Powiadom mnie</button>
+          <p class="fineprint signup-note">Twojego e-maila użyjemy wyłącznie do wiadomości o Dozelight. Zobacz <a href="privacy.html">politykę prywatności</a>.</p>
+        </form>
+        <p class="signup-status" id="signup-status" role="status"></p>
+        <div class="github-notify" id="github-notify">
+          <a class="button" href="https://github.com/Dozelight/dozelight.github.io/subscription">Obserwuj na GitHubie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">Pytania i odpowiedzi</p>
+        <h2>Masz pytania? Mamy odpowiedzi.</h2>
+      </div>
+      <details>
+        <summary>Ile to kosztuje?</summary>
+        <p>9,99 USD, jednorazowo. To cena we wczesnym dostępie – po jego zakończeniu wzrośnie do 14,99 USD. Najpierw możesz przez 14 dni bezpłatnie wypróbować wszystkie funkcje.</p>
+      </details>
+      <details>
+        <summary>Czy mogę używać jednej licencji na komputerze z Windows i na Macu?</summary>
+        <p>Tak. Jedna licencja działa łącznie na maksymalnie 3 komputerach, z Windows lub Mac, więc z tym samym kluczem możesz używać Dozelight na swoim pececie i MacBooku.</p>
+      </details>
+      <details>
+        <summary>Co się stanie po zakończeniu okresu próbnego?</summary>
+        <p>Ocieplenie zostanie wstrzymane, dopóki nie wpiszesz klucza licencyjnego. Twoje ustawienia pozostaną bez zmian, więc wszystko wróci w chwili aktywacji.</p>
+      </details>
+      <details>
+        <summary>Czy Dozelight zastępuje Światło nocne?</summary>
+        <p>Tak. Dozelight idzie znacznie dalej niż Światło nocne: ma cieplejsze ustawienia, tryb Tylko czerwień, stopniowy harmonogram pory snu i filtry. Wyłącz Światło nocne, żeby oba nie wchodziły sobie w drogę. Zobacz <a href="compare.html">Night Shift vs Światło nocne vs f.lux vs Dozelight</a> oraz <a href="red-screen-windows.html">jak zabarwić ekran na czerwono w nocy w Windows</a>.</p>
+      </details>
+      <details>
+        <summary>Czym są Ciemnia i Dodatkowe przyciemnienie?</summary>
+        <p>Ciemnia odwraca kolory ekranu i zostawia tylko czerwień, więc strony stają się czarne z czerwonym tekstem: to najłagodniejszy sposób na czytanie późną nocą. Dodatkowe przyciemnienie sprawia, że ekran jest ciemniejszy niż przy najniższym ustawieniu jasności. Oba znajdziesz w sekcji <b>Filtry</b>, obok Czerni i bieli, Sepii, Odwróć kolory i Wysokiego kontrastu. Działają o każdej porze dnia.</p>
+      </details>
+      <details>
+        <summary>Na jakich komputerach działa?</summary>
+        <p>Na każdym komputerze z 64-bitowym systemem Windows 10 lub Windows 11. Działa też na laptopach z Windows 11 i procesorami Arm, dzięki wbudowanej w Windows emulacji.</p>
+      </details>
+      <details>
+        <summary>Dlaczego Windows ostrzega mnie przy pierwszym uruchomieniu?</summary>
+        <p>Dozelight nie jest jeszcze podpisany cyfrowo, więc Microsoft Defender SmartScreen raz poprosi cię o potwierdzenie. Kliknij <b>Więcej informacji</b>, a potem <b>Uruchom mimo to</b>. <a href="windows-install.html">Instrukcja instalacji</a> pokazuje każdy krok.</p>
+      </details>
+      <details>
+        <summary>Dlaczego najcieplejsze kolory trzeba odblokować?</summary>
+        <p>Windows ogranicza, jak bardzo aplikacje mogą zmieniać kolory ekranu. Dozelight może jednorazowo znieść ten limit, za zgodą administratora, ustawiając tę samą opcję Windows, z której korzystają inne aplikacje do ocieplania ekranu. Potem może być potrzebne jednorazowe ponowne uruchomienie Windows.</p>
+      </details>
+      <details>
+        <summary>Ekran nie zmienia koloru. Co mogę zrobić?</summary>
+        <p>Gdy włączony jest HDR, Windows ignoruje zmiany kolorów wprowadzane przez aplikacje, więc wyłącz HDR w <b>Ustawienia → System → Ekran</b>. Jeśli używasz Światła nocnego, spróbuj je wyłączyć, żeby oba nie wchodziły sobie w drogę. Pulpit zdalny i maszyny wirtualne zwykle też nie pozwalają na zmianę kolorów.</p>
+      </details>
+      <details>
+        <summary>Czy zrzuty ekranu są czerwone?</summary>
+        <p>Nie. Ocieplenie jest nakładane w drodze do monitora, więc zrzuty ekranu, nagrania i udostępniany ekran zachowują prawdziwe kolory.</p>
+      </details>
+      <details>
+        <summary>Czy Dozelight zbiera jakieś dane?</summary>
+        <p>Nie. Dozelight nie ma żadnej analityki ani śledzenia. Łączy się z internetem tylko po to, by aktywować i od czasu do czasu sprawdzić klucz licencyjny – wysyła wtedy wyłącznie klucz i nazwę twojego komputera do Polar, który obsługuje nasz sklep – oraz raz dziennie, by poszukać aktualizacji. Zmierzch i świt są wyliczane na podstawie strefy czasowej, więc twoja lokalizacja też nie jest potrzebna.</p>
+      </details>
+      <details>
+        <summary>Dozelight to filtr czy bloker światła niebieskiego?</summary>
+        <p>Jedno i drugie. Filtr światła niebieskiego, taki jak Światło nocne, ogranicza światło niebieskie. Dozelight robi to w łagodniejszych ustawieniach, a jako bloker światła niebieskiego całkowicie wyłącza niebieskie światło ekranu: przy 1900K i cieplej oraz w trybie Tylko czerwień. Sam decydujesz, jak daleko się posunąć, albo pozwalasz, by tryb Auto podążał za twoją porą snu.</p>
+      </details>
+      <details>
+        <summary>Czy Dozelight całkowicie blokuje światło niebieskie?</summary>
+        <p>Tak. Przy 1900K i cieplej oraz w trybie Tylko czerwień Dozelight całkowicie wyłącza niebieskie światło ekranu. Łagodniejsze ustawienia tylko je ograniczają, jak mocniejsze Światło nocne. Tryb Auto osiąga 1900K w twojej porze snu i przez całą noc zostawia tylko czerwone światło.</p>
+      </details>
+      <details>
+        <summary>Czy Dozelight pomoże mi lepiej spać?</summary>
+        <p>Usuwa jedną z rzeczy, które mogą opóźniać sen: jasne, bogate w niebieską barwę światło ekranu wieczorem. Tryb Auto stopniowo ociepla ekran, a po porze snu zostawia tylko czerwone światło. Regularne pory snu, wyciszenie przed snem i ciemna sypialnia znaczą co najmniej tyle samo – zajrzyj do naszego poradnika o <a href="screens-and-sleep.html">ekranach, świetle niebieskim i lepszym śnie</a>. Dozelight to narzędzie dla wygody, a nie wyrób medyczny.</p>
+      </details>
+      <details>
+        <summary>Czy to wyrób medyczny?</summary>
+        <p>Nie. Dozelight to narzędzie, które sprawia, że wieczorne korzystanie z komputera jest wygodniejsze. Nie diagnozuje, nie leczy ani nie zapobiega żadnym schorzeniom.</p>
+      </details>
+      <details>
+        <summary>Jak odinstalować Dozelight?</summary>
+        <p>Otwórz panel Dozelight, wyłącz <b>Uruchamiaj z systemem Windows</b> i kliknij <b>Zamknij Dozelight</b>. Ekran od razu wróci do normy. Potem usuń plik <code>Dozelight.exe</code>.</p>
+      </details>
+      <details>
+        <summary>Jak przenieść licencję na nowy komputer?</summary>
+        <p>Na starym komputerze otwórz <b>Licencja…</b> w panelu Dozelight i kliknij <b>Dezaktywuj ten komputer</b>. Swoimi komputerami możesz też zarządzać w portalu klienta Polar, do którego link znajdziesz w potwierdzeniu zakupu.</p>
+      </details>
+      <details>
+        <summary>Jak działają aktualizacje?</summary>
+        <p>Dozelight raz dziennie sprawdza, czy jest nowa wersja. Jeśli jest, pokazuje ją w panelu i instaluje jednym kliknięciem. W każdej chwili możesz też wybrać w panelu <b>Ustawienia → Sprawdź aktualizacje…</b> Twoje ustawienia i licencja zostają bez zmian.</p>
+      </details>
+      <details>
+        <summary>Czy mogę dostać zwrot pieniędzy?</summary>
+        <p>Tak. Jeśli Dozelight ci nie odpowiada, napisz do nas w ciągu 14 dni od zakupu, a zwrócimy całą kwotę. Zobacz <a href="refunds.html">zasady zwrotów</a>.</p>
+      </details>
+      <details>
+        <summary>Czy jest wersja na iPhone’a lub iPada?</summary>
+        <p>iPhone i iPad nie pozwalają aplikacjom ocieplać całego ekranu. Mają jednak wbudowane ustawienia, które dają podobny efekt: zobacz nasz bezpłatny <a href="iphone.html">poradnik, jak uzyskać czerwony ekran w nocy na iPhonie i iPadzie</a>.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="../assets/windows-icon-64.png" alt="" width="24" height="24"> Dozelight</div>
+    <p>© 2026 Dozelight. Stworzony dla nocnych marków.</p>
+    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight na Maca</a> · <a href="windows.html" data-choose="windows">Dozelight na Windows</a> · <a href="install.html">Instrukcja instalacji na Macu</a> · <a href="windows-install.html">Instrukcja instalacji na Windows</a> · <a href="changelog.html">Co nowego</a> · <a href="privacy.html">Prywatność</a> · <a href="terms.html">Regulamin</a> · <a href="refunds.html">Zwroty</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links">Poradniki: <a href="screens-and-sleep.html">Ekrany a lepszy sen</a> · <a href="rest-your-eyes.html">Daj oczom odpocząć</a> · <a href="blue-light-filter.html">Filtr światła niebieskiego</a> · <a href="night-shift-warmer.html">Jak ocieplić Night Shift</a> · <a href="red-screen-windows.html">Czerwony ekran w Windows</a> · <a href="compare.html">Night Shift vs Światło nocne vs f.lux</a> · <a href="iphone.html">iPhone i iPad</a></p>
+    <p class="fineprint">Windows, Night Light i Microsoft Defender są znakami towarowymi Microsoft Corporation. Dozelight nie jest powiązany z firmą Microsoft.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

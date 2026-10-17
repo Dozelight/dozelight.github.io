@@ -11,8 +11,21 @@
   <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script data-lang-redirect>
+    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
+    // Crawlers stay.
+    (function () {
+      var chosen = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      try { chosen = localStorage.getItem("lang"); } catch (e) {}
+      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
+        location.replace("pl/" + (location.pathname.split("/").pop() || "") + location.search + location.hash);
+    })();
+  </script>
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
+  <link rel="alternate" hreflang="en" href="https://dozelight.github.io/install.html">
+  <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/install.html">
+  <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/install.html">
   <link rel="canonical" href="https://dozelight.github.io/install.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "macOS says it could not verify Dozelight", "acceptedAnswer": {"@type": "Answer", "text": "That's a download from before Dozelight was notarized by Apple. Delete Dozelight from Applications, download it again from this site and open it as above. If you'd rather keep that copy, open it once, click Done, then click Open Anyway in System Settings → Privacy & Security."}}, {"@type": "Question", "name": "macOS says Dozelight is damaged and can't be opened", "acceptedAnswer": {"@type": "Answer", "text": "The download was probably interrupted. Delete Dozelight from Applications, download it again from this site and repeat the steps. If it still happens, email us at dozelight@icloud.com."}}, {"@type": "Question", "name": "I can't find the icon in the menu bar", "acceptedAnswer": {"@type": "Answer", "text": "If your menu bar is full, macOS may hide some icons behind the camera notch. Quit a few other menu bar apps, or open System Settings → Menu Bar and make sure Dozelight is allowed. You can also open Dozelight from Spotlight at any time: it opens its menu for you."}}, {"@type": "Question", "name": "I'm on an older version of macOS", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight needs macOS 13 Ventura or later. On older versions it won't open."}}]}</script>
 </head>
@@ -31,6 +44,7 @@
       <a href="index.html#download">Pricing</a>
       <a href="index.html#faq">FAQ</a>
     </nav>
+    <a class="lang-link" href="pl/install.html" hreflang="pl" lang="pl" data-lang="pl" aria-label="Polski">PL</a>
     <a class="button button-small" href="download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Download</a>
   </header>
   <div class="platform-hint" id="platform-hint" hidden>Looks like you're on Windows. <a href="windows-install.html" data-choose="windows">See how to install Dozelight for Windows →</a></div>

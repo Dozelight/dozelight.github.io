@@ -13,6 +13,12 @@
       try { localStorage.setItem("platform", link.getAttribute("data-choose")); } catch (e) {}
     });
   });
+  // The header's language link remembers the choice, so the English pages stop sending a Polish browser to /pl/.
+  document.querySelectorAll("[data-lang]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      try { localStorage.setItem("lang", link.getAttribute("data-lang")); } catch (e) {}
+    });
+  });
   var hint = document.getElementById("platform-hint");
   if (hint && detected && page && detected !== page && !chosen) hint.hidden = false;
 })();

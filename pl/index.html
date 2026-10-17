@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="pl" data-platform="mac" data-home>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dozelight – filtr światła niebieskiego na Maca</title>
+  <meta name="description" content="Dozelight to filtr i bloker światła niebieskiego na Maca: blokuje światło niebieskie całkowicie, aż do blasku świecy i czystej czerwieni, zgodnie z twoją porą snu. Bezpłatny okres próbny.">
+  <meta name="theme-color" content="#0d0a0b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dozelight">
+  <meta property="og:title" content="Dozelight – filtr światła niebieskiego na Maca">
+  <meta property="og:description" content="Aż do blasku świecy i czystej czerwieni, zgodnie z twoją porą snu. Mała aplikacja na pasku menu macOS z 14-dniowym bezpłatnym okresem próbnym.">
+  <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
+  <meta property="og:url" content="https://dozelight.github.io/pl/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // Windows visitors who haven't picked a platform go to the Windows page (see platform.js). Search crawlers stay.
+    (function () {
+      var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "", chosen = null;
+      try { chosen = localStorage.getItem("platform"); } catch (e) {}
+      if (!chosen && /Win/i.test(ua) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
+        location.replace("windows.html" + location.hash);
+    })();
+  </script>
+  <script src="../platform.js" defer></script>
+  <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="../count.js"></script>
+  <meta name="google-site-verification" content="awgSpBVwiy73n4SWK_MEB2o4UoAEffG2brTuxusj59I">
+  <meta name="msvalidate.01" content="475B252E7EF599B6CED038FA5DAF3CCC">
+  <link rel="alternate" hreflang="en" href="https://dozelight.github.io/">
+  <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/">
+  <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/">
+  <link rel="canonical" href="https://dozelight.github.io/pl/">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Dozelight", "alternateName": "Aplikacja Dozelight", "url": "https://dozelight.github.io/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Dozelight", "operatingSystem": "macOS 13 lub nowszy", "applicationCategory": "UtilitiesApplication", "description": "Dozelight to filtr i bloker światła niebieskiego na Maca. Night Shift tylko ogranicza światło niebieskie, a Dozelight blokuje je całkowicie, aż do blasku świecy i czystej czerwieni, i podąża za twoją porą snu. 14-dniowy bezpłatny okres próbny.", "url": "https://dozelight.github.io/", "downloadUrl": "https://dozelight.github.io/download/Dozelight.dmg", "image": "https://dozelight.github.io/assets/icon.png", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL"}, "publisher": {"@type": "Organization", "name": "Dozelight", "url": "https://dozelight.github.io/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Czy jest wersja na iPhone’a lub iPada?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone i iPad nie pozwalają aplikacjom ocieplać całego ekranu, więc Dozelight na nie nie istnieje. Mają jednak wbudowane ustawienia, które dają podobny efekt: zajrzyj do naszego bezpłatnego poradnika o czerwonym ekranie nocą na iPhonie i iPadzie."}}, {"@type": "Question", "name": "Na jakich Macach działa?", "acceptedAnswer": {"@type": "Answer", "text": "Na każdym Macu z macOS 13 Ventura lub nowszym, z procesorem Apple silicon lub Intel. Ocieplanie Touch Bara działa na MacBookach Pro z Apple silicon i Touch Barem."}}, {"@type": "Question", "name": "Czy zastępuje Night Shift?", "acceptedAnswer": {"@type": "Answer", "text": "Nie potrzebuje go. Dozelight ociepla ekran o każdej porze dnia, niezależnie od tego, czy Night Shift jest włączony. Jeśli jest, Dozelight dokłada się do jego ocieplenia, tak aby ekran miał dokładnie wybraną przez ciebie temperaturę. W trybie Auto podąża za twoją własną porą snu."}}, {"@type": "Question", "name": "Czym są Ciemnia i Dodatkowe przyciemnienie?", "acceptedAnswer": {"@type": "Answer", "text": "Ciemnia odwraca kolory ekranu i zostawia tylko czerwień, więc strony stają się czarne z czerwonym tekstem: to najłagodniejszy sposób na czytanie późną nocą. Dodatkowe przyciemnienie sprawia, że ekran jest ciemniejszy niż przy najniższym ustawieniu jasności. Obie opcje znajdziesz w menu Filtry, obok filtrów Czerń i biel, Sepia, Odwróć kolory i Wysoki kontrast. Działają o każdej porze dnia."}}, {"@type": "Question", "name": "Czy spowolni mojego Maca?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Dozelight pracuje tylko wtedy, gdy coś się zmienia, na przykład gdy włącza się Night Shift albo przesuwasz suwak. W spoczynku jego zużycie CPU jest niemierzalne."}}, {"@type": "Question", "name": "Czy zrzuty i nagrania ekranu będą czerwone?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Ocieplenie nakłada sam wyświetlacz, więc zrzuty ekranu, nagrania i udostępniany ekran zachowują prawdziwe kolory."}}, {"@type": "Question", "name": "Czy zbiera jakieś dane?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Dozelight nie ma żadnej analityki ani śledzenia. Łączy się z internetem tylko po to, by aktywować i od czasu do czasu sprawdzić twój klucz licencyjny – wysyła wtedy wyłącznie klucz i nazwę twojego Maca – oraz raz dziennie, by poszukać aktualizacji. Zmierzch i świt są szacowane na podstawie twojej strefy czasowej, więc nie potrzebuje też twojej lokalizacji."}}, {"@type": "Question", "name": "Dozelight to filtr czy bloker światła niebieskiego?", "acceptedAnswer": {"@type": "Answer", "text": "Jedno i drugie. Filtr światła niebieskiego, taki jak Night Shift, ogranicza światło niebieskie. Dozelight robi to przy łagodniejszych ustawieniach, a jako bloker światła niebieskiego całkowicie wyłącza niebieskie światło ekranu: przy 1900K i cieplejszych ustawieniach oraz w trybie Tylko czerwień. Ty decydujesz, jak daleko pójść – albo zdajesz się na tryb Auto, który podąża za twoją porą snu."}}, {"@type": "Question", "name": "Czy Dozelight całkowicie blokuje światło niebieskie?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Przy 1900K i cieplejszych ustawieniach oraz w trybie Tylko czerwień Dozelight całkowicie wyłącza niebieskie światło ekranu. Łagodniejsze ustawienia je ograniczają, jak mocniejszy Night Shift. Tryb Auto dochodzi do 1900K w twojej porze snu i przez całą noc zostawia tylko czerwone światło."}}, {"@type": "Question", "name": "Czy Dozelight pomoże mi lepiej spać?", "acceptedAnswer": {"@type": "Answer", "text": "Usuwa jedną z rzeczy, które mogą opóźniać sen: jasne, bogate w niebieską barwę światło ekranu wieczorem. Tryb Auto stopniowo ociepla ekran, a po porze snu zostawia tylko czerwone światło. Regularne pory snu, wyciszenie się wieczorem i ciemna sypialnia znaczą co najmniej tyle samo, więc zajrzyj do naszego poradnika o ekranach, świetle niebieskim i lepszym śnie. Dozelight to narzędzie poprawiające komfort, a nie wyrób medyczny."}}, {"@type": "Question", "name": "Czy to wyrób medyczny?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Dozelight to narzędzie, które poprawia komfort korzystania z Maca wieczorem. Nie diagnozuje, nie leczy ani nie zapobiega żadnym schorzeniom."}}, {"@type": "Question", "name": "Ile kosztuje?", "acceptedAnswer": {"@type": "Answer", "text": "9,99 USD, jednorazowo. To cena we wczesnym dostępie – po jego zakończeniu wzrośnie do 14,99 USD. Najpierw możesz przez 14 dni bezpłatnie wypróbować wszystkie funkcje, a jedna licencja obejmuje maksymalnie 3 komputery – Mac lub Windows."}}, {"@type": "Question", "name": "Co oznacza wczesny dostęp?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight jest kompletny i gotowy do codziennego użytku, a nowe funkcje są w drodze. We wczesnym dostępie kosztuje mniej, a jego użytkownicy pomagają zdecydować, co pojawi się dalej. Twoja licencja działa także po zakończeniu wczesnego dostępu, a aktualizacje nadal przychodzą automatycznie."}}, {"@type": "Question", "name": "Co się stanie po zakończeniu okresu próbnego?", "acceptedAnswer": {"@type": "Answer", "text": "Ocieplenie zostanie wstrzymane, dopóki nie wpiszesz klucza licencyjnego. Twoje ustawienia pozostaną bez zmian, więc wszystko wróci w chwili aktywacji."}}, {"@type": "Question", "name": "Jak działają aktualizacje?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight raz dziennie sprawdza, czy jest nowa wersja. Jeśli jest, pokazuje, co nowego, i instaluje ją jednym kliknięciem. W każdej chwili możesz też wybrać w jego menu Ustawienia → Sprawdź uaktualnienia…"}}, {"@type": "Question", "name": "Jak przenieść licencję na nowego Maca?", "acceptedAnswer": {"@type": "Answer", "text": "Na starym Macu otwórz Licencja… w menu Dozelight i kliknij Dezaktywuj ten Mac. Swoimi Macami możesz też zarządzać w portalu klienta Polar – link znajdziesz w potwierdzeniu zakupu."}}, {"@type": "Question", "name": "Czy mogę dostać zwrot pieniędzy?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Jeśli Dozelight ci nie odpowiada, napisz do nas w ciągu 14 dni od zakupu, a zwrócimy całą kwotę. Zobacz zasady zwrotów."}}, {"@type": "Question", "name": "Czy instalacja Dozelight jest bezpieczna?", "acceptedAnswer": {"@type": "Answer", "text": "Tak. Dozelight jest podpisany przez swojego twórcę i poświadczony przez Apple, które przed udostępnieniem do pobrania sprawdza każdą wersję pod kątem złośliwego oprogramowania. Przy pierwszym otwarciu macOS zapyta, czy otworzyć aplikację pobraną z internetu: kliknij Otwórz. Zobacz kroki instalacji powyżej."}}]}</script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Dozelight – strona główna">
+      <img src="../assets/icon-64.png" alt="" width="32" height="32">
+      <span>Dozelight</span>
+    </a>
+    <div class="platform-switch" role="group" aria-label="Platforma">
+      <a href="index.html" data-choose="mac" aria-current="page">macOS</a>
+      <a href="windows.html" data-choose="windows">Windows</a>
+    </div>
+    <nav class="nav-links" aria-label="Sekcje">
+      <a href="#demo">Wypróbuj</a>
+      <a href="#features">Funkcje</a>
+      <a href="#night">Twoja noc</a>
+      <a href="#download">Cena</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="lang-link" href="../index.html" hreflang="en" lang="en" data-lang="en" aria-label="English">EN</a>
+    <a class="button button-small" href="#download">Pobierz</a>
+  </header>
+  <div class="platform-hint" id="platform-hint" hidden>Wygląda na to, że używasz Windows. <a href="windows.html" data-choose="windows">Zobacz Dozelight na Windows →</a></div>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> Bloker światła niebieskiego dla macOS</p>
+        <h1>Zablokuj światło niebieskie<br><em>na swoim Macu.</em></h1>
+        <p class="lede">
+          Night Shift to łagodny filtr światła niebieskiego: tylko je ogranicza. Dozelight blokuje je całkowicie, aż do blasku świecy
+          i czystej czerwieni, a do tego podąża za twoją porą snu, więc ekran wycisza się razem z tobą.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="../download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Pobierz wersję próbną</a>
+          <a class="button button-ghost" href="https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL" data-goatcounter-click="buy-mac" data-goatcounter-title="Buy (Mac page)">Kup za 9,99 USD</a>
+        </div>
+        <p class="hero-note">14-dniowy okres próbny ze wszystkimi funkcjami · macOS 13 lub nowszy · Apple silicon i Intel</p>
+        <ul class="hero-facts" aria-label="Najważniejsze">
+          <li><strong>1000K</strong><span>najcieplejsze ustawienie</span></li>
+          <li><strong>100%</strong><span>światła niebieskiego zablokowane</span></li>
+          <li><strong>0%</strong><span>CPU w spoczynku</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="horizon"></div>
+        <!-- A recreation of Dozelight's menu -->
+        <div class="menu">
+          <div class="menu-row sun-row">
+            <span><i class="ico ico-rise"></i>Świt 05:58</span>
+            <span><i class="ico ico-set"></i>Zmierzch 18:55</span>
+          </div>
+          <div class="menu-row title-row">
+            <b>Dozelight</b>
+            <span class="switch on"><i></i></span><span class="muted">Wł.</span>
+            <span class="value">Auto · 1900K</span>
+          </div>
+          <div class="fake-slider"><div class="fill" style="width:47%"></div><div class="knob" style="left:47%"></div></div>
+          <div class="menu-sep"></div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Ustawienia wstępne</div>
+          <div class="menu-item"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V17h5v-1.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>Tylko czerwień (bez niebieskiego i zielonego)</div>
+          <div class="menu-item checked"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14.5A7.5 7.5 0 1 1 9.5 5a6 6 0 0 0 9.5 9.5z"/><path d="M17 3v3M15.5 4.5h3"/></svg>Auto (chroń sen i melatoninę)</div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Harmonogram Auto</div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="10" r="5.5"/><circle cx="15" cy="10" r="5.5"/><circle cx="12" cy="15" r="5.5"/></svg>Filtry</div>
+          <div class="menu-sep"></div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="9" width="20" height="6" rx="2"/><path d="M6 12h2M10.5 12h3M16 12h2"/></svg>Touch Bar</div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5l11.5 6.8-5.3 1.4-2.4 5.3z"/><path d="M19 4l-1.5 1.5M20.5 8h-2"/></svg>Wskaźnik</div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h1M10 10h1M14 10h1M18 10h1M7 14h10"/></svg>Klawiatura</div>
+          <div class="menu-sep"></div>
+          <div class="menu-item sub"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>Ustawienia</div>
+          <div class="menu-item"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8"/><path d="M6.6 6.6a7.5 7.5 0 1 0 10.8 0"/></svg>Zakończ Dozelight</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive demo -->
+    <section class="section demo" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">Wypróbuj</p>
+        <h2>Przesuń suwak w stronę wieczoru.</h2>
+        <p>To symulacja w twojej przeglądarce. Prawdziwa aplikacja ociepla cały ekran – i Touch Bar też.</p>
+      </div>
+
+      <div class="demo-stage">
+        <div class="screen" id="screen">
+          <div class="window">
+            <div class="window-bar">
+              <span class="traffic"><i></i><i></i><i></i></span>
+              <span class="window-title">Notatki</span>
+            </div>
+            <div class="window-body">
+              <aside class="sidebar">
+                <p class="side-head">Foldery</p>
+                <p class="side-item active">Wszystkie notatki</p>
+                <p class="side-item">Pomysły</p>
+                <p class="side-item">Do przeczytania</p>
+                <p class="side-item">Podróże</p>
+              </aside>
+              <article class="doc">
+                <div class="photo"><span class="photo-sun"></span></div>
+                <h3>Nocne myśli</h3>
+                <p>Jest 23:40, a ekran wciąż świeci jak w samo południe. Każda biała strona to mały wschód słońca.</p>
+                <div class="lines"><i></i><i></i><i style="width:72%"></i></div>
+                <div class="chips"><span class="chip blue">Niebieski</span><span class="chip green">Zielony</span><span class="chip red">Czerwony</span></div>
+              </article>
+            </div>
+          </div>
+          <div class="touchbar">
+            <span class="tb-esc">esc</span>
+            <span class="tb-group"><i class="tb-btn"></i><i class="tb-btn"></i><i class="tb-btn wide"></i></span>
+            <span class="tb-group"><i class="tb-btn"></i><i class="tb-btn"></i><i class="tb-btn"></i><i class="tb-btn"></i></span>
+          </div>
+          <div class="tint" id="tint"></div>
+        </div>
+
+        <div class="controls">
+          <div class="readout">
+            <span class="readout-k" id="readout">6500K</span>
+            <span class="readout-label" id="readout-label">Dzień</span>
+          </div>
+          <label class="range-label" for="kelvin">Temperatura barwowa</label>
+          <input type="range" id="kelvin" min="0" max="1000" value="0" aria-describedby="readout">
+          <div class="range-ends"><span>Dzień</span><span>Granica Night Shift</span><span>Świeca</span></div>
+          <div class="presets" role="group" aria-label="Ustawienia wstępne">
+            <button type="button" data-k="6500">Dzień</button>
+            <button type="button" data-k="2700">Night Shift</button>
+            <button type="button" data-k="2400">Ciepło</button>
+            <button type="button" data-k="2000">Świeca</button>
+            <button type="button" data-k="1600">Ognisko</button>
+            <button type="button" data-k="1200">Żar</button>
+            <button type="button" data-k="red" class="red">Tylko czerwień</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature showcase -->
+    <section class="section showcase" id="showcase">
+      <div class="section-head">
+        <p class="eyebrow">Co potrafi</p>
+        <h2>Trzy rzeczy, które robi lepiej.</h2>
+      </div>
+      <div class="showcase-rows">
+        <div class="guide-step showcase-row">
+          <div class="guide-text">
+            <h3>Auto ze zmierzchem i świtem oraz Maksymalnym ociepleniem</h3>
+            <p>Auto ociepla ekran krok po kroku przez cały wieczór, po porze snu przechodzi w czerwień, a zanim się obudzisz, wraca do zwykłych barw. Może podążać za twoją porą snu albo za zmierzchem i świtem.</p>
+            <p>Maksymalne ocieplenie decyduje, jak daleko to zajdzie: łagodny bursztyn, blask świecy albo pełna czerwień. Przypomnienie 30 minut przed snem włączysz jednym kliknięciem.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Ilustracja: oś czasu od 18:00 do 07:00. Ekran pozostaje neutralny do zmierzchu, stopniowo ociepla się aż do pory snu, przez całą noc trzyma się linii Maksymalnego ocieplenia i tuż przed 07:00 wraca do neutralnych barw.">
+          <div class="auto-chart" aria-hidden="true">
+            <div class="auto-plot">
+              <svg class="auto-curve" viewBox="0 0 440 120" preserveAspectRatio="none">
+                <defs><linearGradient id="auto-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a2f" stop-opacity="0.45"/><stop offset="1" stop-color="#ff7a2f" stop-opacity="0"/></linearGradient></defs>
+                <path class="vline" d="M34 0V120M169 0V120" vector-effect="non-scaling-stroke"/>
+                <line class="max" x1="0" y1="22" x2="440" y2="22" vector-effect="non-scaling-stroke"/>
+                <path class="area" d="M0 108H34C90 108 125 72 169 46C182 38 192 24 206 22H406C418 22 428 72 440 108V120H0Z"/>
+                <path class="line" d="M0 108H34C90 108 125 72 169 46C182 38 192 24 206 22H406C418 22 428 72 440 108" vector-effect="non-scaling-stroke"/>
+              </svg>
+              <span class="auto-max">Maksymalne ocieplenie</span>
+              <span class="auto-sun"></span>
+            </div>
+            <div class="auto-bar"></div>
+            <div class="auto-marks">
+              <span class="start" style="--at:0%">18:00</span>
+              <span class="optional" style="--at:19%">zmierzch</span>
+              <span style="--at:38.5%">pora snu</span>
+              <span class="end" style="--at:100%">pobudka 07:00</span>
+            </div>
+          </div>
+        </figure>
+        </div>
+        <div class="guide-step showcase-row flip">
+          <div class="guide-text">
+            <h3>Tylko czerwień – ostatni stopień suwaka</h3>
+            <p>Suwak zaczyna się na 2700K, tam gdzie kończy się Night Shift, i schodzi aż do 1000K. Potem jest jeszcze jeden stopień: Tylko czerwień całkowicie usuwa niebieski i zielony, zostawiając najłagodniejsze światło, jakie potrafi dać ekran. Touch Bar dostaje tę samą barwę.</p>
+            <p>Dodatkowe przyciemnienie przygasza czerwień jeszcze bardziej – poniżej najniższego ustawienia jasności.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Ilustracja: suwak ciepła Dozelight od 2700K przez gotowe ustawienia Ciepło, Świeca, Ognisko i Żar do znacznika 1000K, a za nim osobny czerwony odcinek „Tylko czerwień”, na którym stoi gałka. Pod spodem suwak Dodatkowego przyciemnienia ustawiony na 40%.">
+          <div class="menu" aria-hidden="true">
+            <div class="menu-row title-row"><b>Dozelight</b><span class="switch on"><i></i></span><span class="muted">Wł.</span><span class="value">Tylko czerwień</span></div>
+            <div class="kslider mac">
+              <span class="k-label above start" style="--at:0%">2700K</span>
+              <span class="k-label above" style="--at:76%">1000K</span>
+              <div class="kslider-track">
+                <i class="seg warm"></i><i class="seg pause"></i><i class="seg red"></i>
+                <i class="tick" style="--at:8.3%"></i><i class="tick" style="--at:21.1%"></i><i class="tick" style="--at:36.9%"></i><i class="tick" style="--at:57.2%"></i>
+                <b class="knob" style="--at:92.5%"></b>
+              </div>
+              <span class="k-label below" style="--at:8.3%">Ciepło</span>
+              <span class="k-label below alt" style="--at:21.1%">Świeca</span>
+              <span class="k-label below" style="--at:36.9%">Ognisko</span>
+              <span class="k-label below alt" style="--at:57.2%">Żar</span>
+              <span class="k-label below end" style="--at:100%">Tylko czerwień</span>
+            </div>
+            <div class="menu-sep"></div>
+            <div class="menu-row"><span>Dodatkowe przyciemnienie</span><span class="value">40%</span></div>
+            <div class="fake-slider"><div class="fill" style="width:40%"></div><div class="knob" style="left:40%"></div></div>
+          </div>
+        </figure>
+        </div>
+        <div class="guide-step showcase-row">
+          <div class="guide-text">
+            <h3>Wstrzymanie i aplikacje bez ocieplenia</h3>
+            <p>Kiedy potrzebujesz prawdziwych kolorów, wstrzymaj ocieplenie na godzinę albo do rana. Możesz też wybrać aplikacje – na przykład edytor zdjęć – w których barwa znika, gdy z nich korzystasz, i wraca, gdy je opuszczasz.</p>
+            <p>Każda zmiana w menu kończy wstrzymanie.</p>
+          </div>
+        <figure class="shot showcase-shot" aria-label="Ilustracja: ocieplony pulpit z dwoma oknami. Zdjęcia na pierwszym planie pokazują prawdziwe kolory, a okno Notatek za nimi pozostaje ciepłe. Menu Dozelight pokazuje „Wstrzymane: Zdjęcia”, a w rozwiniętym „Wstrzymaj” widać „Na godzinę” i „Do 07:00”.">
+          <div class="pause-scene" aria-hidden="true">
+            <div class="pause-windows">
+              <div class="pwin back"><div class="pwin-bar"><span class="traffic"><i></i><i></i><i></i></span>Notatki</div><div class="pwin-body"><i></i><i></i><i></i><i style="width:70%"></i><i></i><i style="width:45%"></i></div></div>
+              <div class="pwin front"><div class="pwin-bar"><span class="traffic"><i></i><i></i><i></i></span>Zdjęcia</div><div class="pwin-photos"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            </div>
+            <div class="menu">
+              <div class="menu-row title-row"><b>Dozelight</b><span class="switch on"><i></i></span><span class="muted">Wł.</span><span class="value">Wstrzymane w Zdjęciach</span></div>
+              <div class="menu-sep"></div>
+              <div class="menu-item sub open"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M10 9v6M14 9v6"/></svg>Wstrzymaj</div>
+              <div class="submenu"><div class="menu-item">Na godzinę</div><div class="menu-item">Do 07:00</div></div>
+            </div>
+            <div class="pause-tint"></div>
+          </div>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="eyebrow">Funkcje</p>
+        <h2>Mała aplikacja. Ciepłe światło. Dopracowany każdy szczegół.</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>Dalej niż Night Shift</h3>
+          <p>Night Shift kończy się na 2700K. Dozelight idzie dalej, aż do 1000K, z gotowymi ustawieniami od Ciepła po Żar.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Tylko czerwień</h3>
+          <p>Całkowicie usuwa niebieski i zielony – to jeszcze jeden stopień za 1000K, <a class="inline-link" href="#showcase">jak widać wyżej</a>.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div>
+          <h3>Podąża za twoją porą snu</h3>
+          <p>Auto stopniowo ociepla ekran przez cały wieczór, a po porze snu przechodzi w czerwień, <a class="inline-link" href="#showcase">jak widać wyżej</a>.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2.5" y="9" width="19" height="6" rx="2"/><path d="M6 12h2M10.5 12h3M16 12h2"/></svg></div>
+          <h3>Touch Bar też</h3>
+          <p>Night Shift pomija Touch Bar. Dozelight ociepla go tak samo jak ekran albo daje mu osobny suwak.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 3l12 7-5.5 1.5L10 17z"/><circle cx="10" cy="11" r="8.5" opacity=".35"/></svg></div>
+          <h3>Wskaźnik, który łatwo znaleźć</h3>
+          <p>W głębokiej czerwieni strzałka łatwo ginie. Włącz większy wskaźnik z delikatną poświatą i wyłącz podświetlenie klawiatury – tylko wtedy, gdy ekran jest najcieplejszy.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 7V4M5.6 10.6 3.5 8.5M18.4 10.6l2.1-2.1"/></svg></div>
+          <h3>Zmierzch i świt</h3>
+          <p>Dzisiejszy zmierzch i świt prosto w menu, wyliczone na podstawie twojej strefy czasowej. Bez dostępu do lokalizacji – nigdy.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="10" r="6"/><circle cx="15" cy="10" r="6"/><circle cx="12" cy="15" r="6"/></svg></div>
+          <h3>Filtry i dostępność</h3>
+          <p>Czerń i biel, Sepia, Odwróć kolory i Ciemnia, a do tego Wysoki kontrast i Dodatkowe przyciemnienie, gdy chcesz ciemniej niż przy najniższej jasności.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>Natychmiast</h3>
+          <p>Reaguje na Night Shift, twoje ustawienia i monitory w ułamku sekundy. Bez ciągłego odpytywania, bez opóźnień.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z"/></svg></div>
+          <h3>Lekka jak piórko i prywatna</h3>
+          <p>Tylko 1,6 MB do pobrania, niemierzalne zużycie CPU w spoczynku i zero śledzenia. Łączy się z internetem tylko po to, by sprawdzić licencję i poszukać aktualizacji.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 7V4"/><path d="M12 20v1" opacity=".4"/></svg></div>
+          <h3>Za słońcem, jeśli wolisz</h3>
+          <p>Auto może podążać za zmierzchem i świtem zamiast za twoją porą snu. Wieczór ociepla się od zmierzchu, pogłębia po porze snu i ustępuje do świtu.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Tak ciepło, jak chcesz</h3>
+          <p>Maksymalne ocieplenie ustala, jak daleko idzie Auto: łagodny bursztyn dla jednych, blask świecy dla większości, czysta czerwień dla nocnych marków.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg></div>
+          <h3>Wstrzymaj, gdy potrzebujesz kolorów</h3>
+          <p>Na godzinę albo do rana, <a class="inline-link" href="#showcase">jak widać wyżej</a>; każda zmiana od razu przywraca ocieplenie.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><path d="M15 17h4M17 15v4"/></svg></div>
+          <h3>Z wyjątkiem tych aplikacji</h3>
+          <p>Wybierz aplikacje, na przykład edytor zdjęć, w których ocieplenie znika, gdy z nich korzystasz, i wraca, gdy je opuszczasz.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="12" height="9" rx="1.5"/><rect x="11" y="9" width="11" height="8" rx="1.5"/><path d="M8 16v3M5 19h6"/></svg></div>
+          <h3>Każdy ekran albo tylko niektóre</h3>
+          <p>Masz więcej niż jeden ekran? Wybierz, które mają być ocieplane. Monitor do pracy z kolorem może pozostać neutralny.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h1M10 11h1M14 11h1M18 11h1M8 14h8"/></svg></div>
+          <h3>Bez sięgania po mysz</h3>
+          <p>⌃⌥⌘D włącza i wyłącza ocieplenie, ⌃⌥⌘→ i ← zmieniają ciepło o stopień, a przewijanie nad ikoną na pasku menu pozwala je precyzyjnie dostroić.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.5 1.5"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.5-1.5"/></svg></div>
+          <h3>Sterowanie skryptami</h3>
+          <p><code>dozelight://warmer</code>, <code>pause</code>, <code>off</code> i inne linki pozwalają sterować Dozelight z aplikacji Skróty, ze skryptów albo z automatyzacji inteligentnego domu.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- A night with Dozelight -->
+    <section class="section night" id="night">
+      <div class="section-head">
+        <p class="eyebrow">Twoja noc</p>
+        <h2>Ekran, który wycisza się razem z tobą.</h2>
+        <p>To światło niebieskie mówi organizmowi, że wciąż jest dzień. W trybie Auto Dozelight ogranicza je krok po kroku, im bliżej pory snu,
+          a przez noc zostawia tylko czerwone światło – więc nawet rzut oka na ekran o 3:00 w nocy pozostaje łagodny.</p>
+      </div>
+      <div class="timeline" role="img" aria-label="Pora snu o 23:00, pobudka o 07:00: do 19:00 tylko Night Shift, potem coraz cieplej, aż do 1900K w porze snu, od północy tylko czerwień, a o 07:00 znów zwykłe barwy.">
+        <div class="timeline-bar"></div>
+        <ol class="timeline-stops">
+          <li style="--at:0%"><b>19:00</b><span>Tylko Night Shift</span></li>
+          <li style="--at:16.7%"><b>21:00</b><span>2300K</span></li>
+          <li style="--at:33.3%"><b>23:00</b><span>Pora snu, 1900K</span></li>
+          <li style="--at:41.7%"><b>00:00</b><span>Tylko czerwień</span></li>
+          <li style="--at:95.8%"><b>06:30</b><span>Powrót do zwykłych barw</span></li>
+          <li style="--at:100%"><b>07:00</b><span>Dzień dobry</span></li>
+        </ol>
+      </div>
+      <p class="fineprint">Porę snu i porę pobudki ustawisz w menu.</p>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section" id="compare">
+      <div class="section-head">
+        <p class="eyebrow">Porównanie</p>
+        <h2>Czego Night Shift nie potrafi.</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col"></th><th scope="col">Night Shift</th><th scope="col">Dozelight</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Najcieplejsze ustawienie</th><td>2700K</td><td class="yes">1000K</td></tr>
+            <tr><th scope="row">Całkowicie blokuje światło niebieskie</th><td class="no">Nie, tylko je ogranicza</td><td class="yes">Tak, od 1900K</td></tr>
+            <tr><th scope="row">Tylko czerwień, bez niebieskiego i zielonego</th><td class="no">Nie</td><td class="yes">Tak</td></tr>
+            <tr><th scope="row">Stopniowy harmonogram do pory snu</th><td class="no">Tylko od zachodu do wschodu słońca</td><td class="yes">Tak</td></tr>
+            <tr><th scope="row">Touch Bar</th><td class="no">Zostaje biały</td><td class="yes">Ociepla się razem z ekranem</td></tr>
+            <tr><th scope="row">Pomoc ze wskaźnikiem po ciemku</th><td class="no">Nie</td><td class="yes">Większy wskaźnik i poświata</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fineprint"><a class="inline-link" href="compare.html">Zobacz, jak Dozelight wypada na tle f.lux i Światła nocnego →</a> · <a class="inline-link" href="night-shift-warmer.html">Jak sprawić, by Night Shift był cieplejszy →</a></p>
+    </section>
+
+    <!-- Pricing and download -->
+    <section class="section pricing" id="download">
+      <div class="waitlist-card">
+        <img src="../assets/icon-144.png" alt="Ikona aplikacji Dozelight" width="72" height="72">
+        <p class="eyebrow">Cena we wczesnym dostępie</p>
+        <h2>Zdobądź Dozelight</h2>
+        <p class="price"><strong>9,99 USD</strong><span>jednorazowo</span></p>
+        <p class="early-note"><b>Cena we wczesnym dostępie.</b> Po zakończeniu wczesnego dostępu wzrośnie do 14,99 USD. Pierwsi kupujący współtworzą Dozelight: <a href="mailto:dozelight@icloud.com">napisz nam, co chcesz zobaczyć w kolejnych wersjach</a>.</p>
+        <ul class="included">
+          <li>14-dniowy okres próbny ze wszystkimi funkcjami</li>
+          <li>Jedna licencja na maksymalnie 3 komputery – Mac lub Windows</li>
+          <li>Tryb Auto, Tylko czerwień, filtry oraz dodatki dla Touch Bara, wskaźnika i klawiatury</li>
+          <li>Automatyczne aktualizacje instalowane jednym kliknięciem</li>
+          <li>14-dniowa gwarancja zwrotu pieniędzy</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="button" href="../download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Pobierz wersję próbną</a>
+          <a class="button button-ghost" href="https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL" data-goatcounter-click="buy-mac" data-goatcounter-title="Buy (Mac page)">Kup teraz</a>
+        </div>
+        <p class="fineprint">Wersja 1.5.13 · 1,6 MB · macOS 13 Ventura lub nowszy. Płatności bezpiecznie obsługuje Polar. <a class="inline-link" href="changelog.html#mac">Co nowego →</a></p>
+      </div>
+    </section>
+
+    <!-- Installing -->
+    <section class="section install" id="install">
+      <div class="section-head">
+        <p class="eyebrow">Instalacja</p>
+        <h2>Gotowe w minutę.</h2>
+        <p>Dozelight jest poświadczony przez Apple, więc otwiera się jak każda inna pobrana aplikacja. <a class="inline-link" href="install.html">Zobacz instrukcję instalacji krok po kroku, z ilustracjami →</a></p>
+      </div>
+      <ol class="steps">
+        <li><b>Pobierz</b><span>Kliknij <b>Pobierz</b> i otwórz plik <code>Dozelight.dmg</code> z folderu Pobrane.</span></li>
+        <li><b>Przeciągnij do Aplikacji</b><span>W oknie, które się pojawi, przeciągnij Dozelight do folderu Aplikacje.</span></li>
+        <li><b>Otwórz Dozelight</b><span>macOS jednorazowo zapyta, czy otworzyć aplikację pobraną z internetu. Kliknij <b>Otwórz</b>.</span></li>
+        <li><b>Przywitaj się</b><span>Dozelight uruchomi się z krótkim samouczkiem i od tej pory zamieszka na pasku menu. Aktualizacje instalują się jednym kliknięciem, bez żadnych ostrzeżeń.</span></li>
+      </ol>
+    </section>
+
+    <!-- Updates list -->
+    <section class="section updates" id="updates">
+      <div class="waitlist-card small">
+        <h2>Bądź na bieżąco z nowościami</h2>
+        <p>Zostaw swój e-mail, a dostaniesz krótką wiadomość, gdy w Dozelight pojawi się coś nowego.</p>
+        <form class="signup" id="signup" hidden>
+          <label class="visually-hidden" for="email">Adres e-mail</label>
+          <input type="email" id="email" name="email" placeholder="ty@przyklad.pl" autocomplete="email" required>
+          <input type="hidden" name="_subject" value="New Dozelight update sign-up">
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="button" type="submit">Powiadom mnie</button>
+          <p class="fineprint signup-note">Twojego adresu użyjemy tylko do wiadomości o Dozelight. Zobacz <a href="privacy.html">politykę prywatności</a>.</p>
+        </form>
+        <p class="signup-status" id="signup-status" role="status"></p>
+        <div class="github-notify" id="github-notify">
+          <a class="button" href="https://github.com/Dozelight/dozelight.github.io/subscription">Obserwuj na GitHubie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">Pytania i odpowiedzi</p>
+        <h2>Masz pytania? Odpowiadamy.</h2>
+      </div>
+      <details>
+        <summary>Czy jest wersja na iPhone’a lub iPada?</summary>
+        <p>iPhone i iPad nie pozwalają aplikacjom ocieplać całego ekranu, więc Dozelight na nie nie istnieje. Mają jednak wbudowane ustawienia, które dają podobny efekt: zajrzyj do naszego bezpłatnego <a href="iphone.html">poradnika o czerwonym ekranie nocą na iPhonie i iPadzie</a>.</p>
+      </details>
+      <details>
+        <summary>Na jakich Macach działa?</summary>
+        <p>Na każdym Macu z macOS 13 Ventura lub nowszym, z procesorem Apple silicon lub Intel. Ocieplanie Touch Bara działa na MacBookach Pro z Apple silicon i Touch Barem.</p>
+      </details>
+      <details>
+        <summary>Czy zastępuje Night Shift?</summary>
+        <p>Nie potrzebuje go. Dozelight ociepla ekran o każdej porze dnia, niezależnie od tego, czy Night Shift jest włączony. Jeśli jest, Dozelight dokłada się do jego ocieplenia, tak aby ekran miał dokładnie wybraną przez ciebie temperaturę. W trybie Auto podąża za twoją własną porą snu.</p>
+      </details>
+      <details>
+        <summary>Czym są Ciemnia i Dodatkowe przyciemnienie?</summary>
+        <p>Ciemnia odwraca kolory ekranu i zostawia tylko czerwień, więc strony stają się czarne z czerwonym tekstem: to najłagodniejszy sposób na czytanie późną nocą. Dodatkowe przyciemnienie sprawia, że ekran jest ciemniejszy niż przy najniższym ustawieniu jasności. Obie opcje znajdziesz w menu <b>Filtry</b>, obok filtrów Czerń i biel, Sepia, Odwróć kolory i Wysoki kontrast. Działają o każdej porze dnia.</p>
+      </details>
+      <details>
+        <summary>Czy spowolni mojego Maca?</summary>
+        <p>Nie. Dozelight pracuje tylko wtedy, gdy coś się zmienia, na przykład gdy włącza się Night Shift albo przesuwasz suwak. W spoczynku jego zużycie CPU jest niemierzalne.</p>
+      </details>
+      <details>
+        <summary>Czy zrzuty i nagrania ekranu będą czerwone?</summary>
+        <p>Nie. Ocieplenie nakłada sam wyświetlacz, więc zrzuty ekranu, nagrania i udostępniany ekran zachowują prawdziwe kolory.</p>
+      </details>
+      <details>
+        <summary>Czy zbiera jakieś dane?</summary>
+        <p>Nie. Dozelight nie ma żadnej analityki ani śledzenia. Łączy się z internetem tylko po to, by aktywować i od czasu do czasu sprawdzić twój klucz licencyjny – wysyła wtedy wyłącznie klucz i nazwę twojego Maca – oraz raz dziennie, by poszukać aktualizacji. Zmierzch i świt są szacowane na podstawie twojej strefy czasowej, więc nie potrzebuje też twojej lokalizacji.</p>
+      </details>
+      <details>
+        <summary>Dozelight to filtr czy bloker światła niebieskiego?</summary>
+        <p>Jedno i drugie. Filtr światła niebieskiego, taki jak Night Shift, ogranicza światło niebieskie. Dozelight robi to przy łagodniejszych ustawieniach, a jako bloker światła niebieskiego całkowicie wyłącza niebieskie światło ekranu: przy 1900K i cieplejszych ustawieniach oraz w trybie Tylko czerwień. Ty decydujesz, jak daleko pójść – albo zdajesz się na tryb Auto, który podąża za twoją porą snu.</p>
+      </details>
+      <details>
+        <summary>Czy Dozelight całkowicie blokuje światło niebieskie?</summary>
+        <p>Tak. Przy 1900K i cieplejszych ustawieniach oraz w trybie Tylko czerwień Dozelight całkowicie wyłącza niebieskie światło ekranu. Łagodniejsze ustawienia je ograniczają, jak mocniejszy Night Shift. Tryb Auto dochodzi do 1900K w twojej porze snu i przez całą noc zostawia tylko czerwone światło.</p>
+      </details>
+      <details>
+        <summary>Czy Dozelight pomoże mi lepiej spać?</summary>
+        <p>Usuwa jedną z rzeczy, które mogą opóźniać sen: jasne, bogate w niebieską barwę światło ekranu wieczorem. Tryb Auto stopniowo ociepla ekran, a po porze snu zostawia tylko czerwone światło. Regularne pory snu, wyciszenie się wieczorem i ciemna sypialnia znaczą co najmniej tyle samo, więc zajrzyj do naszego poradnika o <a href="screens-and-sleep.html">ekranach, świetle niebieskim i lepszym śnie</a>. Dozelight to narzędzie poprawiające komfort, a nie wyrób medyczny.</p>
+      </details>
+      <details>
+        <summary>Czy to wyrób medyczny?</summary>
+        <p>Nie. Dozelight to narzędzie, które poprawia komfort korzystania z Maca wieczorem. Nie diagnozuje, nie leczy ani nie zapobiega żadnym schorzeniom.</p>
+      </details>
+      <details>
+        <summary>Ile kosztuje?</summary>
+        <p>9,99 USD, jednorazowo. To cena we wczesnym dostępie – po jego zakończeniu wzrośnie do 14,99 USD. Najpierw możesz przez 14 dni bezpłatnie wypróbować wszystkie funkcje, a jedna licencja obejmuje maksymalnie 3 komputery – Mac lub Windows.</p>
+      </details>
+      <details>
+        <summary>Co oznacza wczesny dostęp?</summary>
+        <p>Dozelight jest kompletny i gotowy do codziennego użytku, a nowe funkcje są w drodze. We wczesnym dostępie kosztuje mniej, a jego użytkownicy pomagają zdecydować, co pojawi się dalej. Twoja licencja działa także po zakończeniu wczesnego dostępu, a aktualizacje nadal przychodzą automatycznie.</p>
+      </details>
+      <details>
+        <summary>Co się stanie po zakończeniu okresu próbnego?</summary>
+        <p>Ocieplenie zostanie wstrzymane, dopóki nie wpiszesz klucza licencyjnego. Twoje ustawienia pozostaną bez zmian, więc wszystko wróci w chwili aktywacji.</p>
+      </details>
+      <details>
+        <summary>Jak działają aktualizacje?</summary>
+        <p>Dozelight raz dziennie sprawdza, czy jest nowa wersja. Jeśli jest, pokazuje, co nowego, i instaluje ją jednym kliknięciem. W każdej chwili możesz też wybrać w jego menu <b>Ustawienia → Sprawdź uaktualnienia…</b></p>
+      </details>
+      <details>
+        <summary>Jak przenieść licencję na nowego Maca?</summary>
+        <p>Na starym Macu otwórz <b>Licencja…</b> w menu Dozelight i kliknij <b>Dezaktywuj ten Mac</b>. Swoimi Macami możesz też zarządzać w portalu klienta Polar – link znajdziesz w potwierdzeniu zakupu.</p>
+      </details>
+      <details>
+        <summary>Czy mogę dostać zwrot pieniędzy?</summary>
+        <p>Tak. Jeśli Dozelight ci nie odpowiada, napisz do nas w ciągu 14 dni od zakupu, a zwrócimy całą kwotę. Zobacz <a href="refunds.html">zasady zwrotów</a>.</p>
+      </details>
+      <details>
+        <summary>Czy instalacja Dozelight jest bezpieczna?</summary>
+        <p>Tak. Dozelight jest podpisany przez swojego twórcę i poświadczony przez Apple, które przed udostępnieniem do pobrania sprawdza każdą wersję pod kątem złośliwego oprogramowania. Przy pierwszym otwarciu macOS zapyta, czy otworzyć aplikację pobraną z internetu: kliknij <b>Otwórz</b>. Zobacz <a href="#install">kroki instalacji</a> powyżej.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="../assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
+    <p>© 2026 Dozelight. Stworzony dla nocnych marków.</p>
+    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight na Maca</a> · <a href="windows.html" data-choose="windows">Dozelight na Windows</a> · <a href="install.html">Instrukcja instalacji na Macu</a> · <a href="windows-install.html">Instrukcja instalacji na Windows</a> · <a href="changelog.html">Co nowego</a> · <a href="privacy.html">Prywatność</a> · <a href="terms.html">Regulamin</a> · <a href="refunds.html">Zwroty</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links">Poradniki: <a href="screens-and-sleep.html">Ekrany a lepszy sen</a> · <a href="rest-your-eyes.html">Daj oczom odpocząć</a> · <a href="blue-light-filter.html">Filtr światła niebieskiego</a> · <a href="night-shift-warmer.html">Jak ocieplić Night Shift</a> · <a href="red-screen-windows.html">Czerwony ekran w Windows</a> · <a href="compare.html">Night Shift vs Światło nocne vs f.lux</a> · <a href="iphone.html">iPhone i iPad</a></p>
+    <p class="fineprint">Mac, macOS, Night Shift i Touch Bar są znakami towarowymi Apple Inc. Dozelight nie jest powiązany z Apple.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

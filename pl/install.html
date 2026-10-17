@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pl" data-platform="mac">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Instalacja Dozelight</title>
+  <meta name="description" content="Jak zainstalować Dozelight na Macu – krok po kroku, z ilustracjami. Do tego rozwiązywanie problemów i odinstalowanie.">
+  <meta property="og:site_name" content="Dozelight">
+  <meta name="theme-color" content="#0d0a0b">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="preload" href="../assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../platform.js" defer></script>
+  <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="../count.js"></script>
+  <link rel="alternate" hreflang="en" href="https://dozelight.github.io/install.html">
+  <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/install.html">
+  <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/install.html">
+  <link rel="canonical" href="https://dozelight.github.io/pl/install.html">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "macOS informuje, że nie może zweryfikować Dozelight", "acceptedAnswer": {"@type": "Answer", "text": "To kopia pobrana, zanim Dozelight został poświadczony przez Apple. Usuń Dozelight z folderu Aplikacje, pobierz go ponownie z tej strony i otwórz tak jak wyżej. Jeśli wolisz zachować tę kopię, otwórz ją raz, kliknij Gotowe, a potem kliknij Otwórz mimo to w Ustawienia systemowe → Prywatność i ochrona."}}, {"@type": "Question", "name": "macOS informuje, że Dozelight jest uszkodzony i nie można go otworzyć", "acceptedAnswer": {"@type": "Answer", "text": "Pobieranie zostało prawdopodobnie przerwane. Usuń Dozelight z folderu Aplikacje, pobierz go ponownie z tej strony i powtórz wszystkie kroki. Jeśli problem się powtarza, napisz do nas na dozelight@icloud.com."}}, {"@type": "Question", "name": "Nie mogę znaleźć ikony na pasku menu", "acceptedAnswer": {"@type": "Answer", "text": "Gdy pasek menu jest pełny, macOS może ukryć część ikon za wycięciem na kamerę. Zamknij kilka innych aplikacji z paska menu albo otwórz Ustawienia systemowe → Pasek menu i sprawdź, czy Dozelight jest tam dozwolony. Dozelight możesz też w każdej chwili otworzyć przez Spotlight – wtedy sam otworzy swoje menu."}}, {"@type": "Question", "name": "Mam starszą wersję macOS", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight wymaga macOS 13 Ventura lub nowszego. W starszych wersjach się nie otworzy."}}]}</script>
+</head>
+<body>
+  <header class="nav scrolled">
+    <a class="brand" href="index.html" aria-label="Dozelight – strona główna">
+      <img src="../assets/icon-64.png" alt="" width="32" height="32">
+      <span>Dozelight</span>
+    </a>
+    <div class="platform-switch" role="group" aria-label="Platforma">
+      <a href="install.html" data-choose="mac" aria-current="page">macOS</a>
+      <a href="windows-install.html" data-choose="windows">Windows</a>
+    </div>
+    <nav class="nav-links" aria-label="Sekcje">
+      <a href="index.html#features">Funkcje</a>
+      <a href="index.html#download">Cena</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a class="lang-link" href="../install.html" hreflang="en" lang="en" data-lang="en" aria-label="English">EN</a>
+    <a class="button button-small" href="../download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Pobierz</a>
+  </header>
+  <div class="platform-hint" id="platform-hint" hidden>Wygląda na to, że używasz Windows. <a href="windows-install.html" data-choose="windows">Zobacz, jak zainstalować Dozelight na Windows →</a></div>
+
+  <main class="guide">
+    <header class="guide-head">
+      <p class="eyebrow">Instrukcja instalacji</p>
+      <h1>Zainstaluj Dozelight w trzech krokach.</h1>
+      <p>Zajmie ci to około minuty. Dozelight jest poświadczony przez Apple, więc otwiera się jak każda inna pobrana aplikacja, a aktualizacje instalujesz jednym kliknięciem.</p>
+      <p class="fineprint">Potrzebujesz macOS 13 Ventura lub nowszego, na Macu z czipem Apple lub procesorem Intel. Obrazki poniżej to ilustracje, więc twój ekran może wyglądać nieco inaczej.</p>
+      <a class="button" href="../download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Pobierz Dozelight</a>
+    </header>
+
+    <ol class="guide-steps">
+      <!-- 1 -->
+      <li class="guide-step">
+        <div class="guide-text">
+          <span class="step-no">1</span>
+          <h2>Przeciągnij Dozelight do Aplikacji</h2>
+          <p>Otwórz <code>Dozelight.dmg</code> z folderu Pobrane. W oknie, które się pojawi, przeciągnij ikonę Dozelight na folder Aplikacje.</p>
+          <p class="fineprint">Potem możesz wysunąć dysk Dozelight z paska bocznego Findera.</p>
+        </div>
+        <figure class="shot" aria-label="Ilustracja: okno dysku Dozelight z aplikacją Dozelight i folderem Aplikacje">
+          <div class="win">
+            <div class="win-bar"><span class="traffic"><i></i><i></i><i></i></span><span class="win-title">Dozelight</span></div>
+            <div class="dmg">
+              <div class="dmg-item"><img src="../assets/icon-144.png" alt="" width="72" height="72"><span>Dozelight</span></div>
+              <div class="dmg-arrow">→</div>
+              <div class="dmg-item"><span class="folder"></span><span>Aplikacje</span></div>
+            </div>
+          </div>
+        </figure>
+      </li>
+
+      <!-- 2 -->
+      <li class="guide-step">
+        <div class="guide-text">
+          <span class="step-no">2</span>
+          <h2>Otwórz Dozelight i kliknij Otwórz</h2>
+          <p>Otwórz Dozelight z folderu Aplikacje albo przez Spotlight (⌘ spacja, a potem wpisz Dozelight). Za pierwszym razem macOS zapyta, czy otworzyć aplikację pobraną z Internetu. Kliknij <b>Otwórz</b>.</p>
+          <p class="fineprint">macOS pyta tylko raz. Apple sprawdza Dozelight pod kątem złośliwego oprogramowania, jeszcze zanim go pobierzesz.</p>
+        </div>
+        <figure class="shot" aria-label="Ilustracja: pytanie macOS o aplikację pobraną z Internetu, z wyróżnionym przyciskiem Otwórz">
+          <div class="alert">
+            <img src="../assets/icon-144.png" alt="" width="56" height="56">
+            <b>„Dozelight” to aplikacja pobrana z Internetu. Czy na pewno chcesz ją otworzyć?</b>
+            <p>Apple sprawdził ją pod kątem złośliwego oprogramowania i niczego nie wykryto.</p>
+            <div class="alert-buttons"><span class="btn highlight">Otwórz</span><span class="btn">Anuluj</span></div>
+          </div>
+        </figure>
+      </li>
+
+      <!-- 3 -->
+      <li class="guide-step">
+        <div class="guide-text">
+          <span class="step-no">3</span>
+          <h2>Znajdź Dozelight na pasku menu</h2>
+          <p>Dozelight otwiera się z krótkim samouczkiem. Potem znajdziesz go na pasku menu w prawym górnym rogu ekranu, obok Centrum sterowania. Poszukaj słońca na horyzoncie i kliknij je, żeby otworzyć menu.</p>
+          <p class="fineprint">Właśnie zaczyna się twój 14-dniowy okres próbny, ze wszystkimi funkcjami.</p>
+        </div>
+        <figure class="shot" aria-label="Ilustracja: pasek menu macOS z wyróżnioną ikoną Dozelight">
+          <div class="menubar">
+            <span class="mb-left"> Finder&nbsp;&nbsp;Plik&nbsp;&nbsp;Edycja&nbsp;&nbsp;Widok</span>
+            <span class="mb-right">
+              <span class="mb-icon highlight" title="Dozelight"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M7 16a5 5 0 0 1 10 0z" fill="#fff"/><path d="M3 19h18M12 5v3M5.6 8.6l2 2M18.4 8.6l-2 2M2.5 15h2.5M19 15h2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></span>
+              <span class="mb-glyph">◉</span><span class="mb-glyph">⌕</span><span class="mb-glyph">▤</span><span>wt. 21:30</span>
+            </span>
+          </div>
+          <div class="mb-caption">↑ Dozelight</div>
+        </figure>
+      </li>
+    </ol>
+
+    <section class="guide-more">
+      <h2>Aktualizacje</h2>
+      <p>Dozelight raz dziennie sprawdza, czy jest nowa wersja, i instaluje ją jednym kliknięciem, bez żadnych ostrzeżeń macOS. Możesz też wybrać w jego menu <b>Ustawienia → Sprawdź uaktualnienia…</b>.</p>
+
+      <h2>Rozwiązywanie problemów</h2>
+      <details>
+        <summary>macOS informuje, że nie może zweryfikować Dozelight</summary>
+        <p>To kopia pobrana, zanim Dozelight został poświadczony przez Apple. Usuń Dozelight z folderu Aplikacje, pobierz go ponownie z tej strony i otwórz tak jak wyżej. Jeśli wolisz zachować tę kopię, otwórz ją raz, kliknij <b>Gotowe</b>, a potem kliknij <b>Otwórz mimo to</b> w <b>Ustawienia systemowe → Prywatność i ochrona</b>.</p>
+      </details>
+      <details>
+        <summary>macOS informuje, że Dozelight jest uszkodzony i nie można go otworzyć</summary>
+        <p>Pobieranie zostało prawdopodobnie przerwane. Usuń Dozelight z folderu Aplikacje, pobierz go ponownie z tej strony i powtórz wszystkie kroki. Jeśli problem się powtarza, napisz do nas na <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a>.</p>
+      </details>
+      <details>
+        <summary>Nie mogę znaleźć ikony na pasku menu</summary>
+        <p>Gdy pasek menu jest pełny, macOS może ukryć część ikon za wycięciem na kamerę. Zamknij kilka innych aplikacji z paska menu albo otwórz <b>Ustawienia systemowe → Pasek menu</b> i sprawdź, czy Dozelight jest tam dozwolony. Dozelight możesz też w każdej chwili otworzyć przez Spotlight – wtedy sam otworzy swoje menu.</p>
+      </details>
+      <details>
+        <summary>Mam starszą wersję macOS</summary>
+        <p>Dozelight wymaga macOS 13 Ventura lub nowszego. W starszych wersjach się nie otworzy.</p>
+      </details>
+
+      <h2>Odinstalowanie</h2>
+      <p>Otwórz menu Dozelight, wybierz <b>Ustawienia</b> i wyłącz <b>Otwieraj przy logowaniu</b>, a potem wybierz <b>Zakończ Dozelight</b>. Ekran, Touch Bar, wskaźnik i klawiatura od razu wracają do normy. Następnie przeciągnij Dozelight z folderu Aplikacje do Kosza.</p>
+      <p class="fineprint">Jeśli masz kupioną licencję i chcesz używać jej na innym Macu, najpierw wybierz <b>Ustawienia → Licencja… → Dezaktywuj ten Mac</b>.</p>
+
+      <p class="guide-help">Nadal coś nie działa? Napisz na <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a>, a pomożemy.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="../assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
+    <p>© 2026 Dozelight. Stworzony dla nocnych marków.</p>
+    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight na Maca</a> · <a href="windows.html" data-choose="windows">Dozelight na Windows</a> · <a href="install.html">Instrukcja instalacji na Macu</a> · <a href="windows-install.html">Instrukcja instalacji na Windows</a> · <a href="changelog.html">Co nowego</a> · <a href="privacy.html">Prywatność</a> · <a href="terms.html">Regulamin</a> · <a href="refunds.html">Zwroty</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links">Poradniki: <a href="screens-and-sleep.html">Ekrany a lepszy sen</a> · <a href="rest-your-eyes.html">Daj oczom odpocząć</a> · <a href="blue-light-filter.html">Filtr światła niebieskiego</a> · <a href="night-shift-warmer.html">Jak ocieplić Night Shift</a> · <a href="red-screen-windows.html">Czerwony ekran w Windows</a> · <a href="compare.html">Night Shift vs Światło nocne vs f.lux</a> · <a href="iphone.html">iPhone i iPad</a></p>
+    <p class="fineprint">Mac, macOS, Night Shift i Touch Bar są znakami towarowymi Apple Inc. Dozelight nie jest powiązany z Apple.</p>
+  </footer>
+</body>
+</html>

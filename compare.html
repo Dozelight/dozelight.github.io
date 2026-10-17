@@ -17,8 +17,21 @@
   <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script data-lang-redirect>
+    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
+    // Crawlers stay.
+    (function () {
+      var chosen = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      try { chosen = localStorage.getItem("lang"); } catch (e) {}
+      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
+        location.replace("pl/" + (location.pathname.split("/").pop() || "") + location.search + location.hash);
+    })();
+  </script>
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
+  <link rel="alternate" hreflang="en" href="https://dozelight.github.io/compare.html">
+  <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/compare.html">
   <link rel="canonical" href="https://dozelight.github.io/compare.html">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is f.lux free?", "acceptedAnswer": {"@type": "Answer", "text": "f.lux is free for personal use. Businesses need a license from its makers."}}, {"@type": "Question", "name": "Can I use Dozelight and Night Shift together?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. On Mac, Dozelight works with Night Shift on or off; when it's on, Dozelight builds on its warmth. On Windows, turn Night Light off so the two don't compete."}}, {"@type": "Question", "name": "How warm is 1000K?", "acceptedAnswer": {"@type": "Answer", "text": "About the glow of embers. For comparison, candlelight is around 1900K, a classic light bulb around 2700K and daylight around 6500K. Below that Dozelight also offers Red Only, which removes blue and green completely."}}, {"@type": "Question", "name": "Does Dozelight collect data?", "acceptedAnswer": {"@type": "Answer", "text": "No. It has no analytics or tracking. It only goes online to check your license key and look for updates."}}]}</script>
 </head>
@@ -37,6 +50,7 @@
       <a href="red-screen-windows.html">Red screen on Windows</a>
       <a href="compare.html">Compare</a>
     </nav>
+    <a class="lang-link" href="pl/compare.html" hreflang="pl" lang="pl" data-lang="pl" aria-label="Polski">PL</a>
     <a class="button button-small" href="index.html#download">Download</a>
   </header>
 

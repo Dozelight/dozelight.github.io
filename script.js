@@ -4,6 +4,9 @@
 // While it's empty, the page offers "Watch for the release on GitHub" instead.
 const WAITLIST_ENDPOINT = "https://formspree.io/f/mljdanql";
 
+// Polish pages (website/pl/) say <html lang="pl">; the strings below follow it.
+const PL = document.documentElement.lang === "pl";
+
 // --- Tint demo -------------------------------------------------------------
 // Same model as the app: blackbody RGB (Tanner Helland's fit) relative to 6500K white,
 // applied as a multiply, which is what a display gamma table does.
@@ -31,20 +34,20 @@ const toKelvin = v => Math.round(Math.exp(Math.log(MAX_K) - (v / 1000) * (Math.l
 const toSlider = k => Math.round(((Math.log(MAX_K) - Math.log(k)) / (Math.log(MAX_K) - Math.log(MIN_K))) * 1000);
 
 function describe(k) {
-  if (k >= 5000) return "Daylight";
-  if (k > 2700) return "Evening";
-  if (k === 2700 && document.documentElement.dataset.platform !== "windows") return "Night Shift's limit";
-  if (k > 2200) return "Warm";
-  if (k > 1800) return "Candlelight";
-  if (k > 1400) return "Firelight";
-  return "Ember";
+  if (k >= 5000) return PL ? "Dzień" : "Daylight";
+  if (k > 2700) return PL ? "Wieczór" : "Evening";
+  if (k === 2700 && document.documentElement.dataset.platform !== "windows") return PL ? "Granica Night Shift" : "Night Shift's limit";
+  if (k > 2200) return PL ? "Ciepło" : "Warm";
+  if (k > 1800) return PL ? "Świeca" : "Candlelight";
+  if (k > 1400) return PL ? "Ognisko" : "Firelight";
+  return PL ? "Żar" : "Ember";
 }
 
 function show(k, red) {
   const [r, g, b] = red ? [1, 0, 0] : gains(k);
   tint.style.backgroundColor = `rgb(${Math.round(r * 255)}, ${Math.round(g * 255)}, ${Math.round(b * 255)})`;
-  readout.textContent = red ? "Red" : `${k}K`;
-  label.textContent = red ? "Red only, no blue or green" : describe(k);
+  readout.textContent = red ? (PL ? "Czerwień" : "Red") : `${k}K`;
+  label.textContent = red ? (PL ? "Tylko czerwień, bez niebieskiego i zielonego" : "Red only, no blue or green") : describe(k);
   presetButtons.forEach(btn => {
     const match = red ? btn.dataset.k === "red" : Number(btn.dataset.k) === k;
     btn.setAttribute("aria-pressed", String(match));
@@ -89,7 +92,7 @@ if (WAITLIST_ENDPOINT) {
     event.preventDefault();
     const button = form.querySelector("button");
     button.disabled = true;
-    status.textContent = "Adding you…";
+    status.textContent = PL ? "Zapisujemy cię…" : "Adding you…";
     try {
       const response = await fetch(WAITLIST_ENDPOINT, {
         method: "POST",
@@ -98,9 +101,10 @@ if (WAITLIST_ENDPOINT) {
       });
       if (!response.ok) throw new Error(String(response.status));
       form.hidden = true;
-      status.textContent = "You're on the list. We'll email you about big updates, and never more than that.";
+      status.textContent = PL ? "Jesteś na liście. Napiszemy tylko o dużych aktualizacjach – nigdy częściej."
+                              : "You're on the list. We'll email you about big updates, and never more than that.";
     } catch {
-      status.textContent = "That didn't go through. Please try again in a moment.";
+      status.textContent = PL ? "Nie udało się. Spróbuj ponownie za chwilę." : "That didn't go through. Please try again in a moment.";
       button.disabled = false;
     }
   });
@@ -147,7 +151,7 @@ buyLinks.forEach(link => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;  // new tab: leave as is
     if (link.classList.contains("loading")) { event.preventDefault(); return; }       // ignore double clicks
     link.classList.add("loading");
-    link.textContent = "Opening secure checkout…";
+    link.textContent = PL ? "Otwieranie bezpiecznej płatności…" : "Opening secure checkout…";
   });
 });
 // Coming back with the browser's Back button restores the original label.
