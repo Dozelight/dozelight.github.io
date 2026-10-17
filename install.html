@@ -14,7 +14,7 @@
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
   <link rel="canonical" href="https://dozelight.github.io/install.html">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I don't see the Open Anyway button", "acceptedAnswer": {"@type": "Answer", "text": "macOS only shows it for about an hour after you try to open Dozelight. Open Dozelight again, click Done, then go straight to System Settings → Privacy & Security and scroll down to Security."}}, {"@type": "Question", "name": "macOS says Dozelight is damaged and can't be opened", "acceptedAnswer": {"@type": "Answer", "text": "The download was probably interrupted. Delete Dozelight from Applications, download it again from this site and repeat the steps. If it still happens, email us at dozelight@icloud.com."}}, {"@type": "Question", "name": "I can't find the icon in the menu bar", "acceptedAnswer": {"@type": "Answer", "text": "If your menu bar is full, macOS may hide some icons behind the camera notch. Quit a few other menu bar apps, or open System Settings → Menu Bar and make sure Dozelight is allowed. You can also open Dozelight from Spotlight at any time: it opens its menu for you."}}, {"@type": "Question", "name": "I'm on an older version of macOS", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight needs macOS 13 Ventura or later. On older versions it won't open."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "macOS says it could not verify Dozelight", "acceptedAnswer": {"@type": "Answer", "text": "That's a download from before Dozelight was notarized by Apple. Delete Dozelight from Applications, download it again from this site and open it as above. If you'd rather keep that copy, open it once, click Done, then click Open Anyway in System Settings → Privacy & Security."}}, {"@type": "Question", "name": "macOS says Dozelight is damaged and can't be opened", "acceptedAnswer": {"@type": "Answer", "text": "The download was probably interrupted. Delete Dozelight from Applications, download it again from this site and repeat the steps. If it still happens, email us at dozelight@icloud.com."}}, {"@type": "Question", "name": "I can't find the icon in the menu bar", "acceptedAnswer": {"@type": "Answer", "text": "If your menu bar is full, macOS may hide some icons behind the camera notch. Quit a few other menu bar apps, or open System Settings → Menu Bar and make sure Dozelight is allowed. You can also open Dozelight from Spotlight at any time: it opens its menu for you."}}, {"@type": "Question", "name": "I'm on an older version of macOS", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight needs macOS 13 Ventura or later. On older versions it won't open."}}]}</script>
 </head>
 <body>
   <header class="nav scrolled">
@@ -38,8 +38,8 @@
   <main class="guide">
     <header class="guide-head">
       <p class="eyebrow">Installation guide</p>
-      <h1>Install Dozelight in five steps.</h1>
-      <p>It takes about a minute. Dozelight isn't notarized by Apple yet, so macOS asks you to confirm once, the first time you open it. After that it opens normally, and updates install with one click.</p>
+      <h1>Install Dozelight in three steps.</h1>
+      <p>It takes about a minute. Dozelight is notarized by Apple, so it opens like any other app you download, and updates install with one click.</p>
       <p class="fineprint">You need macOS 13 Ventura or later, on an Apple silicon or Intel Mac. The pictures below are illustrations, so your screen may look slightly different.</p>
       <a class="button" href="download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Download Dozelight</a>
     </header>
@@ -69,16 +69,16 @@
       <li class="guide-step">
         <div class="guide-text">
           <span class="step-no">2</span>
-          <h2>Open Dozelight, then click Done</h2>
-          <p>Open Dozelight from your Applications folder or with Spotlight (⌘ Space, then type Dozelight). macOS says it could not verify Dozelight. That's expected for apps that aren't notarized yet.</p>
-          <p>Click <b>Done</b>. Don't choose Move to Trash.</p>
+          <h2>Open Dozelight, then click Open</h2>
+          <p>Open Dozelight from your Applications folder or with Spotlight (⌘ Space, then type Dozelight). The first time, macOS asks whether to open an app downloaded from the internet. Click <b>Open</b>.</p>
+          <p class="fineprint">macOS only asks once. Apple has checked Dozelight for malicious software before you download it.</p>
         </div>
-        <figure class="shot" aria-label="Illustration: the macOS warning that Dozelight was not opened, with the Done button highlighted">
+        <figure class="shot" aria-label="Illustration: the macOS question about an app downloaded from the internet, with the Open button highlighted">
           <div class="alert">
             <img src="assets/icon-144.png" alt="" width="56" height="56">
-            <b>“Dozelight” Not Opened</b>
-            <p>Apple could not verify “Dozelight” is free of malware that may harm your Mac or compromise your privacy.</p>
-            <div class="alert-buttons"><span class="btn highlight">Done</span><span class="btn">Move to Trash</span></div>
+            <b>“Dozelight” is an app downloaded from the Internet. Are you sure you want to open it?</b>
+            <p>Apple checked it for malicious software and none was detected.</p>
+            <div class="alert-buttons"><span class="btn highlight">Open</span><span class="btn">Cancel</span></div>
           </div>
         </figure>
       </li>
@@ -87,52 +87,6 @@
       <li class="guide-step">
         <div class="guide-text">
           <span class="step-no">3</span>
-          <h2>Click Open Anyway in System Settings</h2>
-          <p>Open <b>System Settings</b> from the Apple menu and choose <b>Privacy &amp; Security</b> in the sidebar. Scroll down to the <b>Security</b> section. Next to the message about Dozelight, click <b>Open Anyway</b>.</p>
-          <p class="fineprint">The button appears for about an hour after step 2. If you don't see it, open Dozelight once more and come back.</p>
-        </div>
-        <figure class="shot" aria-label="Illustration: System Settings, Privacy and Security, with the Open Anyway button highlighted">
-          <div class="win settings">
-            <div class="win-bar"><span class="traffic"><i></i><i></i><i></i></span><span class="win-title">Privacy &amp; Security</span></div>
-            <div class="settings-body">
-              <aside class="settings-side">
-                <span>Wi-Fi</span><span>Bluetooth</span><span>General</span><span>Displays</span><span class="active">Privacy &amp; Security</span><span>Touch ID &amp; Password</span>
-              </aside>
-              <div class="settings-main">
-                <p class="settings-head">Security</p>
-                <div class="settings-row"><span>Allow applications from</span><span class="muted-ui">App Store &amp; Known Developers ⌃</span></div>
-                <div class="settings-row blocked">
-                  <span>“Dozelight” was blocked to protect your Mac.</span>
-                  <span class="btn highlight">Open Anyway</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </figure>
-      </li>
-
-      <!-- 4 -->
-      <li class="guide-step">
-        <div class="guide-text">
-          <span class="step-no">4</span>
-          <h2>Confirm with Open Anyway</h2>
-          <p>macOS asks once more. Click <b>Open Anyway</b>, then confirm with your Mac's password or Touch ID.</p>
-          <p class="fineprint">You only do steps 2 to 4 once. From now on Dozelight opens like any other app.</p>
-        </div>
-        <figure class="shot" aria-label="Illustration: the confirmation dialog, with the Open Anyway button highlighted">
-          <div class="alert">
-            <img src="assets/icon-144.png" alt="" width="56" height="56">
-            <b>Open “Dozelight”?</b>
-            <p>Apple is not able to verify that it is free from malware. Only open it if you trust its source.</p>
-            <div class="alert-buttons"><span class="btn highlight">Open Anyway</span><span class="btn">Move to Trash</span><span class="btn">Done</span></div>
-          </div>
-        </figure>
-      </li>
-
-      <!-- 5 -->
-      <li class="guide-step">
-        <div class="guide-text">
-          <span class="step-no">5</span>
           <h2>Find Dozelight in your menu bar</h2>
           <p>Dozelight opens with a short tutorial. Afterwards it lives in the menu bar at the top right of your screen, near Control Center. Look for the sun on the horizon and click it to open the menu.</p>
           <p class="fineprint">Your 14-day free trial starts now, with every feature.</p>
@@ -156,8 +110,8 @@
 
       <h2>Troubleshooting</h2>
       <details>
-        <summary>I don't see the Open Anyway button</summary>
-        <p>macOS only shows it for about an hour after you try to open Dozelight. Open Dozelight again, click <b>Done</b>, then go straight to <b>System Settings → Privacy &amp; Security</b> and scroll down to <b>Security</b>.</p>
+        <summary>macOS says it could not verify Dozelight</summary>
+        <p>That's a download from before Dozelight was notarized by Apple. Delete Dozelight from Applications, download it again from this site and open it as above. If you'd rather keep that copy, open it once, click <b>Done</b>, then click <b>Open Anyway</b> in <b>System Settings → Privacy &amp; Security</b>.</p>
       </details>
       <details>
         <summary>macOS says Dozelight is damaged and can't be opened</summary>
