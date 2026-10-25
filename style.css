@@ -686,3 +686,15 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 .screens-grid img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 0 0 1px var(--border); }
 .screens-grid figcaption { margin-top: 10px; color: var(--muted); font-size: 0.92rem; }
 @media (max-width: 640px) { .screens-grid { grid-template-columns: 1fr; } }
+
+/* The developer's letter on the home pages: a warm page, like the screen at Candlelight. */
+.letter-card { max-width: 720px; margin: 0 auto; padding: clamp(28px, 6vw, 56px); border-radius: var(--radius); background: #ef810d; color: #1b0d06; }
+.letter-card .letter-icon { width: 48px; height: 48px; border-radius: 12px; margin-bottom: 24px; }
+.letter-card h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 22px; }
+.letter-card p { font-size: 1.08rem; line-height: 1.65; }
+.letter-card p + p { margin-top: 1em; }
+.letter-card mark { background: #1b0d06; color: #ef810d; padding: 0 0.15em; }
+.letter-card a { color: inherit; text-decoration: underline; text-underline-offset: 0.18em; }
+.letter-card .letter-sign { margin-top: 28px; }
+.letter-card .letter-sign b { display: block; font-size: 1.3rem; }
+.letter-card .letter-sign span { display: block; }
