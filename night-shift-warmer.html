@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script data-lang-redirect>
+    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
+    // Crawlers stay.
+    (function () {
+      var chosen = null, platform = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      try { chosen = localStorage.getItem("lang"); platform = localStorage.getItem("platform"); } catch (e) {}
+      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent)) {
+        var page = location.pathname.split("/").pop(), ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+        if ((page === "" || page === "index.html") && !platform && /Win/i.test(ua)) page = "windows.html";
+        location.replace("pl/" + page + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>How to make Night Shift warmer on Mac (and go past 2700K)</title>
   <meta name="description" content="Night Shift stops at about 2700K, even at More Warm. How to set it as warm as it goes, get a red screen with built-in settings, and go down to 1000K.">
@@ -10,39 +23,35 @@
   <meta property="og:site_name" content="Dozelight">
   <meta property="og:title" content="How to make Night Shift warmer on Mac (and go past 2700K)">
   <meta property="og:description" content="Night Shift stops at about 2700K, even at More Warm. How to set it as warm as it goes, get a red screen with built-in settings, and go down to 1000K.">
-  <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
   <meta property="og:url" content="https://dozelight.github.io/night-shift-warmer.html">
+  <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dozelight: blue light blocker for your Mac">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script data-lang-redirect>
-    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
-    // Crawlers stay.
-    (function () {
-      var chosen = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
-      try { chosen = localStorage.getItem("lang"); } catch (e) {}
-      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
-        location.replace("pl/" + (location.pathname.split("/").pop() || "") + location.search + location.hash);
-    })();
-  </script>
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
   <link rel="alternate" hreflang="en" href="https://dozelight.github.io/night-shift-warmer.html">
   <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/night-shift-warmer.html">
   <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/night-shift-warmer.html">
   <link rel="canonical" href="https://dozelight.github.io/night-shift-warmer.html">
+  <script type="application/ld+json" data-schema>{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://dozelight.github.io/night-shift-warmer.html#article", "headline": "How to make Night Shift warmer on your Mac", "description": "Night Shift stops at about 2700K, even at More Warm. How to set it as warm as it goes, get a red screen with built-in settings, and go down to 1000K.", "inLanguage": "en", "url": "https://dozelight.github.io/night-shift-warmer.html", "mainEntityOfPage": "https://dozelight.github.io/night-shift-warmer.html", "image": "https://dozelight.github.io/assets/og.jpg", "author": {"@type": "Person", "@id": "https://dozelight.github.io/about.html#artur", "name": "Artur Pereć", "url": "https://dozelight.github.io/about.html"}, "publisher": {"@type": "Organization", "@id": "https://dozelight.github.io/#organization", "name": "Dozelight", "url": "https://dozelight.github.io/", "logo": {"@type": "ImageObject", "url": "https://dozelight.github.io/assets/icon.png", "width": 512, "height": 512}}, "datePublished": "2026-09-29", "dateModified": "2026-09-29"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dozelight.github.io/"}, {"@type": "ListItem", "position": 2, "name": "How to make Night Shift warmer on your Mac", "item": "https://dozelight.github.io/night-shift-warmer.html"}]}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Night Shift go below 2700K?", "acceptedAnswer": {"@type": "Answer", "text": "No. More Warm is the limit of the Night Shift slider. Going warmer takes the Color Filters accessibility setting or a separate app like Dozelight."}}, {"@type": "Question", "name": "Is Night Shift the same as True Tone?", "acceptedAnswer": {"@type": "Answer", "text": "No. True Tone matches the screen to the color of the light in your room, all day. Night Shift makes the screen warmer in the evening. You can use both."}}, {"@type": "Question", "name": "Is red light better at night?", "acceptedAnswer": {"@type": "Answer", "text": "Research suggests that the blue part of light has the strongest effect on melatonin, the hormone that helps you fall asleep, and red light the weakest. That's why the warmest settings keep mostly red. Dozelight and Night Shift are comfort tools, not medical products."}}, {"@type": "Question", "name": "Do screenshots turn orange?", "acceptedAnswer": {"@type": "Answer", "text": "No. Night Shift and Dozelight change the color on the way to the display, so screenshots, recordings and screen sharing keep their true colors."}}, {"@type": "Question", "name": "Is there something similar for Windows?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Windows has Night Light, which also stops at a warm orange. See how to make your screen red at night on Windows."}}]}</script>
 </head>
 <body>
   <header class="nav scrolled">
-    <a class="brand" href="index.html" aria-label="Dozelight home">
+    <a class="brand" href="./" aria-label="Dozelight home">
       <img src="assets/icon-64.png" alt="" width="32" height="32">
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
-      <a href="index.html" data-choose="mac">macOS</a>
+      <a href="./" data-choose="mac">macOS</a>
       <a href="windows.html" data-choose="windows">Windows</a>
     </div>
     <nav class="nav-links" aria-label="Guides">
@@ -50,16 +59,17 @@
       <a href="red-screen-windows.html">Red screen on Windows</a>
       <a href="compare.html">Compare</a>
     </nav>
-    <a class="lang-link" href="pl/night-shift-warmer.html" hreflang="pl" lang="pl" data-lang="pl" title="Polski" aria-label="Polski"><svg viewBox="0 0 60 30" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><clipPath id="flag-gb"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#flag-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
-    <a class="button button-small" href="index.html#download">Dozelight for Mac</a>
+    <a class="lang-link" href="pl/night-shift-warmer.html" hreflang="pl" data-lang="pl" title="Polski" aria-label="EN: switch to Polish"><svg viewBox="0 0 60 30" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><clipPath id="flag-gb"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#flag-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
+    <a class="button button-small" href="./#download">Dozelight for Mac</a>
   </header>
 
   <main class="guide">
     <header class="guide-head">
       <p class="eyebrow">Guide for Mac</p>
       <h1>How to make Night Shift warmer on your Mac.</h1>
-      <p class="answer">Open <b>System Settings → Displays → Night Shift</b> and drag <b>Color Temperature</b> all the way to <b>More Warm</b>. That is as warm as Night Shift goes, about 2700K. To go warmer, down to candlelight or pure red, use the <b>Color Filters</b> accessibility setting for a red tint, or an app like <a href="index.html">Dozelight</a>, which adds warmth on top of Night Shift down to 1000K and follows your bedtime.</p>
+      <p class="answer">Open <b>System Settings → Displays → Night Shift</b> and drag <b>Color Temperature</b> all the way to <b>More Warm</b>. That is as warm as Night Shift goes, about 2700K. To go warmer, down to candlelight or pure red, use the <b>Color Filters</b> accessibility setting for a red tint, or an app like <a href="./">Dozelight</a>, which adds warmth on top of Night Shift down to 1000K and follows your bedtime.</p>
       <p class="fineprint">Updated 29 September 2026.</p>
+      <p class="fineprint byline">By <a href="about.html">Artur Pereć</a>, the developer of Dozelight.</p>
     </header>
 
     <section class="guide-more">
@@ -86,7 +96,7 @@
         </table>
       </div>
       <p><b>Color Filters</b> is in <b>System Settings → Accessibility → Display → Color Filters</b>. Turn it on, choose <b>Color Tint</b> as the filter type, pick red and raise the intensity. It works, but it tints everything evenly, has no schedule, and you switch it on and off by hand. <b>Reduce White Point</b> on the same page makes the screen dimmer, which helps too.</p>
-      <p><a href="index.html">Dozelight</a> goes further than Night Shift, with or without it: down to 1000K, or removes blue and green completely in Red Only mode. In Auto mode it warms the screen gradually through the evening, switches to red after your bedtime and fades back before you wake.</p>
+      <p><a href="./">Dozelight</a> goes further than Night Shift, with or without it: down to 1000K, or removes blue and green completely in Red Only mode. In Auto mode it warms the screen gradually through the evening, switches to red after your bedtime and fades back before you wake.</p>
 
       <h2>Questions</h2>
       <details>
@@ -115,7 +125,7 @@
         <div>
           <h2>Go past Night Shift with Dozelight.</h2>
           <p>Down to candlelight and pure red, on your bedtime schedule, right from the menu bar. Try every feature free for 14 days.</p>
-          <a class="button" href="index.html">See Dozelight for Mac</a>
+          <a class="button" href="./">See Dozelight for Mac</a>
         </div>
       </div>
       <p class="fineprint">Mac, macOS, Night Shift, True Tone and Touch Bar are trademarks of Apple Inc. Dozelight is not affiliated with Apple.</p>
@@ -125,7 +135,7 @@
   <footer class="footer">
     <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
-    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="changelog.html">What's new</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links"><a href="./" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="changelog.html">What's new</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="about.html">About</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="screens-and-sleep.html">Screens and better sleep</a> · <a href="rest-your-eyes.html">Rest your eyes</a> · <a href="blue-light-filter.html">Blue light filter</a> · <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>
   </footer>
 </body>

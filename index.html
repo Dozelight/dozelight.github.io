@@ -2,30 +2,17 @@
 <html lang="en" data-platform="mac" data-home>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dozelight: blue light filter for your Mac</title>
-  <meta name="description" content="Dozelight is a blue light filter and blocker for Mac: it blocks blue light completely, down to candlelight and pure red, on your bedtime schedule. Free trial.">
-  <meta name="theme-color" content="#0d0a0b">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Dozelight">
-  <meta property="og:title" content="Dozelight: blue light filter for your Mac">
-  <meta property="og:description" content="Down to candlelight and pure red, on your bedtime schedule. A tiny menu bar app for macOS, with a 14-day free trial.">
-  <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
-  <meta property="og:url" content="https://dozelight.github.io/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css">
   <script data-lang-redirect>
     // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
     // Crawlers stay.
     (function () {
-      var chosen = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
-      try { chosen = localStorage.getItem("lang"); } catch (e) {}
-      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
-        location.replace("pl/" + (location.pathname.split("/").pop() || "") + location.search + location.hash);
+      var chosen = null, platform = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      try { chosen = localStorage.getItem("lang"); platform = localStorage.getItem("platform"); } catch (e) {}
+      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent)) {
+        var page = location.pathname.split("/").pop(), ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+        if ((page === "" || page === "index.html") && !platform && /Win/i.test(ua)) page = "windows.html";
+        location.replace("pl/" + page + location.search + location.hash);
+      }
     })();
   </script>
   <script>
@@ -37,6 +24,27 @@
         location.replace("windows.html" + location.hash);
     })();
   </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dozelight: Blue Light Filter for Mac, Warmer than Night Shift</title>
+  <meta name="description" content="Dozelight blocks blue light on your Mac completely, down to candlelight and pure red, and warms the screen on your bedtime schedule. 14-day free trial.">
+  <meta name="theme-color" content="#0d0a0b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dozelight">
+  <meta property="og:title" content="Dozelight: Blue Light Filter for Mac, Warmer than Night Shift">
+  <meta property="og:description" content="Down to candlelight and pure red, on your bedtime schedule. A tiny menu bar app for macOS, with a 14-day free trial.">
+  <meta property="og:url" content="https://dozelight.github.io/">
+  <meta property="og:image" content="https://dozelight.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dozelight: blue light blocker for your Mac">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
   <meta name="google-site-verification" content="awgSpBVwiy73n4SWK_MEB2o4UoAEffG2brTuxusj59I">
@@ -45,9 +53,8 @@
   <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/">
   <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/">
   <link rel="canonical" href="https://dozelight.github.io/">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Dozelight", "alternateName": "Dozelight app", "url": "https://dozelight.github.io/"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Dozelight", "operatingSystem": "macOS 13 or later", "applicationCategory": "UtilitiesApplication", "description": "Dozelight is a blue light filter and blocker for Mac. Night Shift only reduces blue light, Dozelight blocks it completely, down to candlelight and pure red, and follows your bedtime. 14-day free trial.", "url": "https://dozelight.github.io/", "downloadUrl": "https://dozelight.github.io/download/Dozelight.dmg", "image": "https://dozelight.github.io/assets/icon.png", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL"}, "publisher": {"@type": "Organization", "name": "Dozelight", "url": "https://dozelight.github.io/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there an iPhone or iPad version?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone and iPad don't allow apps to tint the whole screen, so there's no Dozelight for them. But they have built-in settings that come close: see our free guide to a red screen at night on iPhone and iPad."}}, {"@type": "Question", "name": "Which Macs does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "Any Mac with macOS 13 Ventura or later, Apple silicon or Intel. Touch Bar tinting works on Apple silicon MacBook Pros with a Touch Bar."}}, {"@type": "Question", "name": "Does it replace Night Shift?", "acceptedAnswer": {"@type": "Answer", "text": "It doesn't need it. Dozelight warms your screen at any time of day, with Night Shift on or off. If Night Shift is on, Dozelight builds on its warmth, so the screen ends up at the temperature you picked. In Auto mode it follows your own bedtime."}}, {"@type": "Question", "name": "What are Darkroom and Extra Dim?", "acceptedAnswer": {"@type": "Answer", "text": "Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in the Filters menu, next to Black & White, Sepia, Invert Colors and High Contrast, and they work at any time of day."}}, {"@type": "Question", "name": "Will it slow down my Mac?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight only does work when something changes, like Night Shift turning on or you moving a slider. When idle it uses no measurable CPU."}}, {"@type": "Question", "name": "Do screenshots and screen recordings look red?", "acceptedAnswer": {"@type": "Answer", "text": "No. The tint is applied by the display itself, so screenshots, recordings and screen sharing keep their true colors."}}, {"@type": "Question", "name": "Does it collect any data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight has no analytics or tracking. It goes online only to activate and occasionally check your license key, sending just the key and your Mac's name, and once a day to look for updates. Dusk and dawn are estimated from your time zone, so it doesn't need your location either."}}, {"@type": "Question", "name": "Is Dozelight a blue light filter or a blue light blocker?", "acceptedAnswer": {"@type": "Answer", "text": "Both. A blue light filter like Night Shift turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime."}}, {"@type": "Question", "name": "Does Dozelight block blue light completely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. At 1900K and warmer, and in Red Only, Dozelight switches the screen's blue light off completely. Milder settings reduce it, like a stronger Night Shift. Auto mode reaches 1900K at your bedtime and keeps only red light through the night."}}, {"@type": "Question", "name": "Will Dozelight help me sleep better?", "acceptedAnswer": {"@type": "Answer", "text": "It takes away one thing that can push sleep later: bright, blue-rich screen light in the evening. Auto mode warms the screen gradually and keeps only red light after bedtime. Regular sleep times, winding down and a dark bedroom matter at least as much, so see our guide to screens, blue light and better sleep. Dozelight is a comfort tool, not a medical product."}}, {"@type": "Question", "name": "Is it a medical product?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight is a comfort tool for using your Mac in the evening. It doesn't diagnose, treat or prevent any condition."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "$9.99, once. That's the early-access price, and it rises to $14.99 when early access ends. You can try every feature free for 14 days first, and one license covers up to 3 computers, Mac or Windows."}}, {"@type": "Question", "name": "What does early access mean?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight is complete and ready for everyday use, and new features are on the way. During early access it costs less, and the people using it help decide what comes next. Your license keeps working after early access ends, and updates keep coming automatically."}}, {"@type": "Question", "name": "What happens when the trial ends?", "acceptedAnswer": {"@type": "Answer", "text": "The tint pauses until you enter a license key. Your settings stay as they are, so everything comes back the moment you activate."}}, {"@type": "Question", "name": "How do updates work?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight checks for a new version once a day. When there is one, it shows what's new and installs it with one click. You can also choose Settings → Check for Updates… in its menu at any time."}}, {"@type": "Question", "name": "How do I move my license to a new Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Open License… in Dozelight's menu on the old Mac and click Deactivate This Mac. You can also manage your Macs in the Polar customer portal linked in your receipt."}}, {"@type": "Question", "name": "Can I get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If Dozelight isn't right for you, email us within 14 days of your purchase for a full refund. See the refund policy."}}, {"@type": "Question", "name": "Is Dozelight safe to install?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dozelight is signed by its developer and notarized by Apple, which checks every version for malicious software before you download it. The first time you open it, macOS asks whether to open an app downloaded from the internet: click Open. See the install steps above."}}]}</script>
+  <script type="application/ld+json" data-schema>{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://dozelight.github.io/#organization", "name": "Dozelight", "url": "https://dozelight.github.io/", "logo": {"@type": "ImageObject", "url": "https://dozelight.github.io/assets/icon.png", "width": 512, "height": 512}, "email": "dozelight@icloud.com", "sameAs": ["https://apps.microsoft.com/detail/9P8447TGN40X"], "founder": {"@id": "https://dozelight.github.io/about.html#artur"}}, {"@type": "Person", "@id": "https://dozelight.github.io/about.html#artur", "name": "Artur Pereć", "url": "https://dozelight.github.io/about.html", "jobTitle": "Developer of Dozelight", "worksFor": {"@id": "https://dozelight.github.io/#organization"}}, {"@type": "WebSite", "@id": "https://dozelight.github.io/#website", "name": "Dozelight", "alternateName": "Dozelight app", "url": "https://dozelight.github.io/", "inLanguage": ["en", "pl"], "publisher": {"@id": "https://dozelight.github.io/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://dozelight.github.io/#app", "name": "Dozelight", "url": "https://dozelight.github.io/", "mainEntityOfPage": "https://dozelight.github.io/", "inLanguage": "en", "description": "Dozelight blocks blue light on your Mac completely, down to candlelight and pure red, and warms the screen on your bedtime schedule. 14-day free trial.", "operatingSystem": "macOS 13 or later", "applicationCategory": "UtilitiesApplication", "softwareVersion": "1.5.14", "downloadUrl": "https://dozelight.github.io/download/Dozelight.dmg", "releaseNotes": "https://dozelight.github.io/changelog.html#mac", "image": "https://dozelight.github.io/assets/icon.png", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL", "availability": "https://schema.org/InStock", "seller": {"@id": "https://dozelight.github.io/#organization"}}, "isAccessibleForFree": false, "author": {"@id": "https://dozelight.github.io/about.html#artur"}, "publisher": {"@id": "https://dozelight.github.io/#organization"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there an iPhone or iPad version?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone and iPad don't allow apps to tint the whole screen, so there's no Dozelight for them. But they have built-in settings that come close: see our free guide to a red screen at night on iPhone and iPad."}}, {"@type": "Question", "name": "Which Macs does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "Any Mac with macOS 13 Ventura or later, Apple silicon or Intel. Touch Bar tinting works on Apple silicon MacBook Pros with a Touch Bar."}}, {"@type": "Question", "name": "Does it replace Night Shift?", "acceptedAnswer": {"@type": "Answer", "text": "It doesn't need it. Dozelight warms your screen at any time of day, with Night Shift on or off. If Night Shift is on, Dozelight builds on its warmth, so the screen ends up at the temperature you picked. In Auto mode it follows your own bedtime."}}, {"@type": "Question", "name": "What are Darkroom and Extra Dim?", "acceptedAnswer": {"@type": "Answer", "text": "Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in the Filters menu, next to Black & White, Sepia, Invert Colors and High Contrast, and they work at any time of day. For tired eyes, see how to rest your eyes."}}, {"@type": "Question", "name": "Will it slow down my Mac?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight only does work when something changes, like Night Shift turning on or you moving a slider. When idle it uses no measurable CPU."}}, {"@type": "Question", "name": "Do screenshots and screen recordings look red?", "acceptedAnswer": {"@type": "Answer", "text": "No. The tint is applied by the display itself, so screenshots, recordings and screen sharing keep their true colors."}}, {"@type": "Question", "name": "Does it collect any data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight has no analytics or tracking. It goes online only to activate and occasionally check your license key, sending just the key and your Mac's name, and once a day to look for updates. Dusk and dawn are estimated from your time zone, so it doesn't need your location either."}}, {"@type": "Question", "name": "Is Dozelight a blue light filter or a blue light blocker?", "acceptedAnswer": {"@type": "Answer", "text": "Both. A blue light filter like Night Shift turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime. See our guide to blue light filters."}}, {"@type": "Question", "name": "Does Dozelight block blue light completely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. At 1900K and warmer, and in Red Only, Dozelight switches the screen's blue light off completely. Milder settings reduce it, like a stronger Night Shift. Auto mode reaches 1900K at your bedtime and keeps only red light through the night."}}, {"@type": "Question", "name": "Will Dozelight help me sleep better?", "acceptedAnswer": {"@type": "Answer", "text": "It takes away one thing that can push sleep later: bright, blue-rich screen light in the evening. Auto mode warms the screen gradually and keeps only red light after bedtime. Regular sleep times, winding down and a dark bedroom matter at least as much, so see our guide to screens, blue light and better sleep. Dozelight is a comfort tool, not a medical product."}}, {"@type": "Question", "name": "Is it a medical product?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight is a comfort tool for using your Mac in the evening. It doesn't diagnose, treat or prevent any condition."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "$9.99, once. That's the early-access price, and it rises to $14.99 when early access ends. You can try every feature free for 14 days first, and one license covers up to 3 computers, Mac or Windows."}}, {"@type": "Question", "name": "What does early access mean?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight is complete and ready for everyday use, and new features are on the way. During early access it costs less, and the people using it help decide what comes next. Your license keeps working after early access ends, and updates keep coming automatically."}}, {"@type": "Question", "name": "What happens when the trial ends?", "acceptedAnswer": {"@type": "Answer", "text": "The tint pauses until you enter a license key. Your settings stay as they are, so everything comes back the moment you activate."}}, {"@type": "Question", "name": "How do updates work?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight checks for a new version once a day. When there is one, it shows what's new and installs it with one click. You can also choose Settings → Check for Updates… in its menu at any time."}}, {"@type": "Question", "name": "How do I move my license to a new Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Open License… in Dozelight's menu on the old Mac and click Deactivate This Mac. You can also manage your Macs in the Polar customer portal linked in your receipt."}}, {"@type": "Question", "name": "Can I get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If Dozelight isn't right for you, email us within 14 days of your purchase for a full refund. See the refund policy."}}, {"@type": "Question", "name": "Is Dozelight safe to install?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dozelight is signed by its developer and notarized by Apple, which checks every version for malicious software before you download it. The first time you open it, macOS asks whether to open an app downloaded from the internet: click Open. See the install steps above."}}]}</script>
 </head>
 <body>
   <div class="sky" aria-hidden="true"></div>
@@ -58,7 +65,7 @@
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
-      <a href="index.html" data-choose="mac" aria-current="page">macOS</a>
+      <a href="./" data-choose="mac" aria-current="page">macOS</a>
       <a href="windows.html" data-choose="windows">Windows</a>
     </div>
     <nav class="nav-links" aria-label="Sections">
@@ -68,10 +75,20 @@
       <a href="#download">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="lang-link" href="pl/index.html" hreflang="pl" lang="pl" data-lang="pl" title="Polski" aria-label="Polski"><svg viewBox="0 0 60 30" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><clipPath id="flag-gb"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#flag-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
+    <a class="lang-link" href="pl/" hreflang="pl" data-lang="pl" title="Polski" aria-label="EN: switch to Polish"><svg viewBox="0 0 60 30" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><clipPath id="flag-gb"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#flag-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
     <a class="button button-small" href="#download">Download</a>
   </header>
   <div class="platform-hint" id="platform-hint" hidden>Looks like you're on Windows. <a href="windows.html" data-choose="windows">See Dozelight for Windows →</a></div>
+  <script>
+    // Offers the other platform's page when the visitor seems to be on it and hasn't chosen. Runs here, before the page
+    // draws, so the hint doesn't push the page down later.
+    (function () {
+      var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || "", chosen = null;
+      var detected = /Win/i.test(ua) ? "windows" : /Mac/i.test(ua) && !(navigator.maxTouchPoints > 1) ? "mac" : null;  // iPads report themselves as Macs
+      try { chosen = localStorage.getItem("platform"); } catch (e) {}
+      if (detected && !chosen && detected !== document.documentElement.getAttribute("data-platform")) document.getElementById("platform-hint").hidden = false;
+    })();
+  </script>
 
   <main id="top">
     <!-- Hero -->
@@ -80,8 +97,9 @@
         <p class="eyebrow"><span class="dot"></span> Blue light blocker for macOS</p>
         <h1>Block blue light<br><em>on your Mac.</em></h1>
         <p class="lede">
-          Night Shift is a mild blue light filter: it only reduces blue light. Dozelight blocks it completely, down to candlelight
-          and pure red, and follows your bedtime so your screen winds down with you.
+          Dozelight is a blue light filter app for Mac that makes your screen warmer than Night Shift can, down to candlelight
+          and pure red. Night Shift only reduces blue light; Dozelight blocks it completely, and follows your bedtime so your
+          screen winds down with you.
         </p>
         <div class="hero-actions">
           <a class="button" href="download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Download free trial</a>
@@ -152,7 +170,7 @@
               </aside>
               <article class="doc">
                 <div class="photo"><span class="photo-sun"></span></div>
-                <h3>Late night thoughts</h3>
+                <div class="note-title">Late night thoughts</div>
                 <p>It's 11:40 PM and the screen still looks like noon. Every white page is a small sunrise.</p>
                 <div class="lines"><i></i><i></i><i style="width:72%"></i></div>
                 <div class="chips"><span class="chip blue">Blue</span><span class="chip green">Green</span><span class="chip red">Red</span></div>
@@ -192,7 +210,7 @@
     <section class="section showcase" id="showcase">
       <div class="section-head">
         <p class="eyebrow">What it does</p>
-        <h2>Three things it does better.</h2>
+        <h2>Three things Dozelight does better than Night Shift.</h2>
       </div>
       <div class="showcase-rows">
         <div class="guide-step showcase-row">
@@ -282,7 +300,7 @@
     <section class="section" id="features">
       <div class="section-head">
         <p class="eyebrow">Features</p>
-        <h2>Small app. Warm light. Every detail.</h2>
+        <h2>Blue light filter features, down to every detail.</h2>
       </div>
       <div class="grid">
         <article class="card">
@@ -403,13 +421,13 @@
             <tr><th scope="row">Warmest setting</th><td>2700K</td><td class="yes">1000K</td></tr>
             <tr><th scope="row">Blocks blue light completely</th><td class="no">No, reduces it</td><td class="yes">Yes, from 1900K</td></tr>
             <tr><th scope="row">Red only, no blue or green</th><td class="no">No</td><td class="yes">Yes</td></tr>
-            <tr><th scope="row">Gradual bedtime schedule</th><td class="no">Sunset to sunrise only</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Gradual bedtime schedule</th><td class="no">No, sunset to sunrise or custom hours</td><td class="yes">Yes</td></tr>
             <tr><th scope="row">Touch Bar</th><td class="no">Stays white</td><td class="yes">Tinted to match</td></tr>
             <tr><th scope="row">Pointer help in the dark</th><td class="no">No</td><td class="yes">Larger pointer and halo</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fineprint"><a class="inline-link" href="compare.html">See how Dozelight compares with f.lux and Night Light →</a> · <a class="inline-link" href="night-shift-warmer.html">How to make Night Shift warmer →</a></p>
+      <p class="fineprint"><a class="inline-link" href="compare.html">See how Dozelight compares with f.lux and Night Light →</a> · <a class="inline-link" href="night-shift-warmer.html">How to make Night Shift warmer →</a></p>
     </section>
 
     <!-- Pricing and download -->
@@ -431,7 +449,7 @@
           <a class="button" href="download/Dozelight.dmg" download data-goatcounter-click="download-mac" data-goatcounter-title="Download for Mac">Download free trial</a>
           <a class="button button-ghost" href="https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL" data-goatcounter-click="buy-mac" data-goatcounter-title="Buy (Mac page)">Buy now</a>
         </div>
-        <p class="fineprint">Version 1.5.14 · 1.6 MB · macOS 13 Ventura or later. Payments are handled securely by Polar. <a class="inline-link" href="changelog.html#mac">What's new →</a></p>
+        <p class="fineprint">Version 1.5.14 · 1.6 MB · macOS 13 Ventura or later. Payments are handled securely by Polar. <a class="inline-link" href="changelog.html#mac">What's new →</a></p>
       </div>
     </section>
 
@@ -440,7 +458,7 @@
       <div class="section-head">
         <p class="eyebrow">Installing</p>
         <h2>Up and running in a minute.</h2>
-        <p>Dozelight is notarized by Apple, so it opens like any other app you download. <a class="inline-link" href="install.html">See the step-by-step guide with pictures →</a></p>
+        <p>Dozelight is notarized by Apple, so it opens like any other app you download. <a class="inline-link" href="install.html">See the step-by-step guide with pictures →</a></p>
       </div>
       <ol class="steps">
         <li><b>Download</b><span>Click <b>Download</b> and open <code>Dozelight.dmg</code> from your Downloads folder.</span></li>
@@ -474,7 +492,7 @@
     <section class="section faq" id="faq">
       <div class="section-head">
         <p class="eyebrow">FAQ</p>
-        <h2>Questions, answered.</h2>
+        <h2>Dozelight FAQ: questions, answered.</h2>
       </div>
       <details>
         <summary>Is there an iPhone or iPad version?</summary>
@@ -490,7 +508,7 @@
       </details>
       <details>
         <summary>What are Darkroom and Extra Dim?</summary>
-        <p>Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in the <b>Filters</b> menu, next to Black &amp; White, Sepia, Invert Colors and High Contrast, and they work at any time of day.</p>
+        <p>Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in the <b>Filters</b> menu, next to Black &amp; White, Sepia, Invert Colors and High Contrast, and they work at any time of day. For tired eyes, see <a href="rest-your-eyes.html">how to rest your eyes</a>.</p>
       </details>
       <details>
         <summary>Will it slow down my Mac?</summary>
@@ -506,7 +524,7 @@
       </details>
       <details>
         <summary>Is Dozelight a blue light filter or a blue light blocker?</summary>
-        <p>Both. A blue light filter like Night Shift turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime.</p>
+        <p>Both. A blue light filter like Night Shift turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime. See our <a href="blue-light-filter.html">guide to blue light filters</a>.</p>
       </details>
       <details>
         <summary>Does Dozelight block blue light completely?</summary>
@@ -554,7 +572,7 @@
   <footer class="footer">
     <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
-    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="changelog.html">What's new</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links"><a href="./" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="changelog.html">What's new</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="about.html">About</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="screens-and-sleep.html">Screens and better sleep</a> · <a href="rest-your-eyes.html">Rest your eyes</a> · <a href="blue-light-filter.html">Blue light filter</a> · <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>
     <p class="fineprint">Mac, macOS, Night Shift and Touch Bar are trademarks of Apple Inc. Dozelight is not affiliated with Apple.</p>
   </footer>

@@ -80,7 +80,9 @@ p { margin: 0; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; }
 .brand img { border-radius: 8px; flex-shrink: 0; }
 .nav-links { display: flex; gap: 22px; margin-left: auto; }
-.nav-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; transition: color 0.2s; }
+.nav-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; transition: color 0.2s; white-space: nowrap; }
+/* Below this the section links don't fit beside the platform switch, the language link and the button. */
+@media (max-width: 1100px) { .nav-links { display: none; } .nav .lang-link { margin-left: auto; } .nav .lang-link + .button-small { margin-left: 0; } }
 .nav-links a:hover { color: var(--text); }
 
 /* Buttons */
@@ -117,7 +119,7 @@ p { margin: 0; }
 .hero-facts strong { font: 700 1.5rem var(--serif); color: var(--text); }
 .hero-facts span { color: var(--muted); font-size: 0.85rem; }
 
-.hero-visual { position: relative; min-height: 560px; display: grid; place-items: center; }
+.hero-visual { position: relative; min-height: 560px; display: grid; place-items: center; overflow-x: clip; }
 .sun {
   position: absolute; width: 380px; height: 380px; border-radius: 50%; bottom: 70px; left: 50%; translate: -50% 50%;
   background: radial-gradient(circle, #ffd08a 0%, #ff9a45 32%, #ff5a1f 58%, rgba(255, 70, 20, 0) 71%);
@@ -190,7 +192,7 @@ p { margin: 0; }
 .doc { padding: 18px 22px; display: grid; gap: 10px; align-content: start; }
 .photo { height: 110px; border-radius: 10px; background: linear-gradient(180deg, #4a8df8, #9cd0ff 70%, #e9f6ff); position: relative; overflow: hidden; }
 .photo-sun { position: absolute; width: 46px; height: 46px; border-radius: 50%; right: 34px; top: 22px; background: #fffbe6; box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.8); }
-.doc h3 { font-family: var(--sans); font-size: 18px; letter-spacing: -0.01em; color: #111; }
+.doc .note-title { font-family: var(--sans); font-size: 18px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; color: #111; }
 .doc p { font-size: 14px; color: #444; }
 .lines { display: grid; gap: 7px; }
 .lines i { display: block; height: 8px; border-radius: 4px; background: #e6e8ee; }
@@ -384,7 +386,7 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
 .menu-item { padding-left: 48px; }
 .menu-item.checked::before { left: 10px; }
 .menu-item .mi { position: absolute; left: 25px; top: 50%; translate: 0 -50%; width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; opacity: 0.9; }
-.inline-link { color: var(--amber); white-space: nowrap; }
+.inline-link { color: var(--amber); }  /* may wrap: Polish links are long; the arrow keeps to its last word */
 
 /* Install guide */
 .guide { max-width: var(--max); margin: 0 auto; padding: 64px 20px 96px; }
@@ -677,3 +679,10 @@ code { font: 0.9em var(--mono); background: var(--surface-2); padding: 1px 6px; 
   .showcase-shot { padding: 20px 14px; }
   .auto-marks .optional { display: none; }
 }
+
+/* Windows page: the Microsoft Store screenshots, two by two (one column on phones). */
+.screens-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.screens-grid figure { margin: 0; }
+.screens-grid img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 0 0 1px var(--border); }
+.screens-grid figcaption { margin-top: 10px; color: var(--muted); font-size: 0.92rem; }
+@media (max-width: 640px) { .screens-grid { grid-template-columns: 1fr; } }

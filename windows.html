@@ -2,39 +2,47 @@
 <html lang="en" data-platform="windows">
 <head>
   <meta charset="utf-8">
+  <script data-lang-redirect>
+    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
+    // Crawlers stay.
+    (function () {
+      var chosen = null, platform = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+      try { chosen = localStorage.getItem("lang"); platform = localStorage.getItem("platform"); } catch (e) {}
+      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent)) {
+        var page = location.pathname.split("/").pop(), ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+        if ((page === "" || page === "index.html") && !platform && /Win/i.test(ua)) page = "windows.html";
+        location.replace("pl/" + page + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dozelight: blue light filter for your PC</title>
-  <meta name="description" content="Dozelight is a blue light filter and blocker for Windows 10 and 11: warmer than Night Light, down to candlelight and pure red, on your bedtime schedule.">
+  <title>Dozelight: Blue Light Filter for Windows 10 and 11</title>
+  <meta name="description" content="Dozelight is a blue light filter and blocker for Windows 10 and 11: warmer than Night Light, down to candlelight and pure red. 14-day free trial.">
   <meta name="theme-color" content="#0d0a0b">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Dozelight">
-  <meta property="og:title" content="Dozelight: blue light filter for your PC">
+  <meta property="og:title" content="Dozelight: Blue Light Filter for Windows 10 and 11">
   <meta property="og:description" content="Down to candlelight and pure red, right from the taskbar. A tiny app for Windows 10 and 11, with a 14-day free trial.">
-  <meta property="og:image" content="https://dozelight.github.io/assets/og-windows.jpg">
   <meta property="og:url" content="https://dozelight.github.io/windows.html">
+  <meta property="og:image" content="https://dozelight.github.io/assets/og-windows.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dozelight: blue light blocker for your PC">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preload" href="assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <script data-lang-redirect>
-    // Visitors who chose Polish, or whose browser asks for Polish first (with no choice yet), get the Polish page.
-    // Crawlers stay.
-    (function () {
-      var chosen = null, lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
-      try { chosen = localStorage.getItem("lang"); } catch (e) {}
-      if ((chosen === "pl" || !chosen && /^pl\b/i.test(lang)) && !/bot|crawl|spider|slurp|bing|google|yandex|duckduck|baidu|facebookexternalhit|embedly|preview/i.test(navigator.userAgent))
-        location.replace("pl/" + (location.pathname.split("/").pop() || "") + location.search + location.hash);
-    })();
-  </script>
   <script src="platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="count.js"></script>
   <link rel="alternate" hreflang="en" href="https://dozelight.github.io/windows.html">
   <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/windows.html">
   <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/windows.html">
   <link rel="canonical" href="https://dozelight.github.io/windows.html">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Dozelight for Windows", "operatingSystem": "Windows 10, Windows 11", "applicationCategory": "UtilitiesApplication", "description": "Dozelight is a blue light filter and blocker for Windows 10 and 11. Night Light only reduces blue light, Dozelight blocks it completely, down to candlelight and pure red, right from the taskbar. 14-day free trial.", "url": "https://dozelight.github.io/windows.html", "downloadUrl": "https://dozelight.github.io/download/Dozelight-Windows.zip", "image": "https://dozelight.github.io/assets/windows-icon.png", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL"}, "publisher": {"@type": "Organization", "name": "Dozelight", "url": "https://dozelight.github.io/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "$9.99, once. That's the early-access price, and it rises to $14.99 when early access ends. You can try every feature free for 14 days first."}}, {"@type": "Question", "name": "Can I use one license on my PC and my Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. One license works on up to 3 computers in total, Windows or Mac, so you can use it on your PC and your MacBook with the same key."}}, {"@type": "Question", "name": "What happens when the trial ends?", "acceptedAnswer": {"@type": "Answer", "text": "The tint pauses until you enter a license key. Your settings stay as they are, so everything comes back the moment you activate."}}, {"@type": "Question", "name": "Does it replace Night Light?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dozelight goes much further than Night Light, with warmer settings, red only, a gradual bedtime schedule and filters. Turn Night Light off so the two don't compete. See Night Shift vs Night Light vs f.lux vs Dozelight and how to make your screen red at night on Windows."}}, {"@type": "Question", "name": "What are Darkroom and Extra Dim?", "acceptedAnswer": {"@type": "Answer", "text": "Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in Filters, next to Black & White, Sepia, Invert Colors and High Contrast, and they work at any time of day."}}, {"@type": "Question", "name": "Which PCs does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "Any PC with 64-bit Windows 10 or Windows 11. It also runs on Windows 11 laptops with Arm processors, through Windows' built-in emulation."}}, {"@type": "Question", "name": "Why does Windows warn me when I first open it?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight isn't signed yet, so Microsoft Defender SmartScreen asks you to confirm once. Click More info, then Run anyway. The installation guide shows each step."}}, {"@type": "Question", "name": "Why do the warmest colors need unlocking?", "acceptedAnswer": {"@type": "Answer", "text": "Windows limits how far apps can change the screen's colors. Dozelight can lift that limit once, with an administrator's approval, by setting the same Windows option other screen-tint apps use. You may need to restart Windows once afterwards."}}, {"@type": "Question", "name": "The screen doesn't change color. What can I do?", "acceptedAnswer": {"@type": "Answer", "text": "With HDR turned on, Windows ignores color changes from apps, so turn HDR off in Settings → System → Display. If you use Night Light, try turning it off so the two don't compete. Remote Desktop and virtual machines usually don't allow color changes either."}}, {"@type": "Question", "name": "Do screenshots look red?", "acceptedAnswer": {"@type": "Answer", "text": "No. The tint is applied on the way to the display, so screenshots, recordings and screen sharing keep their true colors."}}, {"@type": "Question", "name": "Does it collect any data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight has no analytics or tracking. It goes online only to activate and occasionally check your license key, sending just the key and your PC's name to Polar, which runs our store, and once a day to look for updates. Dusk and dawn are estimated from your time zone, so it doesn't need your location either."}}, {"@type": "Question", "name": "Is Dozelight a blue light filter or a blue light blocker?", "acceptedAnswer": {"@type": "Answer", "text": "Both. A blue light filter like Night Light turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime."}}, {"@type": "Question", "name": "Does Dozelight block blue light completely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. At 1900K and warmer, and in Red Only, Dozelight switches the screen's blue light off completely. Milder settings reduce it, like a stronger Night Light. Auto mode reaches 1900K at your bedtime and keeps only red light through the night."}}, {"@type": "Question", "name": "Will Dozelight help me sleep better?", "acceptedAnswer": {"@type": "Answer", "text": "It takes away one thing that can push sleep later: bright, blue-rich screen light in the evening. Auto mode warms the screen gradually and keeps only red light after bedtime. Regular sleep times, winding down and a dark bedroom matter at least as much, so see our guide to screens, blue light and better sleep. Dozelight is a comfort tool, not a medical product."}}, {"@type": "Question", "name": "Is it a medical product?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight is a comfort tool for using your computer in the evening. It doesn't diagnose, treat or prevent any condition."}}, {"@type": "Question", "name": "How do I uninstall it?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Dozelight panel, turn off Open at Login and click Quit Dozelight. Your screen goes back to normal right away. Then delete Dozelight.exe."}}, {"@type": "Question", "name": "How do I move my license to a new PC?", "acceptedAnswer": {"@type": "Answer", "text": "Open License… in the Dozelight panel on the old PC and click Deactivate This PC. You can also manage your computers in the Polar customer portal linked in your receipt."}}, {"@type": "Question", "name": "How do updates work?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight checks for a new version once a day. When there is one, it shows in the panel and installs with one click. You can also choose Settings → Check for Updates in the panel at any time. Your settings and license stay."}}, {"@type": "Question", "name": "Can I get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If Dozelight isn't right for you, email us within 14 days of your purchase for a full refund. See the refund policy."}}, {"@type": "Question", "name": "Is there an iPhone or iPad version?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone and iPad don't allow apps to tint the whole screen. But they have built-in settings that come close: see our free guide to a red screen at night on iPhone and iPad."}}]}</script>
+  <script type="application/ld+json" data-schema>{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://dozelight.github.io/#organization", "name": "Dozelight", "url": "https://dozelight.github.io/", "logo": {"@type": "ImageObject", "url": "https://dozelight.github.io/assets/icon.png", "width": 512, "height": 512}, "email": "dozelight@icloud.com", "sameAs": ["https://apps.microsoft.com/detail/9P8447TGN40X"], "founder": {"@id": "https://dozelight.github.io/about.html#artur"}}, {"@type": "Person", "@id": "https://dozelight.github.io/about.html#artur", "name": "Artur Pereć", "url": "https://dozelight.github.io/about.html", "jobTitle": "Developer of Dozelight", "worksFor": {"@id": "https://dozelight.github.io/#organization"}}, {"@type": "WebSite", "@id": "https://dozelight.github.io/#website", "name": "Dozelight", "alternateName": "Dozelight app", "url": "https://dozelight.github.io/", "inLanguage": ["en", "pl"], "publisher": {"@id": "https://dozelight.github.io/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://dozelight.github.io/windows.html#app", "name": "Dozelight for Windows", "url": "https://dozelight.github.io/windows.html", "mainEntityOfPage": "https://dozelight.github.io/windows.html", "inLanguage": "en", "description": "Dozelight is a blue light filter and blocker for Windows 10 and 11: warmer than Night Light, down to candlelight and pure red. 14-day free trial.", "operatingSystem": "Windows 10, Windows 11", "applicationCategory": "UtilitiesApplication", "softwareVersion": "1.5.9", "downloadUrl": "https://dozelight.github.io/download/Dozelight-Windows.zip", "releaseNotes": "https://dozelight.github.io/changelog.html#windows", "image": "https://dozelight.github.io/assets/windows-icon.png", "installUrl": "https://apps.microsoft.com/detail/9P8447TGN40X", "sameAs": ["https://apps.microsoft.com/detail/9P8447TGN40X"], "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL", "availability": "https://schema.org/InStock", "seller": {"@id": "https://dozelight.github.io/#organization"}}, "isAccessibleForFree": false, "author": {"@id": "https://dozelight.github.io/about.html#artur"}, "publisher": {"@id": "https://dozelight.github.io/#organization"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "$9.99, once. That's the early-access price, and it rises to $14.99 when early access ends. You can try every feature free for 14 days first."}}, {"@type": "Question", "name": "Can I use one license on my PC and my Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. One license works on up to 3 computers in total, Windows or Mac, so you can use it on your PC and your MacBook with the same key."}}, {"@type": "Question", "name": "What happens when the trial ends?", "acceptedAnswer": {"@type": "Answer", "text": "The tint pauses until you enter a license key. Your settings stay as they are, so everything comes back the moment you activate."}}, {"@type": "Question", "name": "Does it replace Night Light?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dozelight goes much further than Night Light, with warmer settings, red only, a gradual bedtime schedule and filters. Turn Night Light off so the two don't compete. See Night Shift vs Night Light vs f.lux vs Dozelight and how to make your screen red at night on Windows."}}, {"@type": "Question", "name": "What are Darkroom and Extra Dim?", "acceptedAnswer": {"@type": "Answer", "text": "Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in Filters, next to Black & White, Sepia, Invert Colors and High Contrast, and they work at any time of day. For tired eyes, see how to rest your eyes."}}, {"@type": "Question", "name": "Which PCs does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "Any PC with 64-bit Windows 10 or Windows 11. It also runs on Windows 11 laptops with Arm processors, through Windows' built-in emulation."}}, {"@type": "Question", "name": "Why does Windows warn me when I first open it?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight isn't signed yet, so Microsoft Defender SmartScreen asks you to confirm once. Click More info, then Run anyway. The installation guide shows each step."}}, {"@type": "Question", "name": "Why do the warmest colors need unlocking?", "acceptedAnswer": {"@type": "Answer", "text": "Windows limits how far apps can change the screen's colors. Dozelight can lift that limit once, with an administrator's approval, by setting the same Windows option other screen-tint apps use. You may need to restart Windows once afterwards."}}, {"@type": "Question", "name": "The screen doesn't change color. What can I do?", "acceptedAnswer": {"@type": "Answer", "text": "With HDR turned on, Windows ignores color changes from apps, so turn HDR off in Settings → System → Display. If you use Night Light, try turning it off so the two don't compete. Remote Desktop and virtual machines usually don't allow color changes either."}}, {"@type": "Question", "name": "Do screenshots look red?", "acceptedAnswer": {"@type": "Answer", "text": "No. The tint is applied on the way to the display, so screenshots, recordings and screen sharing keep their true colors."}}, {"@type": "Question", "name": "Does it collect any data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight has no analytics or tracking. It goes online only to activate and occasionally check your license key, sending just the key and your PC's name to Polar, which runs our store, and once a day to look for updates. Dusk and dawn are estimated from your time zone, so it doesn't need your location either."}}, {"@type": "Question", "name": "Is Dozelight a blue light filter or a blue light blocker?", "acceptedAnswer": {"@type": "Answer", "text": "Both. A blue light filter like Night Light turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime. See our guide to blue light filters."}}, {"@type": "Question", "name": "Does Dozelight block blue light completely?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. At 1900K and warmer, and in Red Only, Dozelight switches the screen's blue light off completely. Milder settings reduce it, like a stronger Night Light. Auto mode reaches 1900K at your bedtime and keeps only red light through the night."}}, {"@type": "Question", "name": "Will Dozelight help me sleep better?", "acceptedAnswer": {"@type": "Answer", "text": "It takes away one thing that can push sleep later: bright, blue-rich screen light in the evening. Auto mode warms the screen gradually and keeps only red light after bedtime. Regular sleep times, winding down and a dark bedroom matter at least as much, so see our guide to screens, blue light and better sleep. Dozelight is a comfort tool, not a medical product."}}, {"@type": "Question", "name": "Is it a medical product?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dozelight is a comfort tool for using your computer in the evening. It doesn't diagnose, treat or prevent any condition."}}, {"@type": "Question", "name": "How do I uninstall it?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Dozelight panel, turn off Open at Login and click Quit Dozelight. Your screen goes back to normal right away. Then delete Dozelight.exe."}}, {"@type": "Question", "name": "How do I move my license to a new PC?", "acceptedAnswer": {"@type": "Answer", "text": "Open License… in the Dozelight panel on the old PC and click Deactivate This PC. You can also manage your computers in the Polar customer portal linked in your receipt."}}, {"@type": "Question", "name": "How do updates work?", "acceptedAnswer": {"@type": "Answer", "text": "Dozelight checks for a new version once a day. When there is one, it shows in the panel and installs with one click. You can also choose Settings → Check for Updates in the panel at any time. Your settings and license stay."}}, {"@type": "Question", "name": "Can I get a refund?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If Dozelight isn't right for you, email us within 14 days of your purchase for a full refund. See the refund policy."}}, {"@type": "Question", "name": "Is there an iPhone or iPad version?", "acceptedAnswer": {"@type": "Answer", "text": "iPhone and iPad don't allow apps to tint the whole screen. But they have built-in settings that come close: see our free guide to a red screen at night on iPhone and iPad."}}]}</script>
 </head>
 <body>
   <div class="sky" aria-hidden="true"></div>
@@ -45,7 +53,7 @@
       <span>Dozelight</span>
     </a>
     <div class="platform-switch" role="group" aria-label="Platform">
-      <a href="index.html" data-choose="mac">macOS</a>
+      <a href="./" data-choose="mac">macOS</a>
       <a href="windows.html" data-choose="windows" aria-current="page">Windows</a>
     </div>
     <nav class="nav-links" aria-label="Sections">
@@ -55,20 +63,31 @@
       <a href="#download">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="lang-link" href="pl/windows.html" hreflang="pl" lang="pl" data-lang="pl" title="Polski" aria-label="Polski"><svg viewBox="0 0 60 30" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><clipPath id="flag-gb"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#flag-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
+    <a class="lang-link" href="pl/windows.html" hreflang="pl" data-lang="pl" title="Polski" aria-label="EN: switch to Polish"><svg viewBox="0 0 60 30" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><clipPath id="flag-gb"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#flag-gb)" stroke="#c8102e" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></svg>EN</a>
     <a class="button button-small" href="#download">Download</a>
   </header>
-  <div class="platform-hint" id="platform-hint" hidden>Looks like you're on a Mac. <a href="index.html" data-choose="mac">See Dozelight for Mac →</a></div>
+  <div class="platform-hint" id="platform-hint" hidden>Looks like you're on a Mac. <a href="./" data-choose="mac">See Dozelight for Mac →</a></div>
+  <script>
+    // Offers the other platform's page when the visitor seems to be on it and hasn't chosen. Runs here, before the page
+    // draws, so the hint doesn't push the page down later.
+    (function () {
+      var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || "", chosen = null;
+      var detected = /Win/i.test(ua) ? "windows" : /Mac/i.test(ua) && !(navigator.maxTouchPoints > 1) ? "mac" : null;  // iPads report themselves as Macs
+      try { chosen = localStorage.getItem("platform"); } catch (e) {}
+      if (detected && !chosen && detected !== document.documentElement.getAttribute("data-platform")) document.getElementById("platform-hint").hidden = false;
+    })();
+  </script>
 
   <main id="top">
     <!-- Hero -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span> Blue light blocker for Windows</p>
+        <p class="eyebrow"><span class="dot"></span> Blue light filter and blocker for Windows 10 and 11</p>
         <h1>Block blue light<br><em>on your PC.</em></h1>
         <p class="lede">
-          Night Light is a mild blue light filter: it only reduces blue light. Dozelight blocks it completely, down to candlelight
-          and pure red, right from the taskbar, and follows your bedtime so your screen winds down with you.
+          Dozelight is a blue light filter app for Windows 10 and 11 that makes your screen warmer than Night Light can, down to
+          candlelight and pure red. Night Light only reduces blue light; Dozelight blocks it completely, right from the taskbar,
+          and follows your bedtime so your screen winds down with you.
         </p>
         <div class="hero-actions">
           <a class="button" href="download/Dozelight-Windows.zip" download data-goatcounter-click="download-windows" data-goatcounter-title="Download for Windows">Download free trial</a>
@@ -129,7 +148,7 @@
               </aside>
               <article class="doc">
                 <div class="photo"><span class="photo-sun"></span></div>
-                <h3>Late night thoughts</h3>
+                <div class="note-title">Late night thoughts</div>
                 <p>It's 11:40 PM and the screen still looks like noon. Every white page is a small sunrise.</p>
                 <div class="lines"><i></i><i></i><i style="width:72%"></i></div>
                 <div class="chips"><span class="chip blue">Blue</span><span class="chip green">Green</span><span class="chip red">Red</span></div>
@@ -168,7 +187,7 @@
     <section class="section showcase" id="showcase">
       <div class="section-head">
         <p class="eyebrow">What it does</p>
-        <h2>Three things it does better.</h2>
+        <h2>Three things Dozelight does better than Night Light.</h2>
       </div>
       <div class="showcase-rows">
         <div class="guide-step showcase-row">
@@ -257,10 +276,24 @@
     </section>
 
     <!-- Features -->
+    <section class="section screens" id="screenshots">
+      <div class="section-head">
+        <p class="eyebrow">Screenshots</p>
+        <h2>Dozelight on Windows 11.</h2>
+        <p>The real panel, as in the Microsoft Store listing. Screenshots keep their true colors, so the tint was added to them to show what you see.</p>
+      </div>
+      <div class="screens-grid">
+        <figure><img src="assets/shots/windows-candlelight.webp" alt="Dozelight panel on Windows 11 with the Candlelight preset, over a white window warmed to candlelight" width="1280" height="720" loading="lazy" decoding="async"><figcaption>The panel, with the Candlelight preset</figcaption></figure>
+        <figure><img src="assets/shots/windows-red-only.webp" alt="Windows 11 desktop in Red Only, with no blue or green light" width="1280" height="720" loading="lazy" decoding="async"><figcaption>Red Only, the slider's last step</figcaption></figure>
+        <figure><img src="assets/shots/windows-schedule.webp" alt="Dozelight's Auto schedule page on Windows, with bedtime and wake-up time" width="1280" height="720" loading="lazy" decoding="async"><figcaption>Auto follows your bedtime</figcaption></figure>
+        <figure><img src="assets/shots/windows-darkroom.webp" alt="Darkroom filter on Windows: black pages with red text" width="1280" height="720" loading="lazy" decoding="async"><figcaption>Darkroom: black pages, red text</figcaption></figure>
+      </div>
+    </section>
+
     <section class="section" id="features">
       <div class="section-head">
         <p class="eyebrow">Features</p>
-        <h2>Small app. Warm light. One click away.</h2>
+        <h2>Blue light filter features, one click away.</h2>
       </div>
       <div class="grid">
         <article class="card">
@@ -388,7 +421,7 @@
           <a class="button button-ghost" href="https://apps.microsoft.com/detail/9P8447TGN40X" data-goatcounter-click="store-windows" data-goatcounter-title="Microsoft Store">Get it from Microsoft Store</a>
           <a class="button button-ghost" href="https://buy.polar.sh/polar_cl_vW1CZe0jYEofC1ECHEfeNki5Oq9OQqqWhFMfx1OUVyL" data-goatcounter-click="buy-windows" data-goatcounter-title="Buy (Windows page)">Buy now</a>
         </div>
-        <p class="fineprint">Version 1.5.9 · 169 KB ZIP · Windows 10 and 11, 64-bit. Payments are handled securely by Polar. <a class="inline-link" href="windows-install.html">Installation guide →</a> · <a class="inline-link" href="changelog.html#windows">What's new →</a></p>
+        <p class="fineprint">Version 1.5.9 · 169 KB ZIP · Windows 10 and 11, 64-bit. Payments are handled securely by Polar. <a class="inline-link" href="windows-install.html">Installation guide →</a> · <a class="inline-link" href="changelog.html#windows">What's new →</a></p>
       </div>
     </section>
 
@@ -397,7 +430,7 @@
       <div class="section-head">
         <p class="eyebrow">Installing</p>
         <h2>Up and running in a minute.</h2>
-        <p>Dozelight isn't signed yet, so the first time you open it, Windows asks you to confirm. You only do this once. <a class="inline-link" href="windows-install.html">See the step-by-step guide with pictures →</a></p>
+        <p>Dozelight isn't signed yet, so the first time you open it, Windows asks you to confirm. You only do this once. <a class="inline-link" href="windows-install.html">See the step-by-step guide with pictures →</a></p>
       </div>
       <ol class="steps">
         <li><b>Unzip it</b><span>Open the ZIP and move <code>Dozelight.exe</code> to a folder where it can stay, for example Documents.</span></li>
@@ -431,7 +464,7 @@
     <section class="section faq" id="faq">
       <div class="section-head">
         <p class="eyebrow">FAQ</p>
-        <h2>Questions, answered.</h2>
+        <h2>Dozelight for Windows FAQ: questions, answered.</h2>
       </div>
       <details>
         <summary>How much does it cost?</summary>
@@ -451,7 +484,7 @@
       </details>
       <details>
         <summary>What are Darkroom and Extra Dim?</summary>
-        <p>Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in <b>Filters</b>, next to Black &amp; White, Sepia, Invert Colors and High Contrast, and they work at any time of day.</p>
+        <p>Darkroom inverts the screen and keeps only red, so pages turn black with red text: the gentlest way to read late at night. Extra Dim makes the screen darker than the lowest brightness setting. Both are in <b>Filters</b>, next to Black &amp; White, Sepia, Invert Colors and High Contrast, and they work at any time of day. For tired eyes, see <a href="rest-your-eyes.html">how to rest your eyes</a>.</p>
       </details>
       <details>
         <summary>Which PCs does it run on?</summary>
@@ -479,7 +512,7 @@
       </details>
       <details>
         <summary>Is Dozelight a blue light filter or a blue light blocker?</summary>
-        <p>Both. A blue light filter like Night Light turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime.</p>
+        <p>Both. A blue light filter like Night Light turns blue light down. Dozelight does that at its milder settings, and as a blue light blocker it switches the screen's blue light off completely: at 1900K and warmer, and in Red Only. You choose how far to go, or let Auto mode follow your bedtime. See our <a href="blue-light-filter.html">guide to blue light filters</a>.</p>
       </details>
       <details>
         <summary>Does Dozelight block blue light completely?</summary>
@@ -519,7 +552,7 @@
   <footer class="footer">
     <div class="footer-brand"><img src="assets/windows-icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Made for late nights.</p>
-    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="changelog.html">What's new</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links"><a href="./" data-choose="mac">Dozelight for Mac</a> · <a href="windows.html" data-choose="windows">Dozelight for Windows</a> · <a href="install.html">Mac install guide</a> · <a href="windows-install.html">Windows install guide</a> · <a href="changelog.html">What's new</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refunds.html">Refunds</a> · <a href="about.html">About</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Guides: <a href="screens-and-sleep.html">Screens and better sleep</a> · <a href="rest-your-eyes.html">Rest your eyes</a> · <a href="blue-light-filter.html">Blue light filter</a> · <a href="night-shift-warmer.html">Make Night Shift warmer</a> · <a href="red-screen-windows.html">Red screen on Windows</a> · <a href="compare.html">Night Shift vs Night Light vs f.lux</a> · <a href="iphone.html">iPhone &amp; iPad</a></p>
     <p class="fineprint">Windows, Night Light and Microsoft Defender are trademarks of Microsoft Corporation. Dozelight is not affiliated with Microsoft.</p>
   </footer>

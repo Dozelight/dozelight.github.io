@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /updates/
+Disallow: /README.md
 
 Sitemap: https://dozelight.github.io/sitemap.xml

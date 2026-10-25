@@ -3,14 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Instalacja Dozelight na Windows</title>
+  <title>Jak zainstalować Dozelight na Windows 10 i 11</title>
   <meta name="description" content="Jak zainstalować Dozelight na Windows 10 i 11 – krok po kroku, z ilustracjami. Do tego rozwiązywanie problemów i odinstalowanie.">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Dozelight">
-  <meta name="theme-color" content="#0d0a0b">
+  <meta property="og:title" content="Jak zainstalować Dozelight na Windows 10 i 11">
+  <meta property="og:description" content="Jak zainstalować Dozelight na Windows 10 i 11 – krok po kroku, z ilustracjami. Do tego rozwiązywanie problemów i odinstalowanie.">
+  <meta property="og:url" content="https://dozelight.github.io/pl/windows-install.html">
   <meta property="og:image" content="https://dozelight.github.io/assets/og-windows.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dozelight: bloker światła niebieskiego dla twojego komputera">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d0a0b">
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <link rel="preload" href="../assets/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Fraunces-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../style.css">
   <script src="../platform.js" defer></script>
   <script data-goatcounter="https://dozelight.goatcounter.com/count" async src="../count.js"></script>
@@ -18,6 +30,7 @@
   <link rel="alternate" hreflang="pl" href="https://dozelight.github.io/pl/windows-install.html">
   <link rel="alternate" hreflang="x-default" href="https://dozelight.github.io/windows-install.html">
   <link rel="canonical" href="https://dozelight.github.io/pl/windows-install.html">
+  <script type="application/ld+json" data-schema>{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://dozelight.github.io/pl/windows-install.html#article", "headline": "Zainstaluj Dozelight na Windows w czterech krokach", "description": "Jak zainstalować Dozelight na Windows 10 i 11 – krok po kroku, z ilustracjami. Do tego rozwiązywanie problemów i odinstalowanie.", "inLanguage": "pl", "url": "https://dozelight.github.io/pl/windows-install.html", "mainEntityOfPage": "https://dozelight.github.io/pl/windows-install.html", "image": "https://dozelight.github.io/assets/og-windows.jpg", "author": {"@type": "Person", "@id": "https://dozelight.github.io/about.html#artur", "name": "Artur Pereć", "url": "https://dozelight.github.io/about.html"}, "publisher": {"@type": "Organization", "@id": "https://dozelight.github.io/#organization", "name": "Dozelight", "url": "https://dozelight.github.io/", "logo": {"@type": "ImageObject", "url": "https://dozelight.github.io/assets/icon.png", "width": 512, "height": 512}}, "datePublished": "2026-10-17"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://dozelight.github.io/pl/"}, {"@type": "ListItem", "position": 2, "name": "Zainstaluj Dozelight na Windows w czterech krokach", "item": "https://dozelight.github.io/pl/windows-install.html"}]}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ekran nie zmienia koloru", "acceptedAnswer": {"@type": "Answer", "text": "Przy włączonym HDR Windows ignoruje zmiany kolorów wprowadzane przez aplikacje. Wyłącz HDR w Ustawienia → System → Ekran. Jeśli używasz Światła nocnego, spróbuj je też wyłączyć, żeby oba nie wchodziły sobie w drogę. Pulpit zdalny i maszyny wirtualne zwykle również nie pozwalają zmieniać kolorów."}}, {"@type": "Question", "name": "Nie robi się tak ciepło, jak pokazuje suwak", "acceptedAnswer": {"@type": "Answer", "text": "To ograniczenie Windows. Kliknij Odblokuj cieplejsze kolory w panelu Dozelight, zatwierdź i uruchom Windows ponownie, jeśli Dozelight o to poprosi."}}, {"@type": "Question", "name": "Zabezpieczenia Windows albo mój antywirus ostrzega przed Dozelight", "acceptedAnswer": {"@type": "Answer", "text": "Nowe aplikacje, które nie są jeszcze podpisane, bywają oznaczane jako podejrzane. Dozelight zmienia tylko kolory ekranu, a z internetem łączy się wyłącznie po to, żeby sprawdzić licencję. Jeśli antywirus go blokuje, napisz do nas, a przyjrzymy się sprawie."}}]}</script>
 </head>
 <body>
@@ -35,15 +48,25 @@
       <a href="windows.html#download">Pobierz</a>
       <a href="windows.html#faq">FAQ</a>
     </nav>
-    <a class="lang-link" href="../windows-install.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English"><svg viewBox="0 0 16 10" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><rect width="16" height="5" fill="#fff"/><rect y="5" width="16" height="5" fill="#dc143c"/></svg>PL</a>
+    <a class="lang-link" href="../windows-install.html" hreflang="en" data-lang="en" title="English" aria-label="PL: przełącz na angielski"><svg viewBox="0 0 16 10" width="18" height="12" style="vertical-align: -1px; margin-right: 6px" aria-hidden="true"><rect width="16" height="5" fill="#fff"/><rect y="5" width="16" height="5" fill="#dc143c"/></svg>PL</a>
     <a class="button button-small" href="../download/Dozelight-Windows.zip" download data-goatcounter-click="download-windows" data-goatcounter-title="Download for Windows">Pobierz</a>
   </header>
   <div class="platform-hint" id="platform-hint" hidden>Wygląda na to, że używasz Maca. <a href="install.html" data-choose="mac">Zobacz, jak zainstalować Dozelight na Macu →</a></div>
+  <script>
+    // Offers the other platform's page when the visitor seems to be on it and hasn't chosen. Runs here, before the page
+    // draws, so the hint doesn't push the page down later.
+    (function () {
+      var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || "", chosen = null;
+      var detected = /Win/i.test(ua) ? "windows" : /Mac/i.test(ua) && !(navigator.maxTouchPoints > 1) ? "mac" : null;  // iPads report themselves as Macs
+      try { chosen = localStorage.getItem("platform"); } catch (e) {}
+      if (detected && !chosen && detected !== document.documentElement.getAttribute("data-platform")) document.getElementById("platform-hint").hidden = false;
+    })();
+  </script>
 
   <main class="guide">
     <header class="guide-head">
       <p class="eyebrow">Instrukcja instalacji</p>
-      <h1>Zainstaluj Dozelight w czterech krokach.</h1>
+      <h1>Zainstaluj Dozelight na Windows w czterech krokach.</h1>
       <p>Zajmie ci to około minuty. Dozelight nie jest jeszcze podpisany, więc Windows poprosi cię o potwierdzenie – tylko raz, przy pierwszym uruchomieniu. Potem otwiera się już normalnie.</p>
       <p class="fineprint">Potrzebujesz 64-bitowego systemu Windows 10 lub 11. Obrazki poniżej to ilustracje, więc twój ekran może wyglądać nieco inaczej.</p>
       <a class="button" href="../download/Dozelight-Windows.zip" download data-goatcounter-click="download-windows" data-goatcounter-title="Download for Windows">Pobierz Dozelight</a>
@@ -160,7 +183,7 @@
   <footer class="footer">
     <div class="footer-brand"><img src="../assets/icon-64.png" alt="" width="24" height="24"> Dozelight</div>
     <p>© 2026 Dozelight. Stworzony dla nocnych marków.</p>
-    <p class="footer-links"><a href="index.html" data-choose="mac">Dozelight na Maca</a> · <a href="windows.html" data-choose="windows">Dozelight na Windows</a> · <a href="install.html">Instrukcja instalacji na Macu</a> · <a href="windows-install.html">Instrukcja instalacji na Windows</a> · <a href="changelog.html">Co nowego</a> · <a href="privacy.html">Prywatność</a> · <a href="terms.html">Regulamin</a> · <a href="refunds.html">Zwroty</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
+    <p class="footer-links"><a href="./" data-choose="mac">Dozelight na Maca</a> · <a href="windows.html" data-choose="windows">Dozelight na Windows</a> · <a href="install.html">Instrukcja instalacji na Macu</a> · <a href="windows-install.html">Instrukcja instalacji na Windows</a> · <a href="changelog.html">Co nowego</a> · <a href="privacy.html">Prywatność</a> · <a href="terms.html">Regulamin</a> · <a href="refunds.html">Zwroty</a> · <a href="about.html">O twórcy</a> · <a href="mailto:dozelight@icloud.com">dozelight@icloud.com</a></p>
     <p class="footer-links">Poradniki: <a href="screens-and-sleep.html">Ekrany a lepszy sen</a> · <a href="rest-your-eyes.html">Daj oczom odpocząć</a> · <a href="blue-light-filter.html">Filtr światła niebieskiego</a> · <a href="night-shift-warmer.html">Jak ocieplić Night Shift</a> · <a href="red-screen-windows.html">Czerwony ekran w Windows</a> · <a href="compare.html">Night Shift vs Światło nocne vs f.lux</a> · <a href="iphone.html">iPhone i iPad</a></p>
   </footer>
 </body>

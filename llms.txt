@@ -1,10 +1,10 @@
 # Dozelight
 
-> Dozelight is a blue light blocker app for Mac and Windows. Night Shift and Night Light only reduce blue light, while Dozelight blocks it completely (at 1900K and warmer, and in Red Only). It makes the screen warmer than they allow, down to 1000K (candlelight and embers) and pure red with no blue or green light, and follows the user's bedtime automatically. One-time purchase of $9.99 (early-access price, rising to $14.99) with a 14-day free trial. One license key works on up to 3 computers, Mac or Windows.
+> Dozelight is a blue light blocker app for Mac and Windows. Night Shift and Night Light only reduce blue light, while Dozelight blocks it completely (at 1900K and warmer, and in Red Only). It makes the screen warmer than they allow, down to 1000K (candlelight and embers) and pure red with no blue or green light, and follows the user's bedtime automatically. One-time purchase of $9.99 (early-access price, rising to $14.99; in Poland 39,99 zł, rising to 59,99 zł) with a 14-day free trial. One license key works on up to 3 computers, Mac or Windows.
 
 Key facts:
 
-- Platforms: macOS 13 Ventura or later (Apple silicon and Intel), as a menu bar app. Windows 10 and 11, 64-bit, as a taskbar (system tray) app.
+- Platforms: macOS 13 Ventura or later (Apple silicon and Intel), as a menu bar app, signed and notarized by Apple. Windows 10 and 11, 64-bit, as a taskbar (system tray) app, also on Microsoft Store.
 - Warmth: a slider from normal down to 1000K, with presets Evening (3400K, Windows), Warm (2400K), Candlelight (2000K), Firelight (1600K) and Ember (1200K).
 - Blocks blue light completely at 1900K and warmer. Red Only, the last step of the slider, removes blue and green completely; Extra Dim takes it darker.
 - Auto mode: warms the screen gradually through the evening (about 1900K at bedtime), switches to red only after bedtime and fades back to normal in the 30 minutes before waking. Any bedtime and wake-up time can be set.
@@ -12,8 +12,10 @@ Key facts:
 - Filters: Black & White, Sepia, Invert Colors, Darkroom (inverted red: black pages with red text), High Contrast and Extra Dim (darker than the lowest brightness).
 - Pointer help for deep red: a larger pointer and a soft halo behind it.
 - Mac only: works together with Night Shift (adds warmth on top of it), tints the Touch Bar, can switch off the keyboard backlight at the warmest settings.
-- Privacy: no analytics or tracking. The app goes online only to activate and occasionally check the license key (sent to Polar, the store) and to check for updates.
+- Languages: the apps and website are in English and Polish.
+- Privacy: no analytics or tracking. The app goes online only to activate and occasionally check the license key (sent to Polar, the store and merchant of record) and to check for updates.
 - Screenshots and screen recordings keep their true colors.
+- No iPhone or iPad version: iOS doesn't let apps tint the whole screen (see the iPhone guide for built-in settings).
 - Not a medical product: a comfort tool for using a computer in the evening.
 - Support: dozelight@icloud.com
 
@@ -21,6 +23,7 @@ Key facts:
 
 - [Dozelight for Mac](https://dozelight.github.io/): features, pricing, download and FAQ for macOS
 - [Dozelight for Windows](https://dozelight.github.io/windows.html): features, pricing, download and FAQ for Windows 10 and 11
+- [Dozelight on Microsoft Store](https://apps.microsoft.com/detail/9P8447TGN40X): the Windows app's store listing
 
 ## Guides
 
@@ -30,10 +33,31 @@ Key facts:
 - [How to make Night Shift warmer on Mac](https://dozelight.github.io/night-shift-warmer.html): Night Shift's limit (about 2700K) and how to go warmer
 - [How to make your screen red at night on Windows](https://dozelight.github.io/red-screen-windows.html): Night Light's limit and how to get pure red
 - [Night Shift vs Night Light vs f.lux vs Dozelight](https://dozelight.github.io/compare.html): a comparison table
+- [f.lux alternatives for Mac and Windows](https://dozelight.github.io/flux-alternatives.html): free and paid alternatives compared, with sources
 - [Red screen at night on iPhone and iPad](https://dozelight.github.io/iphone.html): built-in settings, since iOS apps can't tint the screen
 - [What's new](https://dozelight.github.io/changelog.html): the version history of both apps
 - [Installing on Mac](https://dozelight.github.io/install.html) and [Installing on Windows](https://dozelight.github.io/windows-install.html)
 
+## Po polsku (Polish)
+
+- [Dozelight na Maca](https://dozelight.github.io/pl/): filtr światła niebieskiego na Maca, cena 39,99 zł (we wczesnym dostępie, potem 59,99 zł), 14 dni za darmo
+- [Dozelight na Windows](https://dozelight.github.io/pl/windows.html): filtr światła niebieskiego dla Windows 10 i 11
+- [Night Shift vs Światło nocne vs f.lux vs Dozelight](https://dozelight.github.io/pl/compare.html): porównanie
+- [Alternatywy dla f.lux na Maca i Windows](https://dozelight.github.io/pl/flux-alternatives.html)
+- [O Dozelight i jego twórcy](https://dozelight.github.io/pl/about.html)
+- [Filtr światła niebieskiego na Maca i Windows](https://dozelight.github.io/pl/blue-light-filter.html)
+- [Jak ustawić cieplejszy Night Shift na Macu](https://dozelight.github.io/pl/night-shift-warmer.html)
+- [Czerwony ekran w nocy w Windows 10 i 11](https://dozelight.github.io/pl/red-screen-windows.html)
+- [Ekrany, światło niebieskie i sen](https://dozelight.github.io/pl/screens-and-sleep.html)
+- [Daj oczom odpocząć](https://dozelight.github.io/pl/rest-your-eyes.html)
+- [Czerwony ekran nocą na iPhonie i iPadzie](https://dozelight.github.io/pl/iphone.html)
+- [Co nowego](https://dozelight.github.io/pl/changelog.html), [Instalacja na Macu](https://dozelight.github.io/pl/install.html), [Instalacja na Windows](https://dozelight.github.io/pl/windows-install.html)
+
+## About
+
+- [About Dozelight and its developer](https://dozelight.github.io/about.html): made by Artur Pereć, an independent developer in Poland
+
 ## Legal
 
 - [Privacy policy](https://dozelight.github.io/privacy.html), [Terms](https://dozelight.github.io/terms.html), [Refunds](https://dozelight.github.io/refunds.html): 14-day money-back guarantee
+- Polish: [Polityka prywatności](https://dozelight.github.io/pl/privacy.html), [Warunki korzystania](https://dozelight.github.io/pl/terms.html), [Polityka zwrotów](https://dozelight.github.io/pl/refunds.html)
